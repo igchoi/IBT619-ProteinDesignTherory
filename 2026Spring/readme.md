@@ -1,6 +1,30 @@
 # 2026 Spring Class
 ## Following [Boston Protein Design & Modelling Club](https://www.bpdmc.org/) Seminar Series
 
+## Presentation guide
+
+### Presentor
+
+#### Pre-distribtuion package (before class)
+1. Seminar summary - Questions/Alogirthms
+2. Who is the speaker? (e.g. Affiliation/Background...)
+3. Related literatures/references (e.g. [bioRXive.org](https://www.biorxiv.org/) if the content is published or cited..)
+4. Related distribution/packages (e.g. Github/Google Colab...)
+
+#### Presentation (during class)
+1. PPT digestion (selected topics)
+2. Purpose (Aim) - What (problems) to solve
+3. How to solve/solutions
+4. Expectation/Shortcomings
+5. Questions for Audience (Take-home message)
+
+### Audience
+1. Prepare Questions - within markdown documents
+2. At least make one question - avoid asking things revealed in the seminar/or literatures.
+3. Using AI, get answers first and build a new question
+
+
+---
 ### Tips
 
 #### Use `markdown` for documentation
