@@ -28,6 +28,9 @@
 ---
 ### Tips
 
+#### How to `add` or `write` files/folders in the repository
+* [creating-new-files](https://docs.github.com/ko/enterprise-cloud@latest/repositories/working-with-files/managing-files/creating-new-files)
+
 #### Use `markdown` for documentation
   * [Markdown tutorial](https://guides.github.com/features/mastering-markdown/)
   * [Markdown tutorial - Korean](https://github.com/biospin/BigBio/blob/master/reference/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4.md)
