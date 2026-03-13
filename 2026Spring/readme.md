@@ -29,7 +29,7 @@
 | Date | Presentor | Topic |
 | :--- | :--- | :--- |
 | 3/19 | SWKim | [link] |
-| 3/26 |  |  |
+| 3/26 | YSOh |  |
 | 4/2  | MJBaek |  |
 | 4/9  | KHNam |  |
 | 4/16 |  |  |
