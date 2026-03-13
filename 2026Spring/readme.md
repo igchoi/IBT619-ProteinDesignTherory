@@ -24,6 +24,24 @@
 2. At least make one question - avoid asking things revealed in the seminar/or literatures.
 3. Using AI, get answers first and build a new question
 
+---
+## Schedule
+| Date | Presentor | Topic |
+| :--- | :--- | :--- |
+| 3/19 | SWKim | [link] |
+| 3/26 |  |  |
+| 4/2  |  |  |
+| 4/9  |  |  |
+| 4/16 |  |  |
+| 4/23 | Midterm | |
+| 4/30 |  |   |
+| 5/7 | |
+| 5/14 | |
+| 5/21 | |
+| 5/27 | |
+| 6/4 | |
+| 6/11 | |
+| 6/18 | Final | |
 
 ---
 ### Tips
