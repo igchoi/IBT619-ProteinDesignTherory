@@ -6,13 +6,13 @@
 ### Presentor
 
 #### Pre-distribtuion package (before class)
-1. Seminar summary - Questions/Alogirthms (less than 250 characters)
+1. Seminar summary - Questions/Alogirthms (__`less than 250 characters`__)
 2. Who is the speaker? (e.g. Affiliation/Background...)
 3. Related literatures/references (e.g. [bioRXive.org](https://www.biorxiv.org/) if the content is published or cited..)
 4. Related distribution/packages (e.g. Github/Google Colab...)
 5. Add clickable links for the citations
 
-#### Presentation (during class) - Due: the weekend before the presentation day
+#### Presentation (during class) - `Due: the weekend before the presentation day`
 1. PPT digestion (selected topics) - less than 20 min. presentation (PPTs can be shared after the class)
 2. Purpose (Aim) - What (problems) to solve
 3. How to solve/solutions
