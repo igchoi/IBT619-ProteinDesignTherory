@@ -30,7 +30,7 @@
 | :--- | :--- | :--- |
 | 3/19 | SWKim | [link] |
 | 3/26 | YSOh |  |
-| 4/2  | MJBaek |  |
+| 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s |
 | 4/9  | KHNam |  |
 | 4/16 | DHKim |  |
 | 4/23 | Midterm | |
