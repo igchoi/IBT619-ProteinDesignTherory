@@ -28,7 +28,7 @@
 ## Schedule
 | Date | Presentor | Topic |
 | :--- | :--- | :--- |
-| 3/19 | SWKim | [link] |
+| 3/19 | SWKim | https://www.youtube.com/watch?v=qQihl6If9vU&t=3707s |
 | 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s |
 | 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s |
 | 4/9  | KHNam |  |
