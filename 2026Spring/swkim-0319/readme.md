@@ -16,12 +16,13 @@
 - Background
   1. Research Interest: structural biology, protein design, nucleic acids, gene editing
   2. MS (Molecular Life Sciences), PhD (Biochemistry) - meaning he was originally experimental scientist.
-  3. During his PhD, he started to solve biological problems with deep learning. His first notable work was [AlphaFold-Multimer](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2) (bioRxiv, 2022), co-authored with [John Jumper](https://deepmind.google/blog/demis-hassabis-john-jumper-awarded-nobel-prize-in-chemistry/) & [Demis Hassabis](https://deepmind.google/blog/demis-hassabis-john-jumper-awarded-nobel-prize-in-chemistry/). 
+  3. During his PhD, he started to solve biological problems with deep learning. His first notable work was [Computational design of soluble and functional membrane protein analogues](https://www.nature.com/articles/s41586-024-07601-y) (Nature, 2024), co-authored with [David Baker](https://www.ipd.uw.edu/david-baker/). 
   4. Since 2022, he published lots of papers targeting open-source and generalized protein binder design platform, and finally he distributed [BindCraft](https://www.nature.com/articles/s41586-025-09429-6) (Nature, 2025).  
   5. He now opened his lab in University of Zurich to understand the interactome between protein and nucleic acid.
 
 ## 3. Related literatures/references 
 
+- [Richard, E. et al. Protein complex prediction with AlphaFold-Multimer. BioRxiv, 2022](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2)
 -  [Watson, J. L. et al. De novo design of protein structure and function with RFdiffusion. 
 *Nature* **620**, 1089–1100 (2023).](https://www.nature.com/articles/s41586-023-06415-8)
 - [Dauparas, J. et al. Robust deep learning–based protein sequence design using ProteinMPNN. 
