@@ -1,7 +1,8 @@
 # Topic
 
 - Seminar: [**BindCraft: one-shot design of functional protein binders**](https://www.youtube.com/watch?v=qQihl6If9vU)  
-- Paper: [One-shot design of functional protein binders with BindCraft](https://www.nature.com/articles/s41586-025-09429-6) 
+- Paper: [One-shot design of functional protein binders with BindCraft](https://www.nature.com/articles/s41586-025-09429-6)
+- In class: [Presentation PPT](https://docs.google.com/presentation/d/1xWzHwjOoJZSN4WiqnbHxVsjx9xdfW6jG/edit?usp=sharing&ouid=102328751853466048865&rtpof=true&sd=true)
 
 ## 1. Seminar Summary
 
@@ -22,11 +23,13 @@
 
 ## 3. Related literatures/references 
 
-- [Richard, E. et al. Protein complex prediction with AlphaFold-Multimer. BioRxiv, 2022](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2)
+- [Mike, F. et al. Generative Design of High-Affinity Peptides Using BindCraft. BioRxiv, 2025.](https://www.biorxiv.org/content/10.1101/2025.07.23.666285v1)
+- [Richard, E. et al. Protein complex prediction with AlphaFold-Multimer. BioRxiv, 2022.](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2)
 -  [Watson, J. L. et al. De novo design of protein structure and function with RFdiffusion. 
 *Nature* **620**, 1089–1100 (2023).](https://www.nature.com/articles/s41586-023-06415-8)
 - [Dauparas, J. et al. Robust deep learning–based protein sequence design using ProteinMPNN. 
 *Science* **378**, eadd2187 (2022).](https://www.science.org/doi/10.1126/science.add2187)
+- [Cao, L., Coventry, B., Goreshnik, I. et al. Design of protein-binding proteins from the target structure alone. Nature 605, 551–560 (2022). https://doi.org/10.1038/s41586-022-04654-9](https://www.nature.com/articles/s41586-022-04654-9)
 - [Gainza, P., Wehrle, S., Van Hall-Beauvais, A. et al. De novo design of protein interactions with learned surface fingerprints. *Nature* **617**, 176–184 (2023).](https://www.nature.com/articles/s41586-023-05993-x)
 
 Besides these literatures, there are lots of trials to design protein *de novo*. If you are interested in another approaches, please see the reference of [BindCraft paper](https://www.nature.com/articles/s41586-025-09429-6). 
@@ -35,7 +38,8 @@ Besides these literatures, there are lots of trials to design protein *de novo*.
 
 - **BindCraft**
     - [github](https://github.com/martinpacesa/BindCraft?tab=readme-ov-file)
-    - [google colab notebook](https://colab.research.google.com/github/martinpacesa/BindCraft/blob/main/notebooks/BindCraft.ipynb) 
+    - [google colab notebook](https://colab.research.google.com/github/martinpacesa/BindCraft/blob/main/notebooks/BindCraft.ipynb)
+    - [quick implementation guide](https://yarrowmadrona.medium.com/automating-and-runningbindcraft-installation-on-runpod-part-i-4e6d00091285)
     - *Note*: BindCraft is an open-source model, but user needs GPU at least A100. 
 - **RFdiffusion**
     - [github](https://github.com/RosettaCommons/RFdiffusion)
