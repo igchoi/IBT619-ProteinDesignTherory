@@ -6,7 +6,7 @@
 ## 1. Seminar Summary
 
 - Question: *Can we design a functional binder for every protein while reducing costs for experimental screening?*  
-- Algorithms: **de novo binder design** with AlphaFold2 Multimer &rarr; **sequence optimization** with MPNN$_{sol}$ &rarr; ***in silico* filtering** with AlphaFold2 monomer
+- Algorithms: **de novo binder design** with AlphaFold2 Multimer &rarr; **sequence optimization** with MPNN_sol &rarr; ***in silico* filtering** with AlphaFold2 monomer
 
 
 ## 2. Who is the speaker?  
