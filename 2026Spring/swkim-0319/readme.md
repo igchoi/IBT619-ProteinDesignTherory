@@ -57,7 +57,8 @@ Besides these literatures, there are lots of trials to design protein *de novo*.
 
 ## 5. Audience Question
 
-`YSOh`:  
+`YSOh`:  Thank you for good summary. I have 2 questions of this paper. First, is the 46% success rate actually a high number? Second, Looking at Figure 1, it seems the efficiency varies by protein, so is it really applicable to various proteins?
+
 `MJBaek`: Thank you for good summary! I noticed that **BindCraft** uses metrics like **i_pTM** and **interface RMSD** to rank designs for wet-lab validation. I’m curious about the correlation between these in-silico rankings and the actual experimental results, such as binding affinity or expression levels. Also, were there any **'false positive'** cases where the scores were excellent but the protein failed in the lab? If so, what were their characteristics?
 
 `KHNam`:  Thanks for the great summary. Regarding the results, the average success rate of binders designed using BindCraft is approximately 46.3%, but there is significant variance depending on the target (e.g., 24.5% for PD-1 vs. 85.7% for CLDN1). First, I would like to ask if this 46.3% success rate is considered a practically meaningful improvement for utilizing this pipeline compared to previous methods. Second, what strategies or optimizations could be applied to this pipeline to close this gap and minimize the success rate variance between different targets?
