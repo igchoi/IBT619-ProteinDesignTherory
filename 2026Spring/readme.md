@@ -26,22 +26,22 @@
 
 ---
 ## Schedule
-| Date | Presentor | Topic |
-| :--- | :--- | :--- |
-| 3/19 | SWKim | https://www.youtube.com/watch?v=qQihl6If9vU&t=3707s |
-| 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s |
-| 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s |
-| 4/9  | KHNam |  |
-| 4/16 | DHKim |  |
-| 4/23 | Midterm | |
-| 4/30 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4  | 
-| 5/7 | |
-| 5/14 | |
-| 5/21 | |
-| 5/27 | |
-| 6/4 | |
-| 6/11 | | 
-| 6/18 | Final | |
+| Date | Presentor | Topic | Title |
+| :--- | :--- | :--- | :-- |
+| 3/19 | SWKim | https://www.youtube.com/watch?v=qQihl6If9vU&t=3707s ||
+| 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s ||
+| 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s ||
+| 4/9  | KHNam |  ||
+| 4/16 | DHKim |  ||
+| 4/23 | Midterm | ||
+| 4/30 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4  | |
+| 5/7 | ||
+| 5/14 | ||
+| 5/21 | ||
+| 5/27 | ||
+| 6/4 | ||
+| 6/11 | | |
+| 6/18 | Final | ||
 
 ---
 ### Tips
