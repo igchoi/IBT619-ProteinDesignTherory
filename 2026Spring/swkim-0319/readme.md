@@ -23,13 +23,13 @@
 
 ## 3. Related literatures/references 
 
-- [Mike, F. et al. Generative Design of High-Affinity Peptides Using BindCraft. BioRxiv, 2025.](https://www.biorxiv.org/content/10.1101/2025.07.23.666285v1)
-- [Richard, E. et al. Protein complex prediction with AlphaFold-Multimer. BioRxiv, 2022.](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2)
+- [Mike, F. et al. Generative Design of High-Affinity Peptides Using BindCraft. *BioRxiv*, 2025.](https://www.biorxiv.org/content/10.1101/2025.07.23.666285v1)
+- [Richard, E. et al. Protein complex prediction with AlphaFold-Multimer. *BioRxiv*, 2022.](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v2)
 -  [Watson, J. L. et al. De novo design of protein structure and function with RFdiffusion. 
 *Nature* **620**, 1089–1100 (2023).](https://www.nature.com/articles/s41586-023-06415-8)
 - [Dauparas, J. et al. Robust deep learning–based protein sequence design using ProteinMPNN. 
 *Science* **378**, eadd2187 (2022).](https://www.science.org/doi/10.1126/science.add2187)
-- [Cao, L., Coventry, B., Goreshnik, I. et al. Design of protein-binding proteins from the target structure alone. Nature 605, 551–560 (2022). https://doi.org/10.1038/s41586-022-04654-9](https://www.nature.com/articles/s41586-022-04654-9)
+- [Cao, L., Coventry, B., Goreshnik, I. et al. Design of protein-binding proteins from the target structure alone. *Nature* **605**, 551–560 (2022). https://doi.org/10.1038/s41586-022-04654-9](https://www.nature.com/articles/s41586-022-04654-9)
 - [Gainza, P., Wehrle, S., Van Hall-Beauvais, A. et al. De novo design of protein interactions with learned surface fingerprints. *Nature* **617**, 176–184 (2023).](https://www.nature.com/articles/s41586-023-05993-x)
 
 Besides these literatures, there are lots of trials to design protein *de novo*. If you are interested in another approaches, please see the reference of [BindCraft paper](https://www.nature.com/articles/s41586-025-09429-6). 
@@ -62,5 +62,5 @@ Besides these literatures, there are lots of trials to design protein *de novo*.
 
 `KHNam`:  Thanks for the great summary. Regarding the results, the average success rate of binders designed using BindCraft is approximately 46.3%, but there is significant variance depending on the target (e.g., 24.5% for PD-1 vs. 85.7% for CLDN1). First, I would like to ask if this 46.3% success rate is considered a practically meaningful improvement for utilizing this pipeline compared to previous methods. Second, what strategies or optimizations could be applied to this pipeline to close this gap and minimize the success rate variance between different targets?
 
-`DHKim`:  Thank you for information and summary. I have just one question. BindCraft allowed flexibility of the target, but is it likely that higher structural flexibility of the target makes it more difficult to maintain binder specificity or increases the risk of off-target binding?
+`DHKim`:  Thank you for information and summary. I have just one question. BindCraft allowed flexibility of the target, but is it likely that higher structural flexibility of the target makes it more difficult to maintain binder specificity or increases the risk of off-target binding?  
 `MSAn`:  Lecturer mentioned manual trimming—essentially cutting the target in half—to prevent the AI from sticking to the hydrophobic regions of GPCRs. Is there a way to automate 'functional epitope recognition' so that the AI can avoid these regions without such heavy manual intervention.
