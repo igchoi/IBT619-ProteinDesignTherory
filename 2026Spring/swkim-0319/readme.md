@@ -61,5 +61,5 @@ Besides these literatures, there are lots of trials to design protein *de novo*.
 `MJBaek`: Thank you for good summary! I noticed that **BindCraft** uses metrics like **i_pTM** and **interface RMSD** to rank designs for wet-lab validation. I’m curious about the correlation between these in-silico rankings and the actual experimental results, such as binding affinity or expression levels. Also, were there any **'false positive'** cases where the scores were excellent but the protein failed in the lab? If so, what were their characteristics?
 
 `KHNam`:  
-`DHKim`:  
+`DHKim`:  Thank you for information and summary. I have just one question. BindCraft allowed flexibility of the target, but is it likely that higher structural flexibility of the target makes it more difficult to maintain binder specificity or increases the risk of off-target binding?
 `MSAn`:  
