@@ -5,7 +5,7 @@
 
 ## 1. Summary
 
-- Question: 
+- Question: How to design highly functional proteins?
 - Algorithms: 
 
 
