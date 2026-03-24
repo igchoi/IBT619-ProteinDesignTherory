@@ -3,6 +3,7 @@
 - Paper: [Complete computational design of highefficiency Kemp elimination enzymes](https://doi.org/10.1038/s41586-025-09136-2)
 - In class: 
 
+
 ## 1. Summary
 
 - Question: How to design highly functional proteins?
@@ -29,7 +30,21 @@
 
 
 ## 4. Referemce
-
+- [PROSS](https://doi.org/10.1146/annurev-biochem-062917-012102) : Principles of Protein Stability and Their Application in Computational Design
+- [PROSS-RH5](https://www.pnas.org/doi/abs/10.1073/pnas.1616903114) : One-step design of a stable variant of the malaria invasion protein RH5 for use as a vaccine immunogen
+- [PROSS-Alphafold2](https://pubs.acs.org/doi/full/10.1021/acscatal.4c00883) : Functionally Diverse Peroxygenases by AlphaFold2, Design, and Signal Peptide Shuffling
+- [active site](https://www.cell.com/molecular-cell/fulltext/S1097-2765(18)30693-2) : Automated Design of Efficient and Functionally Diverse Enzyme Repertoires
+- [CADENZ](https://www.science.org/doi/full/10.1126/science.ade9434) : Combinatorial assembly and design of enzymes
 
 
 ## 5. Questions
+
+
+
+
+
+
+
+
+
+
