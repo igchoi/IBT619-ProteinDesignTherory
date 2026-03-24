@@ -12,7 +12,7 @@
 
 ## 2. Speaker
 
-[**Sarel Fleishman**](https://www.linkedin.com/in/sarel-fleishman-665769277/)
+[**Sarel Jacob Fleishman**](https://www.linkedin.com/in/sarel-fleishman-665769277/)
 
 - [Head of Protein Design Lab at Weizmann](https://www.fleishmanlab.org/)
 - activities
