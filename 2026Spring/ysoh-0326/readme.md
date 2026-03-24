@@ -23,13 +23,10 @@
   - 2024-10-01 to present    |      professor       | Biomolecular Sciences | the Weizmann Institute of Science in Rehovot, Israel  
 - research
   - protein design particulary in antibodies and enzymes
-  - develop algorithms for enzyme and antibody design and verify them using high-throughput experiments
+  - develop algorithms for enzyme and antibody design and verify them using high-throughput experiments 
 
 
-## 3. 
-
-
-## 4. Reference
+## 3. Reference
 - [PROSS](https://doi.org/10.1146/annurev-biochem-062917-012102) : Principles of Protein Stability and Their Application in Computational Design
 - [PROSS-RH5](https://www.pnas.org/doi/abs/10.1073/pnas.1616903114) : One-step design of a stable variant of the malaria invasion protein RH5 for use as a vaccine immunogen
 - [PROSS-Alphafold2](https://pubs.acs.org/doi/full/10.1021/acscatal.4c00883) : Functionally Diverse Peroxygenases by AlphaFold2, Design, and Signal Peptide Shuffling
@@ -37,7 +34,18 @@
 - [CADENZ](https://www.science.org/doi/full/10.1126/science.ade9434) : Combinatorial assembly and design of enzymes
 
 
-## 5. Questions
+## 4. Questions
+
+`swkim`:  
+
+`MJBaek`: 
+
+`KHNam`:  
+
+`DHKim`:  
+
+`MSAn`:  
+
 
 
 
