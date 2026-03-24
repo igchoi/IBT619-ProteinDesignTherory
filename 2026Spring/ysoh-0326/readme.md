@@ -7,7 +7,7 @@
 ## 1. Summary
 
 - Question: How to design highly functional proteins?
-- Algorithms: 
+- Algorithms: One-shot non-iterative protein design optimizes with design for increased stability and expressiveness(PROSS) and active site design for increased activity(FuncLib) and backbone design(CANDEZ)
 
 
 ## 2. Speaker
