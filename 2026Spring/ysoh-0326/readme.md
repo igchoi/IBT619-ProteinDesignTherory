@@ -11,4 +11,8 @@
 
 ## 2. Speaker
 
-- Sarel Fleishman : professor at the Weizmann Institute of Science in Israel, protein design particulary in antibodies and enzymes.
+[**Sarel Fleishman**](https://www.linkedin.com/in/sarel-fleishman-665769277/)
+
+- **professor** at the Weizmann Institute of Science in Israel
+- protein design particulary in antibodies and enzymes
+- 
