@@ -60,7 +60,7 @@
 
 `DHKim`:  
 
-`MSAn`:  
+`MSAn`:  How can we distinguish, among the dozens of mutations proposed by PROSS, those that genuinely alter the protein’s folding pathway from those that merely fine‑tune the surrounding environment?
 
 
 
