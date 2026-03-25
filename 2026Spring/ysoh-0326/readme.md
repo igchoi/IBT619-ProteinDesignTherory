@@ -34,7 +34,16 @@
 - [CADENZ](https://www.science.org/doi/full/10.1126/science.ade9434) : Combinatorial assembly and design of enzymes
 
 
-## 4. Questions
+## 4. Q&As in the seminar
+
+* Q1
+  - A1
+
+* Q2
+  - A2
+
+
+## 5. Classmate Questions
 
 `SWKim`:  
 
