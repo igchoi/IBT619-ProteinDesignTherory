@@ -1,7 +1,7 @@
 # Seminar
 - Seminar: [**Designing new and improved functions in natural protein folds**](https://www.youtube.com/watch?v=2aaWh8yVq8U)  
 - Paper: [Complete computational design of highefficiency Kemp elimination enzymes](https://doi.org/10.1038/s41586-025-09136-2)
-- In class: in ysoh-0326
+- In class: [presentation](https://docs.google.com/presentation/d/1acYBLfsqHHbke1ZQT5r0IQaEOhbeLeM0/edit?usp=sharing&ouid=107177185030271497727&rtpof=true&sd=true)
 
 
 ## 1. Summary
