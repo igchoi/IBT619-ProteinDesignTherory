@@ -52,7 +52,7 @@
 
 ## 6. Classmate Questions
 
-`SWKim`:  
+`SWKim`: Thank you for your summary. While the designed enzyme clearly improves over previous designs, its kcat (~2.8 s⁻¹) still appears far from that of many natural enzymes. To bridge this gap, beyond the factors in this study, what additional factors should be considered (e.g. interaction dynamics of overall reaction)?
 
 `MJBaek`: Interesting paper! In this paper, I guess that when generating the theozyme for the KE reaction, initial enzyme designs likely incorporated the assumption that aromatic residues interacting with the theozyme would be advantageous for its stabilization. However, the findings for Des27.7 and particularly the Phe113Leu mutation revealed that hydrophobic interactions might be more beneficial for theozyme stabilization. 
  Building on this new discovery, Did they try to re-calculate the theozyme **by directly inputting the information that hydrophobic interactions are advantageous**?
