@@ -59,7 +59,7 @@
 
 `KHNam`:  
 
-`DHKim`:  
+`DHKim`:  The focus is on increasing stability and efficiency, but on the contrary, is it possible to design a specific environment that quickly breaks down?
 
 `MSAn`:  How can we distinguish, among the dozens of mutations proposed by PROSS, those that genuinely alter the protein’s folding pathway from those that merely fine‑tune the surrounding environment?
 
