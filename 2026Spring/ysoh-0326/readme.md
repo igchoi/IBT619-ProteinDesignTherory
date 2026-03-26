@@ -57,7 +57,7 @@
 `MJBaek`: Interesting paper! In this paper, I guess that when generating the theozyme for the KE reaction, initial enzyme designs likely incorporated the assumption that aromatic residues interacting with the theozyme would be advantageous for its stabilization. However, the findings for Des27.7 and particularly the Phe113Leu mutation revealed that hydrophobic interactions might be more beneficial for theozyme stabilization. 
  Building on this new discovery, Did they try to re-calculate the theozyme **by directly inputting the information that hydrophobic interactions are advantageous**?
 
-`KHNam`:  
+`KHNam`:  I noticed the enzyme's activity was only tested on one specific substrate (5'-nitrobenzisoxazole). Would it be a problem if the enzyme also shows activity towards other substrates with similar structures?
 
 `DHKim`:  The focus is on increasing stability and efficiency, but on the contrary, is it possible to design a specific environment that quickly breaks down?
 
