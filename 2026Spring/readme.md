@@ -29,7 +29,7 @@
 | Date | Presentor | Topic | Title |
 | :--- | :--- | :--- | :-- |
 | 3/19 | SWKim | https://www.youtube.com/watch?v=qQihl6If9vU&t=3707s | BindCraft: one-shot design of functional protein binders |
-| 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s ||
+| 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s | Designing new and improved functions in natural protein folds |
 | 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s | Protein generation with evolutionary diffusion: sequence is all you need|
 | 4/9  | KHNam | [https://youtu.be/aUMGuogMZCA?si=snaHpxaDuO3yhUGb](https://youtu.be/FX7yBJKQuPg?si=NStDqAjbCM_VojnS) | Computational Design of non-porous, pH-responsive antibody nanoparticles |
 | 4/16 | DHKim |  ||
