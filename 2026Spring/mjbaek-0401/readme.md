@@ -13,19 +13,6 @@
 ### **[Sarah Alamdari](https://github.com/sarah-alamdari)**
 **Senior Applied Scientist at Microsoft Research**  
 *Biology × Deep Learning × Molecular Simulation*
-
----
-
-**- Repositories & Tools**
-
-- [EvoDiff](https://github.com/microsoft/evodiff)  
-  Diffusion-based generative model for designing proteins using only sequence data 
-
-- [ProtNote](https://github.com/microsoft/protnote)
-  Multimodal deep learning tool for protein function prediction and annotation  
-
-- [CleaveNet](https://github.com/microsoft/cleavenet)
-  Deep learning toolkit for predicting and generating peptide cleavage sites  
   
 ---
 
@@ -48,9 +35,18 @@
 
 ---
 
-**- 🏆 Awards & Honors**
+**- 🏆 Awards & computational portfolio**
 
-- MIT Rising Star (Chemical Engineering)  
+- MIT Rising Star (Chemical Engineering)
+
+-   [EvoDiff](https://github.com/microsoft/evodiff)  
+  - Diffusion-based generative model for designing proteins using only sequence data 
+
+- [ProtNote](https://github.com/microsoft/protnote)
+  - Multimodal deep learning tool for protein function prediction and annotation  
+
+- [CleaveNet](https://github.com/microsoft/cleavenet)
+  - Deep learning toolkit for predicting and generating peptide cleavage sites   
 
 
 ## 3. Reference
