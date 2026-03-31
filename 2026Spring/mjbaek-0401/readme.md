@@ -1,7 +1,7 @@
 # Seminar
 - Seminar: [**Discrete diffusion models for generative protein design**](https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1203s)  
 - Paper: [Protein generation with evolutionary diffusion: sequence is all you need](https://www.biorxiv.org/content/10.1101/2023.09.11.556673v1)
-- [Presentation](https://docs.google.com/presentation/d/1qkhc8TLJXyW_kuOD6BntSoyWBaDfw9GC/edit?slide=id.p15#slide=id.p15)
+- Presentation: [2026_proteindesignclass_MJ](https://docs.google.com/presentation/d/1qkhc8TLJXyW_kuOD6BntSoyWBaDfw9GC/edit?slide=id.p15#slide=id.p15)
 
 ## 1. Summary
 
