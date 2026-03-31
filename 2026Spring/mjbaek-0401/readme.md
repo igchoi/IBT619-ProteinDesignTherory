@@ -84,7 +84,7 @@
 
 
 ## 5. Q&As in the seminar
-- [Q&A list]
+- [Q&A list](https://docs.google.com/document/d/1p-X4sM8lkT6Nnxf6Bqlx3lHlafFc8sItmlM9NJJt27Q/edit?tab=t.0)
 - Key questions
 * Q1: Potts Model(공진화 모델)을 쓰면 더 정확하지 않을까?(5번 질문)
   - A1: Potts 모델은 특정 MSA 하나에 최적화되지만, EvoDiff는 64개씩 서브샘플링하며 반복 학습하므로 훨씬 방대한 진화적 예시를 학습할 수 있음. 
