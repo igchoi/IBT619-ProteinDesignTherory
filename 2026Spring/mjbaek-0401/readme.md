@@ -39,8 +39,8 @@
 
 - MIT Rising Star (Chemical Engineering)
 
--   [EvoDiff](https://github.com/microsoft/evodiff)  
-  - Diffusion-based generative model for designing proteins using only sequence data 
+- [EvoDiff](https://github.com/microsoft/evodiff):
+  -Diffusion-based generative model for designing proteins using only sequence data 
 
 - [ProtNote](https://github.com/microsoft/protnote)
   - Multimodal deep learning tool for protein function prediction and annotation  
@@ -84,12 +84,19 @@
 
 
 ## 5. Q&As in the seminar
+- [Q&A list]
+- Key questions
+* Q1: Potts Model(공진화 모델)을 쓰면 더 정확하지 않을까?(5번 질문)
+  - A1: Potts 모델은 특정 MSA 하나에 최적화되지만, EvoDiff는 64개씩 서브샘플링하며 반복 학습하므로 훨씬 방대한 진화적 예시를 학습할 수 있음. 
 
-* Q1
-  - A1
+* Q2: Scaffolding 작업 시 성공 요인은?(12번 질문)
+  - A2: 단순히 구조적 복잡성보다는, 시퀀스 타입이나 데이터셋 내 출현 빈도가 모델의 성공 여부와 더 관련있을 듯.
 
-* Q2
-  - A2
+* Q3: Inference(추론) 시 디코딩 순서(Decoding Order)가 중요한가?(13번 질문)
+  - A3: 학습 시 다양한 마스크 길이를 경험하므로, 추론 시 모든 스텝을 일일이 조절하거나 순차적으로 할 필요 없이 효율적임.
+  
+* Q4: 서열 생성 시 길이를 미리 정해야 하나?(15번 질문)
+  - A4: 학습 시에는 가변적이지만, 실제 생성(Inference) 단계에서는 원하는 길이가 있다면 설정해야 함.
 
 
 ## 6. Classmate Questions
