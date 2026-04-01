@@ -69,20 +69,53 @@
 
 ## 4. Tool
 
-1. [EvoDiff (OADM & D3PM)](https://github.com/microsoft/evodiff)  
-   - Diffusion-based framework for protein sequence generation without structural templates  
+## 4. Tool
 
-2. [MSA Transformer](https://github.com/facebookresearch/esm)  
-   - Utilizes MSA to capture co-evolutionary signals (EvoDiff-MSA)  
+### EvoDiff (OADM & D3PM)
+- [github](https://github.com/microsoft/evodiff)  
+- Diffusion-based framework for protein sequence generation without structural templates  
+- You can generate protein sequences directly using evolutionary information (MSA optional)  
 
-3. [OmegaFold](https://github.com/HeliXonProtein/OmegaFold)  
-   - Predicts 3D structures to assess foldability of generated sequences  
+---
 
-4. [ProteinMPNN](https://github.com/dauparas/ProteinMPNN) & [ESM-IF](https://github.com/facebookresearch/esm)  
-   - Inverse folding tools for self-consistency evaluation  
+### MSA Transformer
+- [github](https://github.com/facebookresearch/esm)  
+- Utilizes MSA to capture co-evolutionary signals (EvoDiff-MSA)  
+- Can be used for extracting evolutionary constraints and embeddings  
 
-5. [ProtT5 (ProtTrans)](https://github.com/agemania/ProtTrans)  
-   - Embedding model for functional space analysis (FPD)  
+---
+
+### OmegaFold
+- [github](https://github.com/HeliXonProtein/OmegaFold)  
+- Predicts 3D protein structures from sequences  
+- Used to validate foldability of generated sequences  
+
+---
+
+### ProteinMPNN & ESM-IF
+- [ProteinMPNN](https://github.com/dauparas/ProteinMPNN)  
+- [ESM-IF](https://github.com/facebookresearch/esm)  
+- Inverse folding tools (structure → sequence)  
+- Used for self-consistency evaluation with generated proteins  
+- You can also find useful examples in RFdiffusion notebooks  
+
+---
+
+### ProtT5 (ProtTrans)
+- [github](https://github.com/agemania/ProtTrans)  
+- Protein embedding model  
+- Used for functional space analysis (e.g., FPD)  
+
+---
+
+### RFdiffusion
+- [github](https://github.com/RosettaCommons/RFdiffusion)  
+- Structure-based diffusion model for protein design  
+- Specific binder design pipelines available in repository  
+- [google colab notebook](https://colab.research.google.com/github/RosettaCommons/RFdiffusion/blob/main/notebooks/design_protein.ipynb)  
+- Tip: If you download notebooks locally, they may break due to version updates → re-download recommended  
+
+--- 
 
 ## 5. Q&As in the seminar
 
