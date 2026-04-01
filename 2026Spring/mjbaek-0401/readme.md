@@ -143,4 +143,4 @@
 
 `DHKim`:  
 
-`MSAn`:  
+`MSAn`:  Is it possible to incorporate cofactors into the protein design process itself? Since most enzymes rely on them, I’m wondering if we can design proteins with pre-determined binding sites and interactions for specific coenzymes
