@@ -69,8 +69,6 @@
 
 ## 4. Tool
 
-## 4. Tool
-
 ### EvoDiff (OADM & D3PM)
 - [github](https://github.com/microsoft/evodiff)  
 - Diffusion-based framework for protein sequence generation without structural templates  
