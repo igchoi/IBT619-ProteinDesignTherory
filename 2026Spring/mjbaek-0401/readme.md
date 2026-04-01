@@ -1,8 +1,8 @@
 # Seminar
 - Seminar: [**Discrete diffusion models for generative protein design**](https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1203s)  
 - Paper: [Protein generation with evolutionary diffusion: sequence is all you need](https://www.biorxiv.org/content/10.1101/2023.09.11.556673v1)
-- Presentation: [2026_proteindesignclass_MJ](https://docs.google.com/presentation/d/1qkhc8TLJXyW_kuOD6BntSoyWBaDfw9GC/edit?slide=id.p15#slide=id.p15)
-
+- Presentation: [2026_proteindesignclass_MJ](https://docs.google.com/presentation/d/10Jx54ySwFa0DGtVcM631dQXtkJ4Xj0u4/edit?slide=id.p1#slide=id.p1)
+  
 ## 1. Summary
 
 - Question: Can we design novel proteins to expand functional space?
@@ -10,28 +10,30 @@
 
 
 ## 2. Speaker
-### **[Sarah Alamdari](https://github.com/sarah-alamdari)**
-**Senior Applied Scientist at Microsoft Research**  
-*Biology × Deep Learning × Molecular Simulation*
+### **Sarah Alamdari**
+-[github](https://github.com/sarah-alamdari)
+-[her domain](https://www.sarahalamdari.com/)
   
 ---
 
 **- 🎓 Career & Education**
 
-- Microsoft Research (2021–Present)  
+- [Microsoft Research](https://www.microsoft.com/en-us/research/) (2021–Present)  
   *Senior Applied Scientist*  
   - Biomedical Machine Learning group  
   - Leads AI models for protein design (e.g., EvoDiff)
 
 - University of Washington (2016–2021)  
   *PhD, Chemical Engineering*  
-  - Molecular dynamics (MD), computational chemistry  
-  - NSF GRFP Fellow  
+  - Molecular dynamics (MD), computational chemistry   
 
 - Arizona State University (2012–2016)
   *BS, Chemical Engineering*  
-  - Magna Cum Laude  
-  - Undergraduate research in 2D materials  
+  - Undergraduate research in 2D materials
+ 
+- [Publications](https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5&q=sarah+alamdari&btnG=)
+ -[Protein generation with evolutionary diffusion: sequence is all you need](https://www.biorxiv.org/content/10.1101/2023.09.11.556673v2.abstract)
+ -[Orientation and Conformation of Proteins at the Air–Water Interface Determined from Integrative Molecular Dynamics Simulations and Sum Frequency Generation Spectroscopy](https://pubs.acs.org/doi/full/10.1021/acs.langmuir.0c01881)
 
 ---
 
@@ -39,8 +41,8 @@
 
 - MIT Rising Star (Chemical Engineering)
 
-- [EvoDiff](https://github.com/microsoft/evodiff):
-  -Diffusion-based generative model for designing proteins using only sequence data 
+- [EvoDiff](https://github.com/microsoft/evodiff)
+ - Diffusion-based generative model for designing proteins using only sequence data 
 
 - [ProtNote](https://github.com/microsoft/protnote)
   - Multimodal deep learning tool for protein function prediction and annotation  
