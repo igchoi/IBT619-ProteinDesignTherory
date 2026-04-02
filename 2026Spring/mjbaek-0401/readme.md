@@ -11,7 +11,7 @@
 ## 2. Speaker
 
 ### **Sarah Alamdari**
-- [github](https://github.com/sarah-alamdari](https://github.com/sarahalamdari)  
+- [github](https://github.com/sarahalamdari)  
 - [her domain](https://www.sarahalamdari.com/)  
 
 ---
