@@ -11,7 +11,7 @@
 ## 2. Speaker
 
 ### **Sarah Alamdari**
-- [github(https://github.com/sarah-alamdari](https://github.com/sarahalamdari)  
+- [github](https://github.com/sarah-alamdari](https://github.com/sarahalamdari)  
 - [her domain](https://www.sarahalamdari.com/)  
 
 ---
@@ -37,15 +37,12 @@
 
 ---
 
-### **- 🏆 Awards & computational portfolio**
+### **- computational portfolio**
 
 - MIT Rising Star (Chemical Engineering)  
 
 - [EvoDiff](https://github.com/microsoft/evodiff)  
   - Diffusion-based generative model for designing proteins using only sequence data  
-
-- [ProtNote](https://github.com/microsoft/protnote)  
-  - Multimodal deep learning tool for protein function prediction and annotation  
 
 - [CleaveNet](https://github.com/microsoft/cleavenet)  
   - Deep learning toolkit for predicting and generating peptide cleavage sites  
