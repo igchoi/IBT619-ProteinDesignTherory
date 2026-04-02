@@ -131,7 +131,7 @@
 
 ## 6. Classmate Questions
 
-`SWKim`:  
+`SWKim`:  **First**, OADM generates masked sequences seemingly random order (I think this order is also important for structural foldability). Is there any score or confidence value to select appropriate position to generate first? **Second (just idea)**, if we use taxa-specific D3PM diffusion method, can we do better for adaptive evolution tasks? For example, could this approach be used to transform a standard *E.coli* protein into a thermophilic variant by modeling specific evolutaionary trajectories?
 
 `YSOh`:  **First**, regarding the performance comparison of EvoDiff, the paper compares it with other tools such as ESM-2. However, performance of these tools often seems to depend on the specific type of protein. In that case, is it really appropriate to make a performance comparison and conclude that EvoDiff is better? **Second**, since the paper does not provide in vitro validation results, how can we know whether the designed proteins actually perform as predicted computationally?
 
