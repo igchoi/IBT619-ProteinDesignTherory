@@ -11,7 +11,7 @@
 ## 2. Speaker
 
 ### **Sarah Alamdari**
-- [github](https://github.com/sarah-alamdari)  
+- [github(https://github.com/sarah-alamdari](https://github.com/sarahalamdari)  
 - [her domain](https://www.sarahalamdari.com/)  
 
 ---
@@ -90,8 +90,7 @@
 
 ---
 
-### ProteinMPNN & ESM-IF
-- [ProteinMPNN](https://github.com/dauparas/ProteinMPNN)  
+### ESM-IF 
 - [ESM-IF](https://github.com/facebookresearch/esm)  
 - Inverse folding tools (structure → sequence)  
 - Used for self-consistency evaluation with generated proteins  
