@@ -133,7 +133,7 @@
 
 `SWKim`:  
 
-`MJBaek`:  
+`YSOh`:  **First**, regarding the performance comparison of EvoDiff, the paper compares it with other tools such as ESM-2. However, performance of these tools often seems to depend on the specific type of protein. In that case, is it really appropriate to make a performance comparison and conclude that EvoDiff is better? **Second**, since the paper does not provide in vitro validation results, how can we know whether the designed proteins actually perform as predicted computationally?
 
 `KHNam`:  
 
