@@ -1,5 +1,5 @@
 # Seminar
-- Seminar: [**Computational Design of non-porous, pH-responsive antibody nanoparticles**]_(https://youtu.be/FX7yBJKQuPg?si=FYIvwJRcjoodvgAF)
+- Seminar: 
 - Paper:
 - Presentation:
 
