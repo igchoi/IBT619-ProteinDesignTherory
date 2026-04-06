@@ -30,17 +30,17 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
 - [Fast and versatile sequence-independent protein docking for nanomaterials design using RPXDock (2023)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010680)
 
 ## 4. Related distribution/packages
-1. **WORMS (helical fusion software)**
+**1. WORMS (helical fusion software)**
    - Software used to fuse or link helical protein subunits in desired ways to build larger or more complex protein structures.
    - **In research:** Used to fuse helical repeat proteins to extend pH-responsive trimer building blocks, filling the pores along the C3 axes of an octahedral nanoparticle.
    - [Github](https://github.com/willsheffler/worms)
 
-2. **RDXDock (protein docking software)**
+**2. RDXDock (protein docking software)**
    - A tool used to predict how two or more proteins (or protein domains) interact to form a complex.
    - **In research:** Used to precisely dock the extended trimer plug into the threefold symmetric pores inside antibody nanoparticles.
    - [Github](https://github.com/willsheffler/rpxdock)
 
-3. **Rosetta Macromolecular Modeling**
+**3. Rosetta Macromolecular Modeling**
    - A powerful software used to address a wide range of protein science problems, including structure prediction, design, modeling, and protein–protein docking
    - **In research:** Used to optimize RPXDock-docked sequences for stability and interactions, and to design variants controlling cargo packaging and pH responsiveness.
    - [Web](https://rosettacommons.org/)
