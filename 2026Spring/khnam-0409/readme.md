@@ -46,6 +46,7 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
    - [Web](https://rosettacommons.org/)
 
 ## 5. Q&As in the seminar
+[**Q&A List**](https://docs.google.com/document/d/1s5P8uvxmlCE2S1HsYh2YY29TFTNhMPIGOT77wAhwzBE/edit?usp=drive_link)
 
 ## 6. Classmate Questions
 `SWKim`:
