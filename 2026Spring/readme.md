@@ -32,7 +32,7 @@
 | 3/26 | YSOh | https://www.youtube.com/watch?v=2aaWh8yVq8U&t=6s | Designing new and improved functions in natural protein folds |
 | 4/2  | MJBaek | https://www.youtube.com/watch?v=iV_7mgxe4OI&t=1489s | Protein generation with evolutionary diffusion: sequence is all you need|
 | 4/9  | KHNam | [https://youtu.be/aUMGuogMZCA?si=snaHpxaDuO3yhUGb](https://youtu.be/FX7yBJKQuPg?si=NStDqAjbCM_VojnS) | Computational Design of non-porous, pH-responsive antibody nanoparticles |
-| 4/16 | DHKim |  ||
+| 4/16 | DHKim | https://youtu.be/oS_Cb-YMymw?si=jhQq_mX2zFIrYuM7 | RNA Function, Design, and Modeling |
 | 4/23 | Midterm | ||
 | 4/30 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4  | |
 | 5/7 | ||
