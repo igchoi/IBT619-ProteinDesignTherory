@@ -57,4 +57,4 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
 
 `DHKim`:
 
-`MSAn`:
+`MSAn`:Unlike viruses, if a material bursts inside an endosome, can the endosome itself also tear open
