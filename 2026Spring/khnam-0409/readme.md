@@ -51,7 +51,7 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
 ## 6. Classmate Questions
 `SWKim`:
 
-`YSOh`:
+`YSOh`: Couldn't we better optimize the trade-offs between pore size, neutral stability, and cargo retention by feeding back the successful and failed design data, along with cryo-EM structural insights, into the next rounds of design?
 
 `MJBaek`: I have two questions. One is 'how did they make 3D particles after cryo-EM?' I just curious about how to convert 2D to 3D and how to make a particles as a real things. And the other one is 'Is it possible to reverse reaction?' I mean after the release between molecules by pH, and can they re-gathering again by pH differences?
 
