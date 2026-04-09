@@ -49,7 +49,7 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
 [**Q&A List**](https://docs.google.com/document/d/1s5P8uvxmlCE2S1HsYh2YY29TFTNhMPIGOT77wAhwzBE/edit?usp=drive_link)
 
 ## 6. Classmate Questions
-`SWKim`:
+`SWKim`: **First**, in this study, cargo packaging seems to be largely charge-driven, but how they could load therapeutic proteins that are more neutral in net charge? **Second**, how about adding a pH-activated endosomal escape module (e.g. low toxic detergent), so that the cargo could be released into cytosol?
 
 `YSOh`: Couldn't we better optimize the trade-offs between pore size, neutral stability, and cargo retention by feeding back the successful and failed design data, along with cryo-EM structural insights, into the next rounds of design?
 
