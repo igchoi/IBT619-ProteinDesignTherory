@@ -35,7 +35,7 @@ PhD, Department of Biochemistry (2018.09.01 to 2023.09)
    - **In research:** Used to fuse helical repeat proteins to extend pH-responsive trimer building blocks, filling the pores along the C3 axes of an octahedral nanoparticle.
    - [Github](https://github.com/willsheffler/worms)
 
-**2. RDXDock (protein docking software)**
+**2. RPXDock (protein docking software)**
    - A tool used to predict how two or more proteins (or protein domains) interact to form a complex.
    - **In research:** Used to precisely dock the extended trimer plug into the threefold symmetric pores inside antibody nanoparticles.
    - [Github](https://github.com/willsheffler/rpxdock)
