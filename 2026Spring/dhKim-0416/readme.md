@@ -1,5 +1,5 @@
 # Seminar
-- Seminar: [RNA Function, Design, and Modeling)  
+- Seminar: [**RNA Function, Design, and Modeling**}(https://youtu.be/oS_Cb-YMymw?si=DlrBkbfoxmlEGLer)  
 - Paper: [)  
 - Presentation: [)  
 
