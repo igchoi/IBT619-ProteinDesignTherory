@@ -32,7 +32,8 @@ DMS-seq developer | A Study on the Structure of Viral RNA
 
 ## 5. Key Q&As in the seminar
   **Q1. 리보스위치 스크리닝이 실제 세포 내에서도 같은 결과가 나오는가?**
-  -**A. 세포 내에서는 대사 물질의 농도를 정밀하게 조절하기 매우 어려워 같은 결과가 나오기 어렵다.**
+  
+    **A. 세포 내에서는 대사 물질의 농도를 정밀하게 조절하기 매우 어려워 같은 결과가 나오기 어렵다.**
 
 
   **Q2. RNA 구조가 매우 빠르게 변할텐데, DMS-MaPseq으로 순간 포착이 가능한가?**
