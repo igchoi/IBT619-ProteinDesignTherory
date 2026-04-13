@@ -14,7 +14,7 @@ DMS-seq developer | A Study on the Structure of Viral RNA
   - Ph.D : 2009 ~ 2014, University of California, San Francisco
   - Fellow : 2015 ~ 2021, Whitehead Institute for Biomedical Research
 - **Affiliation:**
-  - Assistant Professor : 2021 ~ Present, Harvard Medical Microbiology
+  - Assistant Professor : 2021 ~ Present, Harvard Medical School
 
 ## 3. Related Literatures/Reference
 - [Genome-wide probing of RNA structure reveals active unfolding of mRNA structures in vivo (2013)](https://www.nature.com/articles/nature12894#citeas)
