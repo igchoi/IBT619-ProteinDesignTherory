@@ -36,7 +36,7 @@
 | 4/23 | Midterm | ||
 | 4/30 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4  | |
 | 5/7 | ||
-| 5/14 | ||
+| 5/14 | YSOh | https://www.youtube.com/watch?v=G01tGkcw-OA | Shedding light on functional dark matter with genomic language modeling |
 | 5/21 | ||
 | 5/27 | ||
 | 6/4 | ||
