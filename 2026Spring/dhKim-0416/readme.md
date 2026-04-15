@@ -1,7 +1,7 @@
 # Seminar
 - Seminar: [**RNA Function, Design, and Modeling**](https://youtu.be/oS_Cb-YMymw?si=DlrBkbfoxmlEGLer)  
 - Paper: [**Diverse database and machine learning model to narrow the generalization gap in RNA structure prediction**](https://www.science.org/doi/10.1126/sciadv.adz4967)  
-- Presentation: [)  
+- Presentation: [Presentation](https://docs.google.com/presentation/d/1L4yxgcsaV0VbEJz6c2vINLN9hzL_V1poXJ_mhvIQN30/edit?usp=sharing)  
 
 ## 1. Summary
 - Question: Can AI modeling be used to predict the complex structure of RNA and design gene expression freely controllable?  
