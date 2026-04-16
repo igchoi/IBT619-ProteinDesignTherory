@@ -11,7 +11,7 @@
 ### [Silvi rouskin](https://www.rouskinlab.com/)
 DMS-seq developer | A Study on the Structure of Viral RNA
 - **History**
-  - Ph.D : 2009 ~ 2014, University of California, San Francisco
+  - Ph.D : 2009 ~ 2014, University of California, San Francisco(Jonathan Weissman)
   - Fellow : 2015 ~ 2021, Whitehead Institute for Biomedical Research
 - **Affiliation:**
   - Assistant Professor : 2021 ~ Present, Harvard Medical School
