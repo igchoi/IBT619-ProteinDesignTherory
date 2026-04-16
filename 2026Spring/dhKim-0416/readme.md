@@ -44,7 +44,7 @@ DMS-seq developer | A Study on the Structure of Viral RNA(SARS-CoV-2, HIV-1)
    A. 데이터가 부족해 통계적인 데이터로 말하기는 어려움. 완전히 틀린 구조가 나오기도 하는 반면, 실제 존재하는 다른 구조를 찾아내기도 함.
 
 ## 6. Classmate Questions
-`SWKim`: 
+`SWKim`: If RNA secondary structures are derived using chemical probe data (e.g. DMS), how the model can predict secondary structure with only sequence? And second, is there no benefits to utilize information of homologous sequences in RNA structure prediction? (...due to similar sequences can adapt substantially different structures)
 
 `YSOh`: Given that the F1 score for long RNA sequences is still low, I am not sure whether simply expanding experimental data for long RNAs will substantially improve prediction accuracy. Would it be more effective to incorporate data on complex states or binding interactions, rather than relying only on pure RNA sequence information? Also, what do you think about using an MSA-based model instead of a CNN-based model?
 
