@@ -9,7 +9,7 @@
 
 ## 2. Speaker
 ### [Silvi rouskin](https://www.rouskinlab.com/)
-DMS-seq developer | A Study on the Structure of Viral RNA
+DMS-seq developer | A Study on the Structure of Viral RNA(SARS-CoV-2, HIV-1)
 - **History**
   - Ph.D : 2009 ~ 2014, University of California, San Francisco(Jonathan Weissman)
   - Fellow : 2015 ~ 2021, Whitehead Institute for Biomedical Research
