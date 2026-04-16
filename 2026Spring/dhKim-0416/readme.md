@@ -48,7 +48,7 @@ DMS-seq developer | A Study on the Structure of Viral RNA
 
 `YSOh`: 
 
-`MJBaek`: It seems like the e fold model that is developed by speaker has especially strength to generate Long ncRNA. But I think, during the training step, there's not special traing set for long ncRNA. So, Which thing(step or data something like that) could make the model generate well long ncRNA compare with other models.
+`MJBaek`: It seems like the e fold model that is developed by speaker has especially strength to generate Long ncRNA. But I think, during the training step, there's not special traing set for long ncRNA. So, Which thing(step or data something like that) could make the model generate well long ncRNA comparing with other models.
  
 `KHNam`: Is the 2D structure of RNA predicted based only on the mutation frequencies? And if so, how exactly does that process work?
 
