@@ -48,8 +48,8 @@ DMS-seq developer | A Study on the Structure of Viral RNA
 
 `YSOh`: 
 
-`MJBaek`: 
-
+`MJBaek`: It seems like the e fold model that is developed by speaker has especially strength to generate Long ncRNA. But I think, during the training step, there's not special traing set for long ncRNA. So, Which thing(step or data something like that) could make the model generate well long ncRNA compare with other models.
+ 
 `KHNam`: 
 
 `MSAn`: Despite eFold utilizing physical constraints like DMS probing, how can we validate potential "physical hallucinations" when predicting "entirely novel sequences" that are absent from the training data?
