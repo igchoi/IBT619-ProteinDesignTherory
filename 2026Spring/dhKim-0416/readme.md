@@ -46,7 +46,7 @@ DMS-seq developer | A Study on the Structure of Viral RNA(SARS-CoV-2, HIV-1)
 ## 6. Classmate Questions
 `SWKim`: If RNA secondary structures are derived using chemical probe data (e.g. DMS), how the model can predict secondary structure with only sequence? And second, is there no benefits to utilize information of homologous sequences in RNA structure prediction? (...due to similar sequences can adapt substantially different structures)
 
-`YSOh`: Given that the F1 score for long RNA sequences is still low, I am not sure whether simply expanding experimental data for long RNAs will substantially improve prediction accuracy. Would it be more effective to incorporate data on complex states or binding interactions, rather than relying only on pure RNA sequence information? Also, what do you think about using an MSA-based model instead of a CNN-based model?
+`YSOh`: Given that the F1 score for long RNA sequences is still low, I am not sure whether simply expanding experimental data for long RNAs will substantially improve prediction accuracy. Would it be more effective to incorporate data on complex states or binding interactions, rather than relying only on pure RNA sequence information? Also, what do you think about using other sequence-based models, such as MSA?
 
 `MJBaek`: It seems like the e fold model that is developed by speaker has especially strength to generate Long ncRNA. But I think, during the training step, there's not special traing set for long ncRNA. So, Which thing(step or data something like that) could make the model generate well long ncRNA comparing with other models.
  
