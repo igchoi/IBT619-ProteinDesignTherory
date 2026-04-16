@@ -39,8 +39,8 @@
 | 5/14 | YSOh | https://www.youtube.com/watch?v=G01tGkcw-OA | Shedding light on functional dark matter with genomic language modeling |
 | 5/21 | ||
 | 5/27 | ||
-| 6/4 | ||
-| 6/11 | MJBaek ||
+| 6/4 | MJBaek ||
+| 6/11 | ||
 | 6/18 | Final | ||
 
 ---
