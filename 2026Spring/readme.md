@@ -40,7 +40,7 @@ v# 2026 Spring Class
 | 5/21 | KHNam ||
 | 5/27 | ||
 | 6/4 | ||
-| 6/11 | MJBaek |https://www.youtube.com/watch?v=yCOlC_yj4kc| 
+| 6/11 | MJBaek |https://www.youtube.com/watch?v=yCOlC_yj4kc| How AF3-Style Structure Prediction Models Can Be Used for Design: BoltzDesign and Protein Hunter |
 | 6/18 | Final | ||
 
 ---
