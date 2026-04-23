@@ -1,4 +1,4 @@
-# 2026 Spring Class
+v# 2026 Spring Class
 ## Following [Boston Protein Design & Modelling Club](https://www.bpdmc.org/) Seminar Series
 
 ## Presentation guide
@@ -40,7 +40,7 @@
 | 5/21 | KHNam ||
 | 5/27 | ||
 | 6/4 | ||
-| 6/11 | MJBaek ||
+| 6/11 | MJBaek |https://www.youtube.com/watch?v=yCOlC_yj4kc| 
 | 6/18 | Final | ||
 
 ---
