@@ -4,7 +4,6 @@
 - Paper: [Computational Methods for the Structure-Based Design of Protein-Binding Peptides](https://www.proquest.com/docview/3031029492?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses)
 - Presentation: 
 
----
 ## 1. Summary
 
 - **Question:** 
@@ -16,11 +15,10 @@
 ### [Sebastian Swanson](https://www.linkedin.com/in/sebastian-swanson-727827a7/)
 Computational peptide design | Senior Data Scientist [@ Novo Nordisk](https://www.novonordisk.com/science-and-technology/research-technologies.html)
 
-- **Who:** Senior data scientist at Novo Nordisk with a background of studying the principles of peptide-protein interactions ann developing computational methods for the design of peptide binders in Amy Keating's lab at the Massachusetts Institute of Technology (MIT). He is now applying physics-based methods and deep learning models to design peptide therapeutics. 
+- **Who:** Senior data scientist at Novo Nordisk with a background of studying the principles of peptide-protein interactions and developing computational methods for the design of peptide binders in Amy Keating's lab at the Massachusetts Institute of Technology (MIT). He is now applying physics-based methods and deep learning models to design peptide therapeutics. 
 - **Background:**
-
-  1. University of Minnesota, *BS*, *Biochemistry* (2013-2017)
-  2. Massachusetts Institute of Technology (MIT), *PhD*, *Biology* (2017-2022)
+  - University of Minnesota, *BS*, *Biochemistry* (2013-2017)
+  - Massachusetts Institute of Technology (MIT), *PhD*, *Biology* (2017-2022)
         - in [Amy Keating's lab](https://www.keatinglab.mit.edu/)
 
 
