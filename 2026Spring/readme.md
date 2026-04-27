@@ -34,8 +34,8 @@ v# 2026 Spring Class
 | 4/9  | KHNam | [https://youtu.be/aUMGuogMZCA?si=snaHpxaDuO3yhUGb](https://youtu.be/FX7yBJKQuPg?si=NStDqAjbCM_VojnS) | Computational Design of non-porous, pH-responsive antibody nanoparticles |
 | 4/16 | DHKim | https://youtu.be/oS_Cb-YMymw?si=jhQq_mX2zFIrYuM7 | RNA Function, Design, and Modeling |
 | 4/23 | Midterm | ||
-| 4/30 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4  | |
-| 5/7 | ||
+| 4/30 | SWKim | https://www.youtube.com/watch?v=CZn8BdvRYJU&t=3836s | Fragment-based backbone sampling & neural net derived potentials to design protein-binding peptides |
+| 5/7 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4 | Design of small molecule binding proteins using deep learning |
 | 5/14 | YSOh | https://www.youtube.com/watch?v=G01tGkcw-OA | Shedding light on functional dark matter with genomic language modeling |
 | 5/21 | KHNam ||
 | 5/27 | ||
