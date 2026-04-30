@@ -50,7 +50,7 @@ Computational peptide design | Senior Data Scientist [@ Novo Nordisk](https://ww
 
 `MJBaek`: 
 
-`KHNam`: 
+`KHNam`: Are only high-scoring hotspot seeds selected and stitched in the score-then-stitch pipeline? And is the number of hotspots used for stitching dependent on the target protein?
 
 `DHKim`: The Binding Energy predicted by calculation was high, but what do you think caused the failure in the actual experimental results?
 
