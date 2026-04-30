@@ -43,6 +43,20 @@ Computational peptide design | Senior Data Scientist [@ Novo Nordisk](https://ww
 
 ## 5. Q&As in the seminar
 
+**Q1: COORDinator의 input으로 multi-chain backbone coordinates를 이용하는가? COORDinator의 사전학습 시에 intramolecular interaction만 있는 single-chain structure만 이용해도 비슷한 결과가 나올까?**   
+A: 그렇다. 그리고 interface scoring 등의 목적으로 사용할 때는 multi-chain이 더 나은 것 같다.   
+**Q2: Seed의 energy를 계산할 때 전체 complex 구조를 고려하는가 아니면 interface region만 고려하는가?**  
+A: Energy를 계산하는 여러 방법이 있을 수 있지만, 본 연구에서는 interface region을 고려하는 것이 효과적으로 보였다.   
+**Q3: 생성된 seed들이 실제 native-peptide 구조나 서열로 수렴하지는 않는가?**  
+A: 그렇지는 않다.  
+**Q4: Native peptide fragment와 seed의 Rosetta energy를 비교할 때 fragment와 seed 서열의 길이는 비슷했나?**  
+A: 그렇다. 만약 길이가 다르다면, 일반적으로 길이가 긴 fragment가 더 낮은 energy를 가진다.   
+**Q5: Structure-score를 계산할 때, chain 간의 거리를 고려했나?**  
+A: 그렇다. Chain 간의 거리에 따라 한 residue에서 최대 8개까지의 interaction이 가능했는데, 거리가 멀어질수록 side chain 간의 interaction이 주를 이루었다.   
+**Q6: 생성한 서열들 혹은 peptide들이 self-interaction할 가능성은 고려했나?**  
+A: 그렇다. 예전에는 AF2를 이용해서 예측했을 때 complex가 이뤄지지 않는 경우가 있었는데, 지금은 괜찮다.  
+**Q7: Seed들을 연결하는 loop의 score는 어떤가?**  
+A: loop는 interaction보다는 연결에 초점을 두기 때문에 길어질수록 score에 penalty를 준다. 실제 높은 score를 가진 peptide candidate 들은 loop가 2~3 residue 정도이다.  
 
 ## 6. Classmate Questions
 
