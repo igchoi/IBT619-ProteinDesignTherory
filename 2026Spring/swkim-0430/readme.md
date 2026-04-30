@@ -52,6 +52,6 @@ Computational peptide design | Senior Data Scientist [@ Novo Nordisk](https://ww
 
 `KHNam`: 
 
-`DHKim`:
+`DHKim`: The Binding Energy predicted by calculation was high, but what do you think caused the failure in the actual experimental results?
 
 `MSAn`: 
