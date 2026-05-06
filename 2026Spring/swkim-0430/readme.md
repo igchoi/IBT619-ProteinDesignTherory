@@ -68,4 +68,4 @@ A: loop는 interaction보다는 연결에 초점을 두기 때문에 길어질�
 
 `DHKim`: The Binding Energy predicted by calculation was high, but what do you think caused the failure in the actual experimental results?
 
-`MSAn`: 
+`MSAn`: Could the 'Score then Stitch' approach be extended to enzyme design by fixing a specific substrate and then assembling the functional active site pocket around i
