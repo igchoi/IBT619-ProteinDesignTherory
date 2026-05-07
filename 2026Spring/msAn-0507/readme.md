@@ -62,7 +62,7 @@ Harvard Medical School Biophysics PhD Candidate | Polizzi lab
 
 `swKim`: 
 
-`YSOh`: Most of the ProteinMPNN designs so far seemed to not work as intended when tested in vivo or in vitro, but this time we could see that they were stably maintained. What might be the difference?
+`YSOh`: Most of the ProteinMPNN designs so far seemed to not work as intended when tested in vivo or in vitro, but this time we could see that they were stably maintained. What might be the difference? And if a backbone generation tool were connected upstream of NISE, could the entire pipeline be extended into a fully de novo binder design workflow?
 
 `MJBaek`: The NISE algorithm seems to focus only on the binding pose and backbone coordinates, excluding the original sequence from its initial input. If we ignore the native sequence, don't we lose critical information like evolutionary fitness and inherent stability? I wonder if this approach might overlook better-optimized designs by failing to leverage the subtle functional properties already present in the native protein
 
