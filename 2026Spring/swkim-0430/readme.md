@@ -60,7 +60,7 @@ A: loop는 interaction보다는 연결에 초점을 두기 때문에 길어질�
 
 ## 6. Classmate Questions
 
-`YSOh`: I have two questions. First, what do you think about using protein MPNN instead of GNN in the coordinator? Second, would it also be possible to design an active site using the method designed in this seminar? (in the sense that it creates a structure that fits perfectly onto a surface, it seems mechanistically similar to active site design)
+`YSOh`: I have two questions. First, what do you think about using protein MPNN? Second, would it also be possible to design an active site using the method designed in this seminar? (in the sense that it creates a structure that fits perfectly onto a surface, it seems mechanistically similar to active site design)
 
 `MJBaek`: I have a question about the connection part. Increasing the connector's interaction with the target surface often enhances binding affinity, but it can also lead to decreased peptide solubility due to increased hydrophobicity. How do you manage the trade-off between maximizing surface contact and maintaining favorable physiochemical properties like solubility? 
 
