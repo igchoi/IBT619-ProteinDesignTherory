@@ -60,7 +60,7 @@ Harvard Medical School Biophysics PhD Candidate | Polizzi lab
 
 ## 6. Classmate Questions
 
-`swKim`: 
+`SWKim`: In the neural proofreading concept, residue-level probability score used by LASErMPNN's mutation suggestion is generalizable metric that correlates with binding affinity of protein-ligand? Due to their application example is drug protection, I think protein dessociating is also important (high affinity is best?). So, how many tunable residues exist and can we predict the amount of affinity changing in silico environment?   
 
 `YSOh`: Most of the ProteinMPNN designs so far seemed to not work as intended when tested in vivo or in vitro, but this time we could see that they were stably maintained. What might be the difference? And if a backbone generation tool were connected upstream of NISE, could the entire pipeline be extended into a fully de novo binder design workflow?
 
