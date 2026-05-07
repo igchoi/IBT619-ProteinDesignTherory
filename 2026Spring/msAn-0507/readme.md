@@ -66,6 +66,6 @@ Harvard Medical School Biophysics PhD Candidate | Polizzi lab
 
 `KHNam`: 
 
-`DHKim`: 
+`DHKim`: Redesigned proteins have a high risk of developing an immune response in the human body, are there algorithms in Laser mpnn that can confirm or avoid this risk?
 
 `MSAn`: 
