@@ -64,7 +64,7 @@ Harvard Medical School Biophysics PhD Candidate | Polizzi lab
 
 `MJBaek`: The NISE algorithm seems to focus only on the binding pose and backbone coordinates, excluding the original sequence from its initial input. If we ignore the native sequence, don't we lose critical information like evolutionary fitness and inherent stability? I wonder if this approach might overlook better-optimized designs by failing to leverage the subtle functional properties already present in the native protein
 
-`KHNam`: 
+`KHNam`: Was the Q51→N51 substitution determined statistically from the training data, or through direct calculation of physicochemical interactions between the ligand and protein?
 
 `DHKim`: Redesigned proteins have a high risk of developing an immune response in the human body, are there algorithms in Laser mpnn that can confirm or avoid this risk?
 
