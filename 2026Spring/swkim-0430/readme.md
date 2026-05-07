@@ -66,6 +66,6 @@ A: loop는 interaction보다는 연결에 초점을 두기 때문에 길어질�
 
 `KHNam`: Are only high-scoring hotspot seeds selected and stitched in the score-then-stitch pipeline? And is the number of hotspots used for stitching dependent on the target protein?
 
-`DHKim`: The Binding Energy predicted by calculation was high, but what do you think caused the failure in the actual experimental results?
+`DHKim`: If peptides are designed using two main seeds with different functions, can they possess multiple functions?
 
 `MSAn`: Could the 'Score then Stitch' approach be extended to enzyme design by fixing a specific substrate and then assembling the functional active site pocket around i
