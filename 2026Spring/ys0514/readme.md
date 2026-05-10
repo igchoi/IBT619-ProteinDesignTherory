@@ -1,6 +1,6 @@
 # Seminar
 - Seminar: [**Shedding light on functional dark matter with genomic language modeling**](https://youtu.be/G01tGkcw-OA?si=lvekBZHEcXCBApY8)  
-- Paper: [Unraveling the functional dark matter through global metagenomics](https://www.nature.com/articles/s41586-023-06583-7)
+- Paper: [Genomic language model predicts protein co-regulation and function](https://www.nature.com/articles/s41467-024-46947-9)
 - In class: [presentation]()
 
 
