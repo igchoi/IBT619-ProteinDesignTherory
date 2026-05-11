@@ -14,7 +14,7 @@
 ### [Yunha Hwang](https://www.yunhahwang.com/)
 - B.S. in Computer Science from Stanford University
 - Ph.D. in Biology from Harvard University
-- 
+- Assistant Professor at MIT with a shared appointment between Biology, EECS and the Schwarzman College of Computing
 
 
 ## 3. Reference
