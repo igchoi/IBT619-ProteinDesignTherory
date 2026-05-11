@@ -12,8 +12,9 @@
 
 ## 2. Speaker
 ### [Yunha Hwang](https://www.yunhahwang.com/)
-- B.S / PhD
-- Department of Organismic and Evolutionary Biology, Harvard University, Cambridge, MA, USA
+- B.S. in Computer Science from Stanford University
+- Ph.D. in Biology from Harvard University
+- 
 
 
 ## 3. Reference
