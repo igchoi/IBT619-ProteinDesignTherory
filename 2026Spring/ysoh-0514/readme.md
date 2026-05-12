@@ -23,7 +23,11 @@
 
 
 ## 3. Reference
-
+- [genomic language model v2](https://www.biorxiv.org/content/10.1101/2024.08.14.607850v2.abstract)
+- [BERT](https://doi.org/10.18653/v1/N19-1423)
+- [ESM2 pLM](https://www.science.org/doi/abs/10.1126/science.ade2574)
+- [MGnify](https://academic.oup.com/nar/article/51/D1/D753/6880769?login=false&guestAccessKey=)
+- 
 
 
 ## 4. Tool
