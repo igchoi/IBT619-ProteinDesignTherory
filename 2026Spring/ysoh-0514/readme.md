@@ -32,6 +32,7 @@
 - [ESM Atlas](https://esmatlas.com/)
 
 ## 5. Q&As in the seminar
+### [Q&A list](https://docs.google.com/document/d/1UYl-66FOLdlaX3i3L-27DizRlUGf91UCsnAuk9G5qQY/edit?usp=sharing)
 - **Q1. contextualization 결과를 보면 훨씬 더 좋은 성능을 보이는데, substrate를 하나에서 다른 하나로 옮기는 big enzyme machine과 같은 것인가요? (14m 10s)**
   - A1. 더 좋은 성능을 보이는 enzyme들은 conserved context를 가지고, 보통 생합성 경로의 일부이거나 specific partner가 있어 해당 partner gene 옆에서 발견되는 경우도 있습니다. 이러한 이유들로 contextualization이 성능 향상에 큰 도움이 되었습니다.
 
