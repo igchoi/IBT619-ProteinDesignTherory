@@ -28,8 +28,14 @@
 
 ## 4. Tool
 - [gLM](https://github.com/y-hwang/gLM)
+  -
 - [Data set](http://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2022_05/)
+  -
 - [ESM Atlas](https://esmatlas.com/)
+  -
+- [EBI](https://www.ebi.ac.uk/)
+  - Metagenome sequence data analysis and search platform operated by EBI
+
 
 ## 5. Q&As in the seminar
 ### [Q&A list](https://docs.google.com/document/d/1UYl-66FOLdlaX3i3L-27DizRlUGf91UCsnAuk9G5qQY/edit?usp=sharing)
