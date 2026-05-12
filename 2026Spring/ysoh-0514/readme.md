@@ -7,7 +7,7 @@
 ## 1. Summary
 
 - Question: Can we use high throughput method to accelerate sequence-to-function prediction?
-- Algorithms: 
+- Algorithms: This approach uses a genomic language model trained on metagenomic gene neighborhoods to infer the functions of uncharacterized genes.
 
 
 ## 2. Speaker
@@ -28,14 +28,14 @@
 
 ## 4. Tool
 - [gLM](https://github.com/y-hwang/gLM)
-  -
-- [Data set](http://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2022_05/)
-  -
+  - training and inference code and analysis scripts
 - [ESM Atlas](https://esmatlas.com/)
-  -
+  -MGYP database using Foldseek
 - [EBI](https://www.ebi.ac.uk/)
   - Metagenome sequence data analysis and search platform operated by EBI
-
+- [MGnify server](http://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2022_05/)
+  - Dataset used for training
+ 
 
 ## 5. Q&As in the seminar
 ### [Q&A list](https://docs.google.com/document/d/1UYl-66FOLdlaX3i3L-27DizRlUGf91UCsnAuk9G5qQY/edit?usp=sharing)
