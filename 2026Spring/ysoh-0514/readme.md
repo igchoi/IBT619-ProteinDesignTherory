@@ -23,18 +23,17 @@
 
 
 ## 3. Reference
-- [genomic language model v2](https://www.biorxiv.org/content/10.1101/2024.08.14.607850v2.abstract)
-- [BERT](https://doi.org/10.18653/v1/N19-1423)
-- [ESM2 pLM](https://www.science.org/doi/abs/10.1126/science.ade2574)
-- [MGnify](https://academic.oup.com/nar/article/51/D1/D753/6880769?login=false&guestAccessKey=)
-- 
+- genomic language model v2 : [Cornman, Andre, et al. "The OMG dataset: An Open MetaGenomic corpus for mixed-modality genomic language modeling." bioRxiv (2024): 2024-08.](https://www.biorxiv.org/content/10.1101/2024.08.14.607850v2.abstract)
+- BERT : [Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." Proceedings of the 2019 conference of the North American chapter of the association for computational linguistics: human language technologies, volume 1 (long and short papers). 2019.](https://doi.org/10.18653/v1/N19-1423)
+- ESM2 pLM : [Lin,Z.et al.Evolutionary-scale prediction of atomic-level protein structure with a language model. Science 379, 1123–1130 (2023).](https://www.science.org/doi/abs/10.1126/science.ade2574)
+- Mgnify : [ Richardson, L. et al. MGnify: the microbiome sequence data analysis resource in 2023. Nucleic Acids Res 51, D753–D759 (2023)](https://academic.oup.com/nar/article/51/D1/D753/6880769?login=false&guestAccessKey=)
 
 
 ## 4. Tool
 - [gLM](https://github.com/y-hwang/gLM)
   - training and inference code and analysis scripts
 - [ESM Atlas](https://esmatlas.com/)
-  -MGYP database using Foldseek
+  - MGYP database using Foldseek
 - [EBI](https://www.ebi.ac.uk/)
   - Metagenome sequence data analysis and search platform operated by EBI
 - [MGnify server](http://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/2022_05/)
