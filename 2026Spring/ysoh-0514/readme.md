@@ -13,7 +13,9 @@
 ## 2. Speaker
 ### [Yunha Hwang](https://www.yunhahwang.com/)
 - research interests
-  - machine learning
+  - Machine learning approaches to discover and design microbial biochemistry.
+  - Modeling and interpreting mechanisms of microbial evolution, ecology and function.
+  - Microbial applications for human and environmental health.
 - career
   - B.S. in Computer Science from Stanford University
   - Ph.D. in Biology from Harvard University
