@@ -58,7 +58,7 @@
 
 `SWKim`: 
 
-`MJBaek`:I have a question about predicting operons. In the presentation example, it seems the model predicts better when unknown proteins are closer to known proteins. However, if an unknown protein is far from a known one, the model struggles to predict it. Is this just a specific case from this example, or is it a general limitation of the model? 
+`MJBaek`: When predicting operons, it seems that the model can predict operons relatively well in regions adjacent to known proteins, both upstream and downstream, but not much beyond that. What is the approximate range of operon prediction that can be achieved in a single run? Also, would it be possible to broaden the prediction range by using the newly predicted proteins as known inputs and then predicting neighboring proteins again iteratively?
 
 `KHNam`:  
 
