@@ -59,6 +59,7 @@
 `SWKim`: 
 
 `MJBaek`:I have a question about predicting operons. In the presentation example, it seems the model predicts better when unknown proteins are closer to known proteins. However, if an unknown protein is far from a known one, the model struggles to predict it. Is this just a specific case from this example, or is it a general limitation of the model? 
+
 `KHNam`:  
 
 `DHKim`:  
