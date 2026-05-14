@@ -20,7 +20,7 @@
   - B.S. in Computer Science from Stanford University
   - Ph.D. in Biology from Harvard University
   - Assistant Professor at MIT with a shared appointment between Biology, EECS and the Schwarzman College of Computing
-  - Tatta Bio의 co-founder (Tatta Bio is a scientific non-profit dedicated to advancing artificial intelligence models and tools to accelerate biology research.)
+  - [Tatta Bio](https://www.tatta.bio/)의 co-founder (Tatta Bio is a scientific non-profit dedicated to advancing artificial intelligence models and tools to accelerate biology research.)
 
 
 ## 3. Reference
