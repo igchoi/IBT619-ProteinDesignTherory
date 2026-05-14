@@ -63,7 +63,7 @@
 
 `KHNam`:  
 
-`DHKim`:  
+`DHKim`: If sequence have low similarity but appear in similar genomic contexts, how does gLM interpret them? Can it infer similar functional roles or pathway associations based mainly on genomic context? 
 
 `MsAn`:  What is the statistical mechanism by which gLM2 disentangles 'functional coupling' within the genome from mere 'evolutionary hitchhiking'? Specifically, what are the key metrics utilized during the weight allocation process to mitigate false positives
 
