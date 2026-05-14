@@ -61,7 +61,7 @@
 
 `MJBaek`: When predicting operons, it seems that the model can predict operons relatively well in regions adjacent to known proteins, both upstream and downstream, but not much beyond that. What is the approximate range of operon prediction that can be achieved in a single run? Also, would it be possible to broaden the prediction range by using the newly predicted proteins as known inputs and then predicting neighboring proteins again iteratively?
 
-`KHNam`:  How the model handles an incorrect 'gene context' that can be created when DNA from different species gets mixed during the metagenome assembly process. Can gLM recognize such contexts as outliers and correct for them, or does it instead accept them and potentially predict incorrect functions? Alternatively, is the impact of this type of noise on the model’s final prediction performance generally negligible?
+`KHNam`:  How the model handles an incorrect gene context that can be created when DNA from different species gets mixed during the metagenome assembly process. Can gLM recognize such contexts as outliers and correct for them, or does it instead accept them and potentially predict incorrect functions? Alternatively, is the impact of this type of noise on the model’s final prediction performance generally negligible?
 
 `DHKim`: If sequence have low similarity but appear in similar genomic contexts, how does gLM interpret them? Can it infer similar functional roles or pathway associations based mainly on genomic context? 
 
