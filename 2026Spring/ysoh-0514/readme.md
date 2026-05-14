@@ -57,7 +57,7 @@
 
 ## 6. Classmate Questions
 
-`SWKim`: 
+`SWKim`: gLM2 considered both coding sequences and integenic sequences simultaneously. However, in gLM2, the coding sequences were not encoded at the gene level using ESM, but rather at amino acid level resolution. Why do you think the authors chose this approach? Also, if a multimodel AI such as ESM3, which simultaneously considers sequence-structure-function were used, would it be possible to achieve much better results?
 
 `MJBaek`: When predicting operons, it seems that the model can predict operons relatively well in regions adjacent to known proteins, both upstream and downstream, but not much beyond that. What is the approximate range of operon prediction that can be achieved in a single run? Also, would it be possible to broaden the prediction range by using the newly predicted proteins as known inputs and then predicting neighboring proteins again iteratively?
 
