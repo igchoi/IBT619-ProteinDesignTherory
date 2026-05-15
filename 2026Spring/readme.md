@@ -37,7 +37,7 @@
 | 4/30 | SWKim | https://www.youtube.com/watch?v=CZn8BdvRYJU&t=3836s | Fragment-based backbone sampling & neural net derived potentials to design protein-binding peptides |
 | 5/7 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4 | Design of small molecule binding proteins using deep learning |
 | 5/14 | YSOh | https://www.youtube.com/watch?v=G01tGkcw-OA | Shedding light on functional dark matter with genomic language modeling |
-| 5/21 | KHNam ||
+| 5/21 | KHNam | https://youtu.be/vGHrLbxyU-Y?si=mJP4X6Pvhm80CJZv | Jointly Embedding Protein Structures and Sequences through Residue Level Alignment |
 | 5/28 | DHKim ||
 | 6/4 | ||
 | 6/11 | MJBaek |https://www.youtube.com/watch?v=yCOlC_yj4kc| How AF3-Style Structure Prediction Models Can Be Used for Design: BoltzDesign and Protein Hunter |
