@@ -1,6 +1,6 @@
 # Seminar
-- Seminar: 
-- Paper:
+- Seminar: [**Jointly Embedding Protein Structures and Sequences through Residue Level Alignment**](https://youtu.be/vGHrLbxyU-Y?si=b6N405PGE-sEX6ij)
+- Paper: [**Jointly Embedding Protein Structures and Sequences through Residue Level Alignment**](https://pmc.ncbi.nlm.nih.gov/articles/PMC12490763/)
 - Presentation:
 
 ---
