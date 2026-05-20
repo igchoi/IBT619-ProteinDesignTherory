@@ -38,7 +38,7 @@
 | 5/7 | MSAn | https://www.youtube.com/watch?v=IgFgAYQrke4 | Design of small molecule binding proteins using deep learning |
 | 5/14 | YSOh | https://www.youtube.com/watch?v=G01tGkcw-OA | Shedding light on functional dark matter with genomic language modeling |
 | 5/21 | KHNam | https://youtu.be/vGHrLbxyU-Y?si=mJP4X6Pvhm80CJZv | Jointly Embedding Protein Structures and Sequences through Residue Level Alignment |
-| 5/28 | DHKim ||
+| 5/28 | DHKim | https://youtu.be/zyJmWLzkh7Q?si=gFJW9urI5t2Y5h70 | From DNA Origami to Protein Design: Symmetry-Guided Principles Across Scales |
 | 6/4 | ||
 | 6/11 | MJBaek |https://www.youtube.com/watch?v=yCOlC_yj4kc| How AF3-Style Structure Prediction Models Can Be Used for Design: BoltzDesign and Protein Hunter |
 | 6/18 | Final | ||
