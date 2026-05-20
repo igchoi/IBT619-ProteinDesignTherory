@@ -60,6 +60,19 @@ Master of Science - MS, Computer Science (2018.09 ~ 2021.06)
 
 ## 5. Q&As in the seminar
 
+[**Q&A List**](https://docs.google.com/document/d/1F7vlNDJEl5_F19238MnfKvAMaerIDrWTobmFD_MafmI/edit?usp=drive_link)
+
+### 1. Structure encoder는 구조를 어떻게 표현하나요?
+Protein backbone을 graph로 변환한 뒤 MPNN/COORDinator로 처리합니다.
+
+### 2. RLA에서 residue-level structure embedding은 residue를 잘라서 계산하나요, 아니면 전체 구조에서 계산한 뒤 residue별로 보나요? 
+
+전체 structure를 먼저 encoder에 넣어 residue-level embedding을 계산합니다.Residue를 물리적으로 분리해서 독립적으로 embedding하는 것이 아니라, 전체 구조 안에서 각 residue embedding을 얻고, 그 후 residue별 alignment를 수행합니다
+
+### 3. RLA pre-filter가 유용하다고 했는데, binder design에서 진짜 bottleneck은 structure generation 아닌가요?
+
+맞는 지적이지만, design 후보가 생성된 뒤 모든 후보에 AlphaFold를 돌리는 것도 여전히 매우 느리기 때문에, RLA가 scoring 단계에서 후보를 빠르게 줄이는 데 유용합니다.
+
 
 ## 6. Classmate Questions
 `SWKim`: 
