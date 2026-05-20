@@ -83,4 +83,4 @@ Protein backbone을 graph로 변환한 뒤 MPNN/COORDinator로 처리합니다.
 
 `DHKim`:
 
-`MSAn`:
+`MSAn`: RLA employs random chain shuffling to prevent the model from learning positional shortcuts. However, protein-protein interactions (PPI) are biologically and geometrically asymmetric. Shuffling chain orders mechanically may wash out the biological context and directionality (anisotropy) at the interface. How can we preserve the shortcut-prevention benefits of chain shuffling while successfully encoding the physical asymmetry and receptor-ligand topological relationships at the interface? 
