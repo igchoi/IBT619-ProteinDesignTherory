@@ -75,7 +75,7 @@ Protein backbone을 graph로 변환한 뒤 MPNN/COORDinator로 처리합니다.
 
 
 ## 6. Classmate Questions
-`SWKim`: 
+`SWKim`: In the experiments, ESM-RLA was less accurate than the AF initial guess, but combining them with a joint score improved performance. I think this may be because AF captures global sequence-structure relationships, while RLA focuses on residue-level information, making them complementary. If so, could ESM-RLA also perform better by using something other than simple averaging of residue-level similarities, or by incorporating a global protein-sequence matching strategy? 
 
 `YSOh`: 
 
