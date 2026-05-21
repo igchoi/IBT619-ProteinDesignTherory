@@ -79,7 +79,9 @@ Protein backbone을 graph로 변환한 뒤 MPNN/COORDinator로 처리합니다.
 
 `YSOh`: 
 
-`MJBaek`: 
+`MJBaek`: One possible limitation of the RLA approach in the seminar is that, in order to improve computational speed, it evaluates sequence scores on a fixed backbone structure. As a result, it may not fully capture the subtle structural flexibility and side-chain repacking that occur in real proteins.
+
+In that case, rather than using the RLA framework with a completely frozen backbone, could the pipeline be extended in the following way? First, RLA could generate a pool of candidate sequences compatible with a given backbone. Then, based on the steric properties and packing of the selected amino acids, the backbone coordinates could be slightly perturbed or relaxed (e.g., on the scale of a few angstroms). The updated backbone–sequence pairs could subsequently be re-scored or iteratively regenerated through a feedback loop.
 
 `DHKim`:
 
