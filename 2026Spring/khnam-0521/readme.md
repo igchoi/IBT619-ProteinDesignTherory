@@ -83,6 +83,6 @@ Protein backbone을 graph로 변환한 뒤 MPNN/COORDinator로 처리합니다.
 
 In that case, rather than using the RLA framework with a completely frozen backbone, could the pipeline be extended in the following way? First, RLA could generate a pool of candidate sequences compatible with a given backbone. Then, based on the steric properties and packing of the selected amino acids, the backbone coordinates could be slightly perturbed or relaxed (e.g., on the scale of a few angstroms). The updated backbone–sequence pairs could subsequently be re-scored or iteratively regenerated through a feedback loop.
 
-`DHKim`:
+`DHKim`: How about building an in silico protein binder design pipeline that uses BindCraft to generate target-specific de novo binders, evaluating them in a multi-stage process using RLA for fast similarity scoring and AlphaFold for final complex prediction?
 
 `MSAn`: RLA employs random chain shuffling to prevent the model from learning positional shortcuts. However, protein-protein interactions (PPI) are biologically and geometrically asymmetric. Shuffling chain orders mechanically may wash out the biological context and directionality (anisotropy) at the interface. How can we preserve the shortcut-prevention benefits of chain shuffling while successfully encoding the physical asymmetry and receptor-ligand topological relationships at the interface? 
