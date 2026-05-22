@@ -15,7 +15,7 @@ DNA origami | Soft matter physics | Bio-inspired materials
   - Ph.D : Brandeis University - Physics(1987)
   - Postdoctoral Fellow : Max Planck Institute Hochfeld Magnetlabor, Grenoble in France(1987-1989)
 - **Affiliation:**
-  - Professor : 1989 ~ Present, Brandeis University - Physics
+  - Professor : Brandeis University - Physics(1989 ~ Present)
 
 ## 3. Related Literatures/Reference
 - 
