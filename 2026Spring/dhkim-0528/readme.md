@@ -4,7 +4,7 @@
 - Presentation: [Presentation]()  
 
 ## 1. Summary
-- Question:   
+- Question: Are lessons learned from origami assemblies applicable to protein design?
 - Algorithms: 
 
 ## 2. Speaker
