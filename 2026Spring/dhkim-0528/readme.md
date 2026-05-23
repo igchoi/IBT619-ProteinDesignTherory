@@ -1,6 +1,6 @@
 # Seminar
 - Seminar: [**From DNA Origami to Protein Design: Symmetry-Guided Principles Across Scales**](https://youtu.be/zyJmWLzkh7Q?si=NsDi6t30RhGjKSgj)  
-- Paper: [****]()  
+- Paper: [**Modular programming of interaction and geometric specificity enables assembly of complex DNA origami nanostructures**](https://www.nature.com/articles/s41467-025-66195-9)  
 - Presentation: [Presentation]()  
 
 ## 1. Summary
