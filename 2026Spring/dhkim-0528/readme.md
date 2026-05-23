@@ -18,7 +18,17 @@ DNA origami | Soft matter physics | Bio-inspired materials
   - Professor : Brandeis University - Physics(1989 ~ Present)
 
 ## 3. Related Literatures/Reference
-- 
+- **Folding DNA to create nanoscale shapes and patterns**(https://www.nature.com/articles/nature04586)
+- **Programmable icosahedral shell system for virus trapping**(https://www.nature.com/articles/s41563-021-01020-4)
+- **Geometrically programmed self-limited assembly of tubules using DNA origami colloids**(https://www.pnas.org/doi/abs/10.1073/pnas.2207902119)
+- **Hierarchical assembly is more robust than egalitarian assembly in synthetic capsids**(https://www.pnas.org/doi/abs/10.1073/pnas.2312775121)
+- **Economical routes to size-specific assembly of self-closing structures**(https://www.science.org/doi/full/10.1126/sciadv.ado5979)
+- **Broad-Spectrum Virus Trapping with Heparan Sulfate-Modified DNA Origami Shells**(https://pubs.acs.org/doi/10.1021/acsnano.1c11328)
+- **Geometrically programmed self-limited assembly of tubules using DNA origami colloids**(https://www.pnas.org/doi/10.1073/pnas.2207902119)
+- **Economical routes to size-specific assembly of self-closing structures**(https://www.science.org/doi/10.1126/sciadv.ado5979)
+- **Measuring multisubunit mechanics of geometrically-programmed colloidal assemblies via cryo-EM multi-body refinement**(https://arxiv.org/abs/2501.09230)
+- **Local structural flexibility drives oligomorphism in computationally designed protein assemblies**(https://www.nature.com/articles/s41594-025-01490-z)
+- **Hierarchical design of pseudosymmetric protein nanocages**(https://www.nature.com/articles/s41586-024-08360-6)
 
 ## 4. Tool
 **1. **
