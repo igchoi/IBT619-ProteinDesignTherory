@@ -31,7 +31,7 @@ DNA origami | Soft matter physics | Bio-inspired materials
 - [**Hierarchical design of pseudosymmetric protein nanocages**](https://www.nature.com/articles/s41586-024-08360-6)
 
 ## 4. Tool
-]**1. Cadnano**](https://github.com/cadnano/cadnano2.5)
+[**1. Cadnano**](https://github.com/cadnano/cadnano2.5)
    - Long DNA strands can be woven into origami to visually design the desired 2D and 3D nanostructures.
 
 ## 5. Key Q&As in the seminar
