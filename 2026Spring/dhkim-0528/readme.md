@@ -34,7 +34,7 @@ DNA origami | Soft matter physics | Bio-inspired materials
 [**Cadnano**](https://github.com/cadnano/cadnano2.5)
    - Long DNA strands can be woven into origami to visually design the desired 2D and 3D nanostructures.
 
-## 5. Key Q&As in the seminar{(list)}(https://drive.google.com/file/d/1isy87RSIimRlniNDe4pUHBBnhzL57SS_/view?usp=sharing)
+## 5. Key Q&As in the seminar (list)(https://drive.google.com/file/d/1isy87RSIimRlniNDe4pUHBBnhzL57SS_/view?usp=sharing)
    **Q1. 조립된 구조물들은 얼마나 안정적인가요**  
    A. 기본적으로 수용액 상태에서 온도와 이온 농도에 따라 결합하고 해체됩니다. 하지만 자외선을 5분 정도 쬐어주면 티민 염기들 사이에 공유 결합이 형성되어 영구적으로 굳혀집니다. 항바이러스 연구 등에서는 이 방식을 사용합니다.
   
