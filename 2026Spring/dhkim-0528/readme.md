@@ -5,7 +5,7 @@
 
 ## 1. Summary
 - Question: Are lessons learned from origami assemblies applicable to protein design?
-- Algorithms: Design a self-assembled triangular unit based on symmetry principles and local binding rules, and present a physical foundation for applying the engineering principles of DNA Origami to de novo protein design
+- Algorithms: Design a self-assembled triangular unit based on symmetry principles and local binding rules, and present a physical foundation for applying the engineering principles of DNA Origami to de novo protein design.
 
 ## 2. Speaker
 ### [Seth Fraden](https://www.fradenlab.com/)
