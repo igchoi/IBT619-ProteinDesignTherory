@@ -1,7 +1,7 @@
 # Seminar
 - Seminar: [**From DNA Origami to Protein Design: Symmetry-Guided Principles Across Scales**](https://youtu.be/zyJmWLzkh7Q?si=NsDi6t30RhGjKSgj)  
 - Paper: [**Modular programming of interaction and geometric specificity enables assembly of complex DNA origami nanostructures**](https://www.nature.com/articles/s41467-025-66195-9)  
-- Presentation: [Presentation]()  
+- Presentation: [Presentation](https://docs.google.com/presentation/d/1bmDLbPEzkhh1IiA8wGo_iCgJMLobKVCICWGZyqTfRd4/edit?usp=sharing)  
 
 ## 1. Summary
 - Question: Are lessons learned from origami assemblies applicable to protein design?
