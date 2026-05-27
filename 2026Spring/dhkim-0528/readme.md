@@ -48,7 +48,7 @@ DNA origami | Soft matter physics | Bio-inspired materials
    A. 단백질 커뮤니티는 무조건 결합을 강하게 만드는 데 집중하지만, 우리는 결합 강도를 조절하여 '계층적 조립(Hierarchical assembly)' 경로를 유도하는 것이 목표 구조를 찾는 데 훨씬 중요하다고 생각합니다. 또한, 알파 나선이나 계면 공학 등 단백질에서 쓸 수 있는 모든 방식을 DNA 조립 원리와 접목해 보고 있습니다.
 
 ## 6. Classmate Questions
-`SWKim`: 
+`SWKim`: In DNA origami, triangular geometries seem achievable due to DNA flexibility. For de novo proteins, however, such tilted geomtries would likely depend on flexible loops. Could these loops become a major bottleneck for precise structural design, especially given the much smaller scale of protein assemblies compared to DNA origami?  
 
 `YSOh`: 
 
