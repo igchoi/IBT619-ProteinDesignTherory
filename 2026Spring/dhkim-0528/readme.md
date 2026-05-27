@@ -56,4 +56,4 @@ DNA origami | Soft matter physics | Bio-inspired materials
  
 `KHNam`: 
 
-`MSAn`: 
+`MSAn`: Proteins inherently carry surface charges (polarity) depending on their sequence. Since nano-carriers made of DNA origami or de novo proteins also possess specific charges, is there any risk that the encapsulated therapeutic proteins might fail to release due to electrostatic attraction to the carrier's inner wall, or inadvertently bind to other serum proteins (non-specific binding) during circulation?
