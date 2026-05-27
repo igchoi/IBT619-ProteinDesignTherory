@@ -10,7 +10,7 @@
 ## 2. Speaker
 ### [Seth Fraden](https://www.fradenlab.com/)
 DNA origami | Soft matter physics | Bio-inspired materials
-- **History**
+- **Education**
   - BS : University of California Berkeley - Physics(1979)
   - Ph.D : Brandeis University - Physics(1987)
   - Postdoctoral Fellow : Max Planck Institute Hochfeld Magnetlabor, Grenoble in France(1987-1989)
