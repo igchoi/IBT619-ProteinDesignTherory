@@ -52,8 +52,8 @@ DNA origami | Soft matter physics | Bio-inspired materials
 
 `YSOh`: 
 
-`MJBaek`: 
- 
+`MJBaek`: In the seminar at the last slide, as we can see the DNA orgami structure seems like that is made with one huge dna strand and banded with trianglular shape. But the protein triangle structure, instead of using a single continuous protein chain, the framework is assembled from individual protein subunits for each side. So, how these subunits can combine with perfect one triangular form? I couldn't see any linker or bond.
+
 `KHNam`: 
 
 `MSAn`: Proteins inherently carry surface charges (polarity) depending on their sequence. Since nano-carriers made of DNA origami or de novo proteins also possess specific charges, is there any risk that the encapsulated therapeutic proteins might fail to release due to electrostatic attraction to the carrier's inner wall, or inadvertently bind to other serum proteins (non-specific binding) during circulation?
