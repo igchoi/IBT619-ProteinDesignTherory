@@ -50,7 +50,7 @@ DNA origami | Soft matter physics | Bio-inspired materials
 ## 6. Classmate Questions
 `SWKim`: In DNA origami, triangular geometries seem achievable due to DNA flexibility. For de novo proteins, however, such tilted geomtries would likely depend on flexible loops. Could these loops become a major bottleneck for precise structural design, especially given the much smaller scale of protein assemblies compared to DNA origami?  
 
-`YSOh`: 
+`YSOh`: Do you think the geometric design principles derived from DNA origami are directly applicable to de novo protein design, given the fundamental difference in binding mechanisms (DNA binding is clearly programmable through base-pair complementarity), whereas protein binding is governed by more complex forces such as hydrophobic effects and hydrogen bonding?
 
 `MJBaek`: In the seminar at the last slide, as we can see the DNA orgami structure seems like that is made with one huge dna strand and banded with trianglular shape. But the protein triangle structure, instead of using a single continuous protein chain, the framework is assembled from individual protein subunits for each side. So, how these subunits can combine with perfect one triangular form? I couldn't see any linker or bond.
 
