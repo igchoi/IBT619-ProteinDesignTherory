@@ -92,8 +92,8 @@ The protein to be designed is defined as a **small functional protein**.
 
 **Possible functional directions include:**
 
-* **Mini-binder**
-* **Small scaffold protein**
+* Mini-binder
+* Small scaffold protein
 * **Antimicrobial peptide-like protein**
 
 Among these possibilities, this proposal uses **antimicrobial peptide-like function** as the main functional example.
@@ -146,9 +146,9 @@ In the sequence design step, an amino acid sequence is designed so that the sele
 
 * **Residue arrangement that can form a functional surface**
 
-considering an antimicrobial peptide-like function, the balance between **positive charge** and **hydrophobicity** is important at the sequence level. Positive charge may contribute to electrostatic interactions with the bacterial surface, while hydrophobic residues may be related to membrane interaction.
+Considering an antimicrobial peptide-like function, the balance between **positive charge** and **hydrophobicity** is important at the sequence level. Positive charge may contribute to electrostatic interactions with the bacterial surface, while hydrophobic residues may be related to membrane interaction.
 
-if hydrophobicity is too high, the possibility of nonspecific interactions or aggregation may increase. Therefore, the balance between functional properties and structural stability should be considered.
+If hydrophobicity is too high, the possibility of nonspecific interactions or aggregation may increase. Therefore, the balance between functional properties and structural stability should be considered.
 
 ---
 
