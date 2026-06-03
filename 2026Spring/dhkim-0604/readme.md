@@ -7,7 +7,7 @@
    Pim kinase는 PIM1, PIM2, PIM3 세 종류가 있으며 serine/threonine kinase입니다. 기능으로는 암세포의 생존·증식·약제저항성을 도와주는 보조 신호로 활용됩니다. 즉, FLT3-ITD AML에서는 FLT3가 가속화 시킨다면 PIM kinase는 그 신호를 받아 암세포가 더 잘 버티게 해주는 보조역할을 하고 있다 볼 수 있습니다.
 ![Pim kinase](https://github.com/dohoon7482/123/blob/8595f4c972feafce16906bf3c7eaaa0b8a8f5ab5/cancers-14-03565-g001.png)
 #### 3) ATP inhibitor protein
-   Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site입니다. 그러나 현재 Pim kinase inhibitor는 AML의 승인된 표준치료제가 없습니다. AZD1208, PIM447, INCB053914 등 같은 pan-PIM inhibitor들이 AML 또는 혈액암에서 임상시험까지 갔지만, 단독요법의 효과가 제한적이거나 개발이 중단된 사례가 있습니다. 때문에 De nove ATP binding inhibitor protein을 디자인 하고자 합니다.
+   Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site입니다. 그러나 현재 Pim kinase inhibitor는 AML의 승인된 표준치료제가 없습니다. AZD1208, PIM447, INCB053914 등 같은 pan-PIM inhibitor들이 AML 또는 혈액암에서 임상시험까지 갔지만, monotherapy에서 효과가 제한적이거나 개발이 중단된 사례가 있습니다. 때문에 De nove ATP binding inhibitor protein을 디자인 하고자 합니다.
 
 ---
 ### 2. Strategy
@@ -25,3 +25,8 @@ ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 
    - step4. AlphaFold2 Multimer - 서열의 구조 예측과 ipTM 필터링  
    - step5. Rosetta InterfaceAnalyzer - ΔG, shape complementarity 계산(binding energy)  
 
+### 4. Expected results
+   Checmical을 이용하지 않은 protein으로 pim kinase를 억제함으로써 체내에서 일어날 수 있는 toxicity를 최소화 할 수 있으며 충분한 구조와 binding affinity 최적화를 통해 이전 임상 실험에서 발생한 monotherapy에서의 효과가 낮았던 점을 개선할 수 있을것으로 예상합니다.
+
+### 5. 제한점
+   ATP pocket을 커버하여 binding하는 residue를 찾기 어렵고 Allosteric site에 대한 알려진 정보가 적어 탐색에 있어 어려움이 존재합니다.
