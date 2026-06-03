@@ -7,7 +7,8 @@
 - Producing high value added chemicals using CO2 as a substrate through anaerobic microorganisms (clostridium)
 - ex. **hexanol** or long chain fatty acid and alcohol
  ### Background
-- Wood-ljungdahl pathway
+- Wood-ljungdahl pathway<br><br>
+ <img src="./The-Wood-Ljungdahl-pathway-also-called-the-Acetyl-CoA-pathway-The-pathway-comprises.webp" alt="wood-ljungdahl" style="width: 70%; height: auto;">
 
 - chain elongation pathway (reverse beta oxidation)
 
