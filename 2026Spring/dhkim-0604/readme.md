@@ -16,3 +16,12 @@ ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 
    Protein으로 디자인할때 ATP pocket에 들어가는 구조를 만들기는 어렵기 때문에 ATP pocket rim + hinge/P-loop 주변을 덮어서 ATP의 접근을 막는 binder로 디자인을 하고자 합니다.
 #### 2) B plan - Allosteric inhibitor
    알려진 Allosterinc site가 있지만 명확히 확립된 site가 아니므로 사용에 어려움은 있겠지만 Allosterinc site에 결합하는 binder portein을 디자인해 ATP pocket 구조를 변형 시켜 ATP 접근을 막고자 합니다.
+
+---
+### 3. Computational pipeline
+   step1. PDB에서 구조를 찾아 ATP binding stie residue 및 Allosteric site residue 탐색
+   step2. RFdiffusion - 3D 구조에 hotspot residue를 지정해서 binder backbone을 생성
+   step3. ProteinMPNN - 만들어진 binder backbone의 서열을 설계
+   step4. AlphaFold2 Multimer - 서열의 구조 예측과 ipTM 필터링
+   step5. Rosetta InterfaceAnalyzer - ΔG, shape complementarity 계산(binding energy)
+
