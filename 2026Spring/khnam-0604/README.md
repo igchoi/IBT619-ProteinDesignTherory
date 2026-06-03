@@ -8,6 +8,8 @@
 
 **Speaker: KI HYUN NAM**
 
+---
+
 ## 📌 1. Overview
 
 The goal is to explain how a hypothetical de novo protein design project can be planned, from target selection to computational evaluation.
@@ -69,18 +71,23 @@ The proposal includes the following components:
        
 **8. Candidate prioritization**
 
+
+
+<img width="1463" height="629" alt="image" src="https://github.com/user-attachments/assets/04c7d9c2-8170-4b62-8dd5-f6cbb8dd4bba" />
+
+
 **The purpose of each step is as follows:**
 
 | Step                     | Purpose                                                                         |
 | :------------------------: | :-------------------------------------------------------------------------------: |
-| Design goal definition           | Define what type of protein will be designed in terms of its intended function or structural features     |
-| Selection of target function       | Establish possible functional directions, such as antimicrobial peptide-like activity, binding, or scaffold formation |
-| Backbone design or generation     | Design the overall 3D framework of the protein based on an alpha-helical structure                         |
-| Sequence design          | Construct an amino acid sequence that allows the designed backbone to fold stably                      |
-| Structure prediction     | Evaluate whether the designed sequence is likely to form the intended structure                                           |
-| Design comparison        | Compare the predicted structure with the intended backbone design                                               |
+| Design Goal Definition           | Define what type of protein will be designed in terms of its intended function or structural features     |
+| Selection of Target Function       | Establish possible functional directions, such as antimicrobial peptide-like activity, binding, or scaffold formation |
+| Backbone Design or Generation     | Design the overall 3D framework of the protein based on an alpha-helical structure                         |
+| Sequence Design          | Construct an amino acid sequence that allows the designed backbone to fold stably                      |
+| Structure Prediction     | Evaluate whether the designed sequence is likely to form the intended structure                                           |
+| Design Comparison        | Compare the predicted structure with the intended backbone design                                               |
 | Evaluation               | Assess the design based on stability, structural plausibility, and functional plausibility          |
-| Candidate prioritization | Select relatively suitable candidates based on the evaluation criteria                                          |
+| Candidate Prioritization | Select relatively suitable candidates based on the evaluation criteria                                          |
 
 ---
 
@@ -124,6 +131,13 @@ In the backbone design step, the overall three-dimensional structural framework 
 
 * **Structural flexibility or space to form a functional surface**
 
+**[Backbone Design Overview]**
+
+<img width="1102" height="618" alt="image" src="https://github.com/user-attachments/assets/f48589d2-32f8-4ad5-adac-7971dde994e4" />
+
+
+
+
 ---
 
 ### 5.3 Sequence Design
@@ -145,6 +159,14 @@ In the sequence design step, an amino acid sequence is designed so that the sele
 * **Compatibility between the designed backbone structure and the amino acid sequence**
 
 * **Residue arrangement that can form a functional surface**
+
+
+**[Sequence Design Overview]**
+
+<img width="1088" height="641" alt="image" src="https://github.com/user-attachments/assets/6165d8f6-74cc-422c-9b62-d9bc19aed2fe" />
+
+
+
 
 Considering an antimicrobial peptide-like function, the balance between **positive charge** and **hydrophobicity** is important at the sequence level. Positive charge may contribute to electrostatic interactions with the bacterial surface, while hydrophobic residues may be related to membrane interaction.
 
@@ -172,7 +194,15 @@ The key question in this step: **Can the designed amino acid sequence fold into 
 
 * **Whether the structure prediction confidence is sufficient**
 
+**[Structure Prediction]**
+
+<img width="1103" height="623" alt="image" src="https://github.com/user-attachments/assets/820e8c21-da4c-490f-bca3-88be82867d6f" />
+
+
+
+
 Although this does not demonstrate the actual function of the designed protein, it serves as an important computational checkpoint for assessing whether the designed sequence and structure are consistent with each other.
+
 
 ---
 
@@ -218,6 +248,13 @@ The key question in the evaluation step:
 | Disorder           | Presence of disordered regions          | Check whether excessively flexible or disordered regions appear in the predicted structure.                                           |
 | Specificity        | Possibility of nonspecific interactions | Evaluate whether excessive hydrophobicity or charge imbalance may increase the likelihood of nonspecific interactions.                |
 | Feasibility        | Possibility of future validation        | Evaluate whether the candidate can be further validated through future experimental or additional computational analyses.             |
+
+
+**[Summary]**
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/cf85ebc1-a5fd-45bc-84b7-82a9663d71e5" />
+
+
 
 ---
 
@@ -342,6 +379,8 @@ This proposal focuses on organizing the overall stages and evaluation criteria o
 * **Limitations that should be considered during the de novo protein design process**
 
 Ultimately, this proposal focuses on understanding that de novo protein design is not simply a process of generating new sequences. Rather, it is a stepwise design process that connects target function definition, structural design, sequence design, predicted structure evaluation, and functional plausibility assessment.
+
+---
 
 
 
