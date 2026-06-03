@@ -28,5 +28,5 @@ ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 
 ### 4. Expected results
    Checmical을 이용하지 않은 protein으로 pim kinase를 억제함으로써 체내에서 일어날 수 있는 toxicity를 최소화 할 수 있으며 충분한 구조와 binding affinity 최적화를 통해 이전 임상 실험에서 발생한 monotherapy에서의 효과가 낮았던 점을 개선할 수 있을것으로 예상합니다.
 
-### 5. 제한점
+### 5. Limitation
    ATP pocket을 커버하여 binding하는 residue를 찾기 어렵고 Allosteric site에 대한 알려진 정보가 적어 탐색에 있어 어려움이 존재합니다.
