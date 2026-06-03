@@ -19,9 +19,9 @@ ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 
 
 ---
 ### 3. Computational pipeline
-   step1. PDB에서 구조를 찾아 ATP binding stie residue 및 Allosteric site residue 탐색
-   step2. RFdiffusion - 3D 구조에 hotspot residue를 지정해서 binder backbone을 생성
-   step3. ProteinMPNN - 만들어진 binder backbone의 서열을 설계
-   step4. AlphaFold2 Multimer - 서열의 구조 예측과 ipTM 필터링
-   step5. Rosetta InterfaceAnalyzer - ΔG, shape complementarity 계산(binding energy)
+   step1. PDB에서 구조를 찾아 ATP binding stie residue 및 Allosteric site residue 탐색  
+   step2. RFdiffusion - 3D 구조에 hotspot residue를 지정해서 binder backbone을 생성  
+   step3. ProteinMPNN - 만들어진 binder backbone의 서열을 설계  
+   step4. AlphaFold2 Multimer - 서열의 구조 예측과 ipTM 필터링  
+   step5. Rosetta InterfaceAnalyzer - ΔG, shape complementarity 계산(binding energy)  
 
