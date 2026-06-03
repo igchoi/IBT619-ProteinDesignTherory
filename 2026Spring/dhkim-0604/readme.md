@@ -11,7 +11,8 @@
 
 ---
 ### 2. Strategy
-ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 결합하지 못하게해 활성을 낮추는 Competitive inhibitor와 target으로 하는 kinase의 다른 부분에 결합하여 ATP binding site의 구조를 변형 시켜 ATP를 결합하지 못하게 하는 Noncompetitive inhibitor 두 가지 있습니다. 
-#### 1) A plan
-   protein으로 디자인할때 ATP pocket에 들어가는 구조를 만들기는 어렵기 때문에 ATP pocket rim + hinge/P-loop 주변을 덮어서 ATP의 접근을 막는 binder로 디잔을 하고자 합니다.
-#### 2) B plan
+ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 결합하지 못하게해 활성을 낮추는 Competitive inhibitor와 target으로 하는 kinase의 다른 부분에 결합하여 ATP pocket의 구조를 변형 시켜 ATP를 결합하지 못하게 하는 Allosteric inhibitor 두 가지 있습니다. 
+#### 1) A plan - Competitive inhibitor
+   Protein으로 디자인할때 ATP pocket에 들어가는 구조를 만들기는 어렵기 때문에 ATP pocket rim + hinge/P-loop 주변을 덮어서 ATP의 접근을 막는 binder로 디자인을 하고자 합니다.
+#### 2) B plan - Allosteric inhibitor
+   알려진 Allosterinc site가 있지만 명확히 확립된 site가 아니므로 사용에 어려움은 있겠지만 Allosterinc site에 결합하는 binder portein을 디자인해 ATP pocket 구조를 변형 시켜 ATP 접근을 막고자 합니다.
