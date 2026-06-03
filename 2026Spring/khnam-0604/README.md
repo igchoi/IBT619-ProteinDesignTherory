@@ -382,9 +382,11 @@ Ultimately, this proposal focuses on understanding that de novo protein design i
 
 ---
 
+## 📝 Note
 
+The figures included in this file were generated with the assistance of AI-based image generation tools.
 
-
+These figures are used only for conceptual visualization of the de novo protein design workflow, design strategy, and computational evaluation process.
 
 
 
