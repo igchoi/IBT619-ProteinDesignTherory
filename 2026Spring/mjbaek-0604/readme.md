@@ -18,15 +18,19 @@ PKS는 구조에 따라 세 가지 유형으로 분류된다.
 | **Type II** | 개별 단일 기능 단백질이 복합체를 이룸 | 테트라사이클린, 독소루비신 |
 | **Type III** | 독립적 소형 효소, 주로 식물·세균 | 플라보노이드, 스틸벤 |
 
-*N. nambi*의 HispS는 **Type I 이터레이티브 PKS**로서, 단일 모듈이 카페산(Caffeic acid)에 두 분자의 말로닐-CoA를 순차적으로 축합하여 히스피딘(Hispidin)을 합성한다. 히스피딘은 이후 H3H → Luz → CPH 효소와 연계하여 생물발광 루시페린 3-hydroxyhispidin으로 전환되는 진균 생물발광 경로의 핵심 전구체이다 [2].
+### Neonothopanus nambi 유래의 Hispidin synthase(HispS)
+*N. nambi*의 HispS(NnHispS)는 **Type I 이터레이티브 PKS**로서, 단일 모듈이 카페산(Caffeic acid)에 두 분자의 말로닐-CoA를 순차적으로 축합하여 히스피딘(Hispidin)을 합성한다. 히스피딘은 이후 H3H → Luz → CPH 효소와 연계하여 생물발광 루시페린 3-hydroxyhispidin으로 전환되는 진균 생물발광 경로의 핵심 전구체이다 [2].
 
-특히 Type I PKS는 KS(ketosynthase)·AT(acyltransferase)·DH(dehydratase)·KR(ketoreductase)·ACP(acyl carrier protein) 등 다수의 촉매 도메인이 유연한 링커(linker)로 연결된 100 kDa 이상의 거대 구조를 이루며, ACP 도메인은 4'-인산판테테인(4'-phosphopantetheine, Ppant) 보조인자가 보존 세린 잔기에 공유결합되어야 비로소 기질 수송 기능을 수행할 수 있다(holo 형태) [3].
+NnHispS는 Caffeoyl-CoA와 2분자의 Malonyl-CoA를 기질로 사용하여 강력한 항산화 물질인 히스피딘을 합성하는 약 1,600~1,700개 아미노산 크기(약 180kda)의 거대한 메가효소이다. npgA는 Hispidin synthase 내부의 핵심 배달원인 ACP 도메인에 꼬리(Phosphopantetheine 암)를 달아주어 효소를 활성화하는 역할을 한다.
+
+<img width="1966" height="982" alt="image" src="https://github.com/user-attachments/assets/8bb08fc8-749b-415c-a041-dfc701edeea6" />
+그림 1. AlphaFold Protein Structure Database에서 확인한 NnHispS의 구조
 
 ---
 
 ### 대장균 이종 발현의 병목
 
-이처럼 복잡한 구조를 가진 NnHispS를 원핵 숙주인 대장균에서 이종 발현하고자 할 때, 아래 네 가지 병목이 복합적으로 작용한다.
+이처럼 복잡한 구조를 가진 NnHispS를 원핵 숙주인 대장균에서 이종 발현하고자 할 때, 아래 네 가지 병목이 복합적으로 작용한다[3].
 
 | 병목 | 원인 | 결과 |
 |------|------|------|
@@ -35,6 +39,8 @@ PKS는 구조에 따라 세 가지 유형으로 분류된다.
 | **PPTase 결핍** | 대장균은 ACP 도메인의 Ppant 부착을 촉매할 적합한 PPTase 미보유 | apo-PKS 유지 / 효소 비활성 |
 | **Malonyl-CoA 부족** | 지방산 합성계가 Malonyl-CoA 풀을 경쟁적으로 소모 | 기질 결핍 / 폴리케타이드 미생산 |
 
+이 중 두 가지 병목 사항은 컴퓨테이션을 통한 단백질의 구조의 재설계로 해결할 수 있다고 생각한다.
+
 ---
 
 ## 2. 기존 컴퓨테이션 전략 검토
@@ -42,6 +48,7 @@ PKS는 구조에 따라 세 가지 유형으로 분류된다.
 ### 전략 A — 구조 예측 기반 도메인 경계 및 취약 링커 규명
 
 PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백질 안정성이 무너진다는 점이다. Englund et al.은 AlphaFold를 도메인 경계 예측에 활용하고, 형광 기반 용해도 바이오센서를 개발하여 무작위 경계 배정 PKS 라이브러리를 *E. coli*에서 고처리량 스크리닝함으로써 야생형 생산 수준을 유지하는 안정 변이체를 동정하였다 [4]. 이 연구는 AlphaFold의 pLDDT / PAE 지표가 PKS 도메인 경계의 구조적 건전성을 사전에 평가하는 데 유효함을 실증하였으며, 실험적 스크리닝 이전에 *in silico*로 취약 링커 구간을 좁혀내는 방법론적 기반을 제공한다.
+<img width="1448" height="910" alt="image" src="https://github.com/user-attachments/assets/93d346cc-bd09-4373-8c9b-4ed255d30b80" />
 
 ### 전략 B — 생성형 AI 기반 서열 재설계를 통한 수용성·발현 향상
 
@@ -55,11 +62,11 @@ PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백�
 
 ## 3. Research Question
 
-> **Can we computationally redesign NnHispS — its unstable linkers, surface residues, and PPTase-recognition interface — to enable functional soluble expression in *E. coli*?**
-
 세 전략을 검토한 결과, PKS 이종 발현 문제를 해결하기 위한 컴퓨테이션 접근은 구조 예측, 서열 재설계, 코돈 최적화의 세 축으로 발전해왔다. 그러나 기존 연구들은 각 전략을 개별적으로 적용하는 데 그쳤으며, **세 전략을 하나의 통합 파이프라인으로 연결한 사례는 없다.** 나아가 기존 연구들은 대부분 구조적 안정성과 번역 최적화에만 집중하였고, **PPTase 인식 인터페이스 보존**이라는 기능적 활성화 조건을 설계 제약 조건으로 명시적으로 다룬 사례는 전무하다.
 
-대장균은 PKS ACP 도메인을 holo 형태로 전환하는 PPTase를 천연 보유하지 않으므로, 이종 Sfp PPTase를 공동 발현하더라도 ACP 표면의 Sfp 인식 잔기가 링커 재설계 과정에서 손상되면 효소는 apo 상태로 남아 촉매 불활성이 된다 [8]. 따라서 본 연구는 **링커 경직화 + 코돈 최적화 + PPTase 인식 인터페이스 보존**을 동시에 만족하는 통합 *in silico* 설계 전략을 제안한다.
+대장균은 PKS ACP 도메인을 holo 형태로 전환하는 PPTase를 천연 보유하지 않으므로, 이종 PPTase를 공동 발현하더라도 ACP 표면의 PPTase 인식 잔기가 링커 재설계 과정에서 손상되면 효소는 apo 상태로 남아 촉매 불활성이 된다 [8]. 따라서 본 연구는 **링커 경직화 + 코돈 최적화 + PPTase 인식 인터페이스 보존**을 동시에 만족하는 통합 *in silico* 설계 전략을 제안한다.
+
+> **Can we computationally redesign NnHispS — its unstable linkers, surface residues, and PPTase-recognition interface — to enable functional soluble expression in *E. coli*?**
 
 ---
 
