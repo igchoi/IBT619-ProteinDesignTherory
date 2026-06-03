@@ -8,7 +8,8 @@
 ![Pim kinase](https://github.com/dohoon7482/123/blob/8595f4c972feafce16906bf3c7eaaa0b8a8f5ab5/cancers-14-03565-g001.png)
 #### 3) ATP inhibitor protein
    Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site입니다. 그러나 현재 Pim kinase inhibitor는 AML의 승인된 표준치료제가 없습니다. AZD1208, PIM447, INCB053914 등 같은 pan-PIM inhibitor들이 AML 또는 혈액암에서 임상시험까지 갔지만, 단독요법의 효과가 제한적이거나 개발이 중단된 사례가 있습니다. 때문에 De nove ATP binding inhibitor protein을 디자인 하고자 합니다.
-----
+
+---
 ### 2. Strategy
 ATP inhibitor는 크게 ATP binding site에 직접적으로 결합하여 ATP가 결합하지 못하게해 활성을 낮추는 Competitive inhibitor와 target으로 하는 kinase의 다른 부분에 결합하여 ATP binding site의 구조를 변형 시켜 ATP를 결합하지 못하게 하는 Noncompetitive inhibitor 두 가지 있습니다. 
 #### 1) A plan
