@@ -40,6 +40,6 @@
 
 ---
 ### 6. Limitation
-   - 1 in silico design을 중심으로 하기 때문에, computational prediction 결과가 실제 binding affinity나 kinase inhibition을 보장하지 않는다는 한계가 있다. AlphaFold-Multimer와 Rosetta 기반 분석은 candidate filtering에는 유용하지만, 실제 단백질의 folding stability, binding affinity, inhibitory activity는 실험적으로 검증되어야 한다.
-   - 2 PIM kinase의 ATP-binding pocket은 작고 구조적으로 깊은 부위이기 때문에 protein binder가 pocket 내부에 직접 결합하기는 어렵다. 따라서 본 연구는 pocket 내부 결합이 아니라 ATP-binding pocket 주변부를 차폐하는 전략을 사용하지만, 이 구조가 실제로 ATP binding을 충분히 방해할 수 있는지는 추가 검증이 필요하다.
-   - 3 PIM kinase는 intracellular target이므로 실제 치료제로 확장하기 위해서는 cell delivery, intracellular expression, degradation, immunogenicity 등의 문제가 추가적으로 고려되어야 한다.
+   - 1 - in silico design을 중심으로 하기 때문에, computational prediction 결과가 실제 binding affinity나 kinase inhibition을 보장하지 않는다는 한계가 있다. AlphaFold-Multimer와 Rosetta 기반 분석은 candidate filtering에는 유용하지만, 실제 단백질의 folding stability, binding affinity, inhibitory activity는 실험적으로 검증되어야 한다.
+   - 2 - PIM kinase의 ATP-binding pocket은 작고 구조적으로 깊은 부위이기 때문에 protein binder가 pocket 내부에 직접 결합하기는 어렵다. 따라서 본 연구는 pocket 내부 결합이 아니라 ATP-binding pocket 주변부를 차폐하는 전략을 사용하지만, 이 구조가 실제로 ATP binding을 충분히 방해할 수 있는지는 추가 검증이 필요하다.
+   - 3 - PIM kinase는 intracellular target이므로 실제 치료제로 확장하기 위해서는 cell delivery, intracellular expression, degradation, immunogenicity 등의 문제가 추가적으로 고려되어야 한다.
