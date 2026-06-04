@@ -80,7 +80,7 @@ PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백�
    Phase 1  AlphaFold 3 / ESMFold
         │   → 3D 구조(PDB)
         │   → 취약 링커 위치 (pLDDT < 50, PAE ≥ 15 Å)
-        │   → ACP–Sfp 인터페이스 예측 (AlphaFold-Multimer)
+        │   → ACP–PPTase 인터페이스 예측 (AlphaFold-Multimer)
         │
    Phase 2  RFdiffusion + ProteinMPNN
         │   → 링커 백본 재설계
@@ -93,16 +93,16 @@ PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백�
         │
    Phase 4  AlphaFold 3 재예측 + AlphaFold-Multimer (ACP–Sfp 재검증)
         │
-[출력] Δ pLDDT / Δ PAE / Rosetta 에너지 / ACP–Sfp 인터페이스 보존 확인
+[출력] Δ pLDDT / Δ PAE / Rosetta 에너지 / ACP–PPTase 인터페이스 보존 확인
 ```
 
 ### Phase 1 — 구조 모델링, 취약 링커 도출 및 PPTase 인터페이스 예측
 
-AlphaFold 3 / ESMFold로 NnHispS 3D 구조를 도출하고, 잔기별 pLDDT 및 PAE 행렬로 **취약 링커 구간**을 특정한다. 동시에 AlphaFold-Multimer를 이용하여 ACP 도메인과 Sfp PPTase의 복합체 구조를 예측하고, Sfp 인식에 결정적인 **ACP 표면 잔기 목록**을 도출한다 [9].
+AlphaFold 3 / ESMFold로 NnHispS 3D 구조를 도출하고, 잔기별 pLDDT 및 PAE 행렬로 **취약 링커 구간**을 특정한다. 동시에 AlphaFold-Multimer를 이용하여 ACP 도메인과 PPTase의 복합체 구조를 예측하고, PPTase 인식에 결정적인 **ACP 표면 잔기 목록**을 도출한다 [9].
 
 - pLDDT < 50 잔기 클러스터 → 취약 링커 1차 후보
 - PAE ≥ 15 Å 도메인 간 경계 → 취약 링커 2차 후보
-- ACP–Sfp 인터페이스 접촉 잔기 → Phase 2 fixed residues 목록 확정
+- ACP–PPTase 인터페이스 접촉 잔기 → Phase 2 fixed residues 목록 확정
 
 ### Phase 2 — 링커 재설계 (PPTase 인터페이스 보존)
 
@@ -110,7 +110,7 @@ Phase 1 취약 링커 좌표를 RFdiffusion에 마스크 영역으로 지정하�
 
 **Fixed residues (서열 고정 대상):**
 - 촉매 핵심 잔기: KS 활성 Cys, AT 활성 Ser, ACP 인산판테테인화 Ser
-- Sfp 인식 결정 잔기: Phase 1 AlphaFold-Multimer 예측 기반 [8, 9]
+- PPTase 인식 결정 잔기: Phase 1 AlphaFold-Multimer 예측 기반 [8, 9]
 
 이후 CamSol / Aggrescan3D 수용성 스코어로 상위 후보를 필터링한다.
 
@@ -124,7 +124,7 @@ DNA Chisel 'Harmonize RCA'로 진균 코돈 빈도 프로파일을 대장균 tRN
 
 ### Phase 4 — In Silico 구조 및 기능 검증
 
-최종 최적화 서열을 AlphaFold 3에 재입력하여 야생형 구조와 지표를 대비하고, AlphaFold-Multimer로 최적화된 ACP–Sfp 복합체를 재예측하여 인터페이스 잔기 보존 여부를 확인한다.
+최종 최적화 서열을 AlphaFold 3에 재입력하여 야생형 구조와 지표를 대비하고, AlphaFold-Multimer로 최적화된 ACP–PPTase 복합체를 재예측하여 인터페이스 잔기 보존 여부를 확인한다.
 
 | 지표 | 의미 |
 |------|------|
