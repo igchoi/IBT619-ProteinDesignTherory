@@ -6,7 +6,7 @@
 
 #### 2) PIM kinase
    PIM kinase는 PIM1, PIM2, PIM3 세 가지 isoform으로 구성된 serine/threonine kinase family이다. AML, 특히 FLT3-ITD 양성 AML에서는 FLT3-STAT5 signaling을 통해 PIM kinase 발현이 증가할 수 있으며, PIM kinase는 cancer cell survival, proliferation, anti-apoptosis, drug resistance와 관련된 pathway에 관여한다. 따라서 PIM kinase는 AML에서 중요한 therapeutic target candidate로 여겨진다.
-<img src="https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/2544954886b1a2c05b7113806650e8d8bb20d7c1/2026Spring/dhkim-0604/PIM%20kinase%20ST.png" width="50%" height="50%" />
+<img src="https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/2544954886b1a2c05b7113806650e8d8bb20d7c1/2026Spring/dhkim-0604/PIM%20kinase%20ST.png" width="30%" height="30%" />
 <img src="https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/7fa8cc430e1f8001966726889a1412c12fc5e0d7/2026Spring/dhkim-0604/Pim%20kinase.png" width="100%" height="100%" />
 
 #### 3) ATP inhibitor protein
