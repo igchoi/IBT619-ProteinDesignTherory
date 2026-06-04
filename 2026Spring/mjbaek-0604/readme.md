@@ -136,6 +136,38 @@ DNA Chisel 'Harmonize RCA'로 진균 코돈 빈도 프로파일을 대장균 tRN
 
 ---
 
+### Phase 5 출력값 분석 및 차세대 액션 플랜 (Decision Tree)
+
+Phase 4의 최종 인실리코(In silico) 검증 지표를 바탕으로 다음과 같이 두 가지 경로로 나누어 후속 연구를 진행한다.
+
+###  Case 1: 인실리코 검증 통과 (성공적인 설계)
+**[판단 기준]**
+* **pLDDT / PAE:** 링커 구간 점수 70점 이상으로의 상승 및 도메인 간 경계면 녹색 블록 형성.
+* **Rosetta 에너지:** 야생형(WT) 대비 전체 구조 에너지 준위 감소.
+* **Aggrescan3D:** 표면 응집 핫스팟 잔기 수가 유의미하게 감소.
+* **npgA 인터페이스:** npgA-ACP 복합체 재예측 시 계면 PAE가 낮고 안정적임 (인식 잔기 보존).
+
+**[후속 액션 플랜 (Wet-lab 진입)]**
+1. **최적화 서열 확정:** 검증을 통과한 최상위 변이체(Variant)의 아미노산 및 Phase 3 최적화 CDS 염기서열 고정.
+2. **유전자 합성 발주:** 국내외 유전자 합성 전문 기업에 대장균(*E. coli*) 맞춤형 CDS 서열 합성(Gene Synthesis) 의뢰.
+3. **발현 및 활성 검증:** 발현 벡터 생성 후 *E. coli* 내에서 수용성(Soluble) 발현 수율을 확인하고, npgA 동시 발현을 통해 최종 히스피딘(Hispidin) 생산 농도 분석.
+
+---
+
+###  Case 2: 인실리코 검증 실패 (재설계 필요)
+**[판단 기준 및 원인 분석]**
+* **유형 A (npgA 인식 불가):** 구조 안정성은 올랐으나, ACP-npgA 인터페이스 PAE가 치솟거나 결합 각도가 뒤틀린 경우 (링커의 과도한 경직화로 인한 구조적 왜곡).
+* **유형 B (불용성 응집 위험):** 구조 신뢰도는 올라갔으나, Aggrescan3D 핫스팟이 늘어나고 Rosetta 에너지가 오히려 악화된 경우 (표면 소수성 잔기 노출).
+
+**[후속 액션 플랜 (In silico 피드백 루프)]**
+1. **유형 A 해결을 위한 Phase 2 피드백 (RFdiffusion 조건 수정):**
+   * RFdiffusion의 `contigs` 서열 길이를 살짝 늘려 유연성을 확보하거나, ACP 표면 잔기 고정(Fixed residues) 영역을 더 넓게 지정하여 npgA 결합 포켓 공간을 강제로 보호한 뒤 뼈대 재설계.
+2. **유형 B 해결을 위한 Phase 2 피드백 (ProteinMPNN 조건 수정):**
+   * RFdiffusion 백본(뼈대)은 유지하되, ProteinMPNN 구동 스크립트에 아미노산 편향 매개변수(`--soluble_designs`)를 조정하여 표면에 친수성 잔기가 배치되도록 서열만 다시 입히기.
+3. **재검증:** 수정된 서열들을 다시 Phase 3, 4 라인에 투입하여 지표의 개선 여부를 재확인.
+
+---
+
 ## 참고문헌
 
 [1] Hertweck, C. (2009). The biosynthetic logic of polyketide diversity. *Angewandte Chemie International Edition*, 48(26), 4688–4716.
