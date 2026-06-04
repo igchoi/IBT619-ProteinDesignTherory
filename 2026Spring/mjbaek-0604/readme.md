@@ -136,7 +136,7 @@ DNA Chisel 'Harmonize RCA'로 진균 코돈 빈도 프로파일을 대장균 tRN
 
 ---
 
-### Phase 5 출력값 분석 및 차세대 액션 플랜 (Decision Tree)
+## 5. 출력값 분석 및 후속 연구
 
 Phase 4의 최종 인실리코(In silico) 검증 지표를 바탕으로 다음과 같이 두 가지 경로로 나누어 후속 연구를 진행한다.
 
