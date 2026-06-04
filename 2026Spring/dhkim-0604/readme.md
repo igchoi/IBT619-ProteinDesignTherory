@@ -1,5 +1,5 @@
 # Research Plan
-## AML에서 PIM kinase 활성을 억제하기 위한 ATP-binding pocket block형 de novo protein binder 설계
+## AML에서 PIM kinase 활성을 억제하기 위한 ATP-binding pocket block형 De novo protein binder 설계
 ### 1.Background
 #### 1) AML(Acute myeloid leukemia)
    Acute myeloid leukemia, AML은 진행 속도가 빠른 혈액암으로, chemotherapy, hematopoietic stem cell transplantation, targeted therapy 등이 주요 치료 전략으로 사용되고 있다. 환자의 유전자 변이에 따라 FLT3, IDH, BCL-2/venetoclax, menin inhibitor와 같이 환자의 genetic subtype에 따른 targeted therapy가 활발히 연구 및 적용되고 있다. FLT3-ITD AML에서는 constitutive FLT3 signaling이 STAT5 activation을 통해 PIM kinase 발현을 증가된다는 연구 결과가 있다.
