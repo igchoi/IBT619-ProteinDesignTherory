@@ -10,7 +10,7 @@
 
 #### 3) ATP inhibitor protein
    Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site이. 그러나 현재 현재까지 AZD1208, PIM447, INCB053914와 같은 pan-PIM small-molecule inhibitor들이 연구되었지만, AML에서 approved standard therapy로 사용되고 있지는 않으며 monotherapy 효과에도 한계가 보고되었다. 이러한 배경을 바탕으로 본 연구에서는 기존 small-molecule inhibitor와는 다른 방식으로, PIM kinase의 ATP-binding pocket 주변부를 차폐할 수 있는 de novo protein binder candidate를 computational tool을 이용해 in silico로 설계하고자 한다.
-![Pim kinase](https://github.com/dohoon7482/123/blob/8595f4c972feafce16906bf3c7eaaa0b8a8f5ab5/cancers-14-03565-g001.png)
+![Pim kinase](https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/7ee304a7f54283edffac25d3e2368aa35245cf5a/2026Spring/dhkim-0604/protein%20inhibitor.png)
 
 
 ---
