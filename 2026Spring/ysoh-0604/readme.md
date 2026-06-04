@@ -50,8 +50,7 @@
 
 
 ### Strategy 3
-> Aim : Identifying candidates for alcohol production enzymes    
- (Sequence similarity can be missed)
+> Aim : Identifying candidates for alcohol production enzymes (Sequence similarity can be missed)
 - step 1 : checking if the model works well using already annotated gene clusters (ex. crt-hbd-etfBA)
 - step 2 : preparation of my contig file (adhE2 and aor, 10-15 genes with direction information +, -)
 - step 3 : preparation of reference set (functionally similar genes)
