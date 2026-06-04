@@ -85,13 +85,13 @@ PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백�
    Phase 2  RFdiffusion + ProteinMPNN
         │   → 링커 백본 재설계
         │   → 경직화 아미노산 서열
-        │   ※ Fixed residues: 촉매 핵심 잔기 + Sfp 인식 잔기
+        │   ※ Fixed residues: 촉매 핵심 잔기 + PPTase 인식 잔기
         │
    Phase 3  DNA Chisel (Harmonize RCA) + Salis RBS Calculator
         │   → 코돈 페이싱 최적화
         │   → E. coli 맞춤 CDS (mRNA 헤어핀 배제)
         │
-   Phase 4  AlphaFold 3 재예측 + AlphaFold-Multimer (ACP–Sfp 재검증)
+   Phase 4  AlphaFold 3 재예측 + AlphaFold-Multimer (ACP–PPTase 재검증)
         │
 [출력] Δ pLDDT / Δ PAE / Rosetta 에너지 / ACP–PPTase 인터페이스 보존 확인
 ```
