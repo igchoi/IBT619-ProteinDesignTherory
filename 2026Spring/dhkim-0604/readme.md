@@ -23,19 +23,21 @@
    PIM kinase 표면의 potential allosteric pocket을 탐색하고, 해당 부위에 결합할 수 있는 binder를 설계하는 전략이다. Allosteric binder는 ATP-binding pocket에 직접 결합하지 않더라도 kinase domain의 conformation을 변화시키거나 ATP-binding pocket의 구조적 안정성을 방해할 가능성이 있다. 다만 PIM kinase에서 명확하게 확립된 allosteric site 정보는 제한적이다.
 
 ---
-### 3. Computational pipeline
-   - step1. PDB에서 PIM1/2를 target으로 구조 기반 ATP-binding pocket, hinge, P-loop, pocket rim residue 정의
-   - step2. Competitive-like epitope와 potential allosteric pocket 후보 선정  
-   - step3. RFdiffusion - 3D 구조에 hotspot residue를 지정해서 binder backbone 디자인
-   - step4. ProteinMPNN - 만들어진 binder backbone의 sequence 디자인 및 monomer stability filtering
-   - step5. AlphaFold2 Multimer - Complex 예측, ipTM, PAE, clash filtering
+### 4. Computational pipeline
+   - step1. PDB에서 PIM1/2를 target으로 구조 기반 ATP-binding pocket, hinge, P-loop, pocket hotspot residue 정의
+   - step2. Competitive-like epitope와 potential allosteric pocket target epitope 선정  
+   - step3. RFdiffusion - 3D 구조에 target epitope주변에 결합 가능한 binder backbone 생성
+   - step4. ProteinMPNN - 만들어진 binder backbone의 sequence 생성 및 stability filtering
+   - step5. AlphaFold2 Multimer - Complex 예측, ipTM, PAE, clash 및 결합 가능성 평가
    - step6. Rosetta InterfaceAnalyzer - ΔG, buried SASA, shape complementarity 계산(binding energy)
    - step7. 최종 후보 선별
 
 ---
-### 4. Expected results
-   Checmical을 이용하지 않은 protein으로 pim kinase를 억제함으로써 체내에서 일어날 수 있는 toxicity를 최소화 할 수 있으며 충분한 구조와 binding affinity 최적화를 통해 이전 임상 실험에서 발생한 monotherapy에서의 효과가 낮았던 점을 개선할 수 있을것으로 예상합니다.
+### 5. Expected results
+   본 연구를 통해 PIM kinase ATP-binding pocket 주변부에 결합할 수 있는 de novo protein binder candidate를 in silico로 확보할 수 있을 것으로 기대된다. 특히 ATP-binding pocket rim, hinge region, P-loop 주변을 덮는 binder candidate를 선별함으로써, ATP 접근을 sterically block할 가능성이 있는 구조적 모델을 제시할 수 있다.
 
 ---
-### 5. Limitation
-   ATP pocket을 커버하여 binding하는 residue를 찾기 어렵고 Allosteric site에 대한 알려진 정보가 적어 탐색에 있어 어려움이 존재합니다.
+### 6. Limitation
+   - 1. in silico design을 중심으로 하기 때문에, computational prediction 결과가 실제 binding affinity나 kinase inhibition을 보장하지 않는다는 한계가 있다. AlphaFold-Multimer와 Rosetta 기반 분석은 candidate filtering에는 유용하지만, 실제 단백질의 folding stability, binding affinity, inhibitory activity는 실험적으로 검증되어야 한다.
+   - 2. PIM kinase의 ATP-binding pocket은 작고 구조적으로 깊은 부위이기 때문에 protein binder가 pocket 내부에 직접 결합하기는 어렵다. 따라서 본 연구는 pocket 내부 결합이 아니라 ATP-binding pocket 주변부를 차폐하는 전략을 사용하지만, 이 구조가 실제로 ATP binding을 충분히 방해할 수 있는지는 추가 검증이 필요하다.
+   - 3. PIM kinase는 intracellular target이므로 실제 치료제로 확장하기 위해서는 cell delivery, intracellular expression, degradation, immunogenicity 등의 문제가 추가적으로 고려되어야 한다.
