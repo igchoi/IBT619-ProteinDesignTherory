@@ -58,7 +58,7 @@
 - step 5 : checking function through distance comparison
 
 
-## 3. Expected results
+## 3. Expectation
 ### Results of each strategy
 - Verification the function of some hypothetical proteins. Checking if it is similar to RNA sequencing results.
 ### limitations
