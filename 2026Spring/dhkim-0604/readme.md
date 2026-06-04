@@ -4,8 +4,9 @@
 #### 1) AML(Acute myeloid leukemia)
    Acute myeloid leukemia, AML은 진행 속도가 빠른 혈액암으로, chemotherapy, hematopoietic stem cell transplantation, targeted therapy 등이 주요 치료 전략으로 사용되고 있다. 환자의 유전자 변이에 따라 FLT3, IDH, BCL-2/venetoclax, menin inhibitor와 같이 환자의 genetic subtype에 따른 targeted therapy가 활발히 연구 및 적용되고 있다. FLT3-ITD AML에서는 constitutive FLT3 signaling이 STAT5 activation을 통해 PIM kinase 발현을 증가된다는 연구 결과가 있다.
 
-#### 2) PiIM kinase
+#### 2) PIM kinase
    PIM kinase는 PIM1, PIM2, PIM3 세 가지 isoform으로 구성된 serine/threonine kinase family이다. AML, 특히 FLT3-ITD 양성 AML에서는 FLT3-STAT5 signaling을 통해 PIM kinase 발현이 증가할 수 있으며, PIM kinase는 cancer cell survival, proliferation, anti-apoptosis, drug resistance와 관련된 pathway에 관여한다. 따라서 PIM kinase는 AML에서 중요한 therapeutic target candidate로 여겨진다.
+<img src="https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/2544954886b1a2c05b7113806650e8d8bb20d7c1/2026Spring/dhkim-0604/PIM%20kinase%20ST.png" width="100%" height="100%" />
 <img src="https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/7fa8cc430e1f8001966726889a1412c12fc5e0d7/2026Spring/dhkim-0604/Pim%20kinase.png" width="100%" height="100%" />
 
 #### 3) ATP inhibitor protein
