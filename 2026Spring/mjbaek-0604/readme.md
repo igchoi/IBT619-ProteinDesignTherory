@@ -1,6 +1,6 @@
 # 연구계획서
 
-## *Neonothopanus nambi* 유래 Hispidin Synthase(NnHispS)의 대장균 내 이종 발현을 위한 컴퓨터 기반 최적화 전략
+## *Neonothopanus nambi* 유래 Hispidin Synthase(NnHispS)의 대장균 내 이종 발현을 위한 최적화 In silico 파이프라인
 
 ---
 
