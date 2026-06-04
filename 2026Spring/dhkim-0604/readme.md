@@ -12,12 +12,15 @@
    Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site이. 그러나 현재 현재까지 AZD1208, PIM447, INCB053914와 같은 pan-PIM small-molecule inhibitor들이 연구되었지만, AML에서 approved standard therapy로 사용되고 있지는 않으며 monotherapy 효과에도 한계가 보고되었다. 이러한 배경을 바탕으로 본 연구에서는 기존 small-molecule inhibitor와는 다른 방식으로, PIM kinase의 ATP-binding pocket 주변부를 차폐할 수 있는 de novo protein binder candidate를 computational tool을 이용해 in silico로 설계하고자 한다.
 
 ---
-### 2. Strategy
-본 연구에서 PIM kinase 억제를 위해 두 가지 binder design 전략을 설정했습니다. 첫째, ATP-binding pocket 입구와 hinge/P-loop 주변을 차폐하여 ATP 접근을 sterically block하는 competitive-like binder를 설계합니다. 둘째, PIM kinase 표면의 potential allosteric pocket에 결합하여 ATP-binding pocket의 conformation 또는 kinase activity를 간접적으로 저해하는 allosteric binder를 탐색하고자 합니다.
-#### 1) A plan(Main) - Competitive inhibitor
-   Protein으로 디자인할때 ATP pocket에 들어가는 구조를 만들기는 어렵기 때문에 ATP pocket rim + hinge/P-loop 주변을 덮어서 ATP의 접근을 막는 binder로 디자인을 하고자 합니다.
-#### 2) B plan(Sub) - Allosteric inhibitor
-   알려진 Allosterinc site가 있지만 명확히 확립된 site가 아니므로 사용에 어려움은 있겠지만 Allosterinc site에 결합하는 binder portein을 디자인해 ATP pocket 구조를 변형 시켜 ATP 접근을 막고자 합니다.
+### 2. Research objective
+연구의 목적은 RFdiffusion, ProteinMPNN, AlphaFold-Multimer, Rosetta InterfaceAnalyzer와 같은 computational protein design tools를 활용하여 PIM kinase ATP-binding pocket을 block할 가능성이 있는 de novo protein binder candidate를 설계하고 평가하고자 한다. PIM kinase의 ATP-binding pocket, hinge region, P-loop, catalytic cleft 주변 residue를 target epitope으로 설정하고, 이 부위를 덮어 ATP 접근을 sterically block할 수 있는 binder 구조를 in silico로 생성한다. 이후 구조 예측 및 interface analysis를 통해 유망한 binder candidate를 선별한다.
+
+---
+### 3. Strategy
+#### 1) A plan : Competitive-like ATP-pocket-blocking binder design
+   PIM kinase의 ATP-binding pocket 주변부에 결합하여 ATP 접근을 물리적으로 차단할 수 있는 binder를 설계하는 전략으로, Protein binder는 small molecule처럼 ATP pocket 내부에 깊게 들어가기 어렵기 때문에, ATP-binding pocket 내부가 아니라 pocket rim, hinge region, P-loop 주변을 덮는 방식의 competitive-like binder design을 목표로 한다.
+#### 2) B plan : Potential allosteric binder design
+   PIM kinase 표면의 potential allosteric pocket을 탐색하고, 해당 부위에 결합할 수 있는 binder를 설계하는 전략이다. Allosteric binder는 ATP-binding pocket에 직접 결합하지 않더라도 kinase domain의 conformation을 변화시키거나 ATP-binding pocket의 구조적 안정성을 방해할 가능성이 있다. 다만 PIM kinase에서 명확하게 확립된 allosteric site 정보는 제한적이다.
 
 ---
 ### 3. Computational pipeline
