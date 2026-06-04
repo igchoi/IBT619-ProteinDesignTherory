@@ -6,7 +6,7 @@
 
 #### 2) Pim kinase
    PIM kinase는 PIM1, PIM2, PIM3 세 가지 isoform으로 구성된 serine/threonine kinase family이다. AML, 특히 FLT3-ITD 양성 AML에서는 FLT3-STAT5 signaling을 통해 PIM kinase 발현이 증가할 수 있으며, PIM kinase는 cancer cell survival, proliferation, anti-apoptosis, drug resistance와 관련된 pathway에 관여한다. 따라서 PIM kinase는 AML에서 중요한 therapeutic target candidate로 여겨진다.
-<img src="https://github.com/dohoon7482/123/blob/8595f4c972feafce16906bf3c7eaaa0b8a8f5ab5/cancers-14-03565-g001.png" width="100%" height="100%" />
+<img src="https://github.com/dohoon7482/123/blob/8595f4c972feafce16906bf3c7eaaa0b8a8f5ab5/cancers-14-03565-g001.png" width="650" height="400" />
 
 #### 3) ATP inhibitor protein
    Pim kinase에는 ATP binding site가 있어 약물이 개발될 때 흔히 사용된 target site이. 그러나 현재 현재까지 AZD1208, PIM447, INCB053914와 같은 pan-PIM small-molecule inhibitor들이 연구되었지만, AML에서 approved standard therapy로 사용되고 있지는 않으며 monotherapy 효과에도 한계가 보고되었다. 이러한 배경을 바탕으로 본 연구에서는 기존 small-molecule inhibitor와는 다른 방식으로, PIM kinase의 ATP-binding pocket 주변부를 차폐할 수 있는 de novo protein binder candidate를 computational tool을 이용해 in silico로 설계하고자 한다.
