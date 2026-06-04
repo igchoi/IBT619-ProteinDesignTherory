@@ -1,4 +1,4 @@
-# Reseach Plan
+# Research Plan
 ## AML에서 PIM kinase 활성을 억제하기 위한 ATP-binding pocket block형 de novo protein binder 설계
 ### 1.Background
 #### 1) AML(Acute myeloid leukemia)
