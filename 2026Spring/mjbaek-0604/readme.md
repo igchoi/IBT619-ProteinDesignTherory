@@ -48,7 +48,9 @@ NnHispS는 Caffeoyl-CoA와 2분자의 Malonyl-CoA를 기질로 사용하여 강�
 ### 전략 A — 구조 예측 기반 도메인 경계 및 취약 링커 규명
 
 PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백질 안정성이 무너진다는 점이다. Englund et al.은 AlphaFold를 도메인 경계 예측에 활용하고, 형광 기반 용해도 바이오센서를 개발하여 무작위 경계 배정 PKS 라이브러리를 *E. coli*에서 고처리량 스크리닝함으로써 야생형 생산 수준을 유지하는 안정 변이체를 동정하였다 [4]. 이 연구는 AlphaFold의 pLDDT / PAE 지표가 PKS 도메인 경계의 구조적 건전성을 사전에 평가하는 데 유효함을 실증하였으며, 실험적 스크리닝 이전에 *in silico*로 취약 링커 구간을 좁혀내는 방법론적 기반을 제공한다.
-<img width="1448" height="910" alt="image" src="https://github.com/user-attachments/assets/93d346cc-bd09-4373-8c9b-4ed255d30b80" />
+
+<img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/6047200e-a0fc-461c-a6bc-b25cff65bfb2" />
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/93d346cc-bd09-4373-8c9b-4ed255d30b80" />
 
 ### 전략 B — 생성형 AI 기반 서열 재설계를 통한 수용성·발현 향상
 
