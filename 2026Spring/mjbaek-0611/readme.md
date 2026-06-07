@@ -1,7 +1,9 @@
 # Seminar
 
 **Seminar:** [How AF3-Style Structure Prediction Models Can Be Used for Design: BoltzDesign and Protein Hunter](https://www.youtube.com/watch?v=yCOlC_yj4kc)
+
 **Paper 1:** [BOLTZDESIGN1: INVERTING ALL-ATOM STRUCTURE PREDICTION MODEL FOR GENERALIZED BIOMOLECULAR BINDER DESIGN](https://www.biorxiv.org/content/10.1101/2025.04.06.647261v1)
+
 **Paper 2:** [Protein Hunter: exploiting structure hallucination within diffusion for protein design](https://www.biorxiv.org/content/10.1101/2025.10.10.681530v1)
 **Presentation:** 
 
@@ -147,4 +149,8 @@ Each method has its strengths. **BoltzDesign1** fixes the interface first and re
 
 ## 6. Classmate Questions
 
-*(to be filled)*
+`SWKim`: 
+`YSOh`: 
+`KHNam`: 
+`DHKim`:  
+`MSAn`: 
