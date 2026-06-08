@@ -131,6 +131,7 @@ python run_protein_hunter.py
 ## 5. Q&As in the Seminar
 
 **key questions**
+
 **Q1: Why is Boltz-2 so confident in its predictions compared to AlphaFold3?**
 AlphaFold3 essentially memorizes correct structures and stretches them during inference, whereas Boltz-2 derives module weights directly from the Pairformer's confidence output. This means Boltz-2 has access to richer interface and complex-level information encoded in the pair representations, which likely explains its higher confidence scores. *(Personal hypothesis by the speaker.)*
 
@@ -157,4 +158,5 @@ Each method has its strengths. **BoltzDesign1** fixes the interface first and re
 `KHNam`: 
 
 `DHKim`:  
+
 `MSAn`: 
