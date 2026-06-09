@@ -18,7 +18,7 @@ PKS는 구조에 따라 세 가지 유형으로 분류된다.
 | **Type II** | 개별 단일 기능 단백질이 복합체를 이룸 | 테트라사이클린, 독소루비신 |
 | **Type III** | 독립적 소형 효소, 주로 식물·세균 | 플라보노이드, 스틸벤 |
 
-### Neonothopanus nambi 유래의 Hispidin synthase(HispS)
+### 타겟 재설계 단백질: Neonothopanus nambi 유래의 Hispidin synthase(HispS)
 *N. nambi*의 HispS(NnHispS)는 **Type I  PKS**로서, 단일 모듈이 카페산(Caffeic acid)에 두 분자의 말로닐-CoA를 순차적으로 축합하여 히스피딘(Hispidin)을 합성한다. 히스피딘은 이후 H3H → Luz → CPH 효소와 연계하여 생물발광 루시페린 3-hydroxyhispidin으로 전환되는 진균 생물발광 경로의 핵심 전구체이다 [2].
 
 NnHispS는 Caffeoyl-CoA와 2분자의 Malonyl-CoA를 기질로 사용하여 강력한 항산화 물질인 히스피딘을 합성하는 약 1,600~1,700개 아미노산 크기(약 180kDa)의 거대한 메가효소이다. npgA는 Hispidin synthase 내부의 핵심 배달원인 ACP 도메인에 꼬리(Phosphopantetheine 암)를 달아주어 효소를 활성화하는 역할을 한다.
