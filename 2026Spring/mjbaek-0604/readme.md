@@ -1,6 +1,6 @@
 # 연구계획서
 
-## *Neonothopanus nambi* 유래 Hispidin Synthase(NnHispS)의 대장균 내 이종 발현을 위한 최적화 In silico 파이프라인
+## *Polyketide Synthase(PKS)*의 대장균 내 이종 발현을 위한 취약 링커 규명 및 재설계 In silico 파이프라인
 
 ---
 
@@ -64,107 +64,136 @@ PKS 엔지니어링의 핵심 난제는 모듈 간 도메인 교환 시 단백�
 
 ## 3. Research Question
 
-세 전략을 검토한 결과, PKS 이종 발현 문제를 해결하기 위한 컴퓨테이션 접근은 구조 예측, 서열 재설계, 코돈 최적화의 세 축으로 발전해왔다. 그러나 기존 연구들은 각 전략을 개별적으로 적용하는 데 그쳤으며, **세 전략을 하나의 통합 파이프라인으로 연결한 사례는 없다.** 나아가 기존 연구들은 대부분 구조적 안정성과 번역 최적화에만 집중하였고, **PPTase 인식 인터페이스 보존**이라는 기능적 활성화 조건을 설계 제약 조건으로 명시적으로 다룬 사례는 전무하다.
+세 전략을 검토한 결과, **구조 예측과 생성형 AI 기반 링커 재설계**가 이종 발현 문제 해결에 가장 직접적으로 접근하는 전략임을 확인하였다. 그러나 기존 연구들은 각 전략을 개별적으로 적용하는 데 그쳤으며, AlphaFold 기반 취약 링커 규명과 RFdiffusion 기반 링커 재설계를 순차적으로 연결한 사례는 Type I 메가효소에서 드물다.
 
-대장균은 PKS ACP 도메인을 holo 형태로 전환하는 PPTase를 천연 보유하지 않으므로, 이종 PPTase를 공동 발현하더라도 ACP 표면의 PPTase 인식 잔기가 링커 재설계 과정에서 손상되면 효소는 apo 상태로 남아 촉매 불활성이 된다 [8]. 따라서 본 연구는 **링커 경직화 + 코돈 최적화 + PPTase 인식 인터페이스 보존**을 동시에 만족하는 통합 *in silico* 설계 전략을 제안한다.
+특히 링커 재설계 시 **촉매 핵심 잔기(KS Cys, AT Ser, ACP Ser)의 보존**이 명시적 설계 제약 조건으로 다루어지지 않는 경우, 효소 활성을 희생하면서 안정성만 향상되는 결과를 낳을 수 있다.
 
-> **Can we computationally redesign NnHispS — its unstable linkers, surface residues, and PPTase-recognition interface — to enable functional soluble expression in *E. coli*?**
+> **Can we identify structurally unstable linkers in NnHispS using AlphaFold predictions and redesign them via RFdiffusion while preserving catalytic residues, to enable functional soluble expression in *E. coli*?**
 
 ---
 
 ## 4. 단계별 In Silico 파이프라인
 
 ```
-[입력] NnHispS FASTA
+[입력] NnHispS FASTA 서열
         │
-   Phase 1  AlphaFold 3 / ESMFold
-        │   → 3D 구조(PDB)
-        │   → 취약 링커 위치 (pLDDT < 50, PAE ≥ 15 Å)
-        │   → ACP–PPTase 인터페이스 예측 (AlphaFold-Multimer)
+   Phase 1  ColabFold (AlphaFold2 기반)
+        │   → 3D 구조 (PDB)
+        │   → pLDDT 프로파일 (잔기별 구조 신뢰도)
+        │   → PAE 행렬 (도메인 간 상대 위치 오차)
+        │   → 취약 링커 후보 구간 특정
         │
-   Phase 2  RFdiffusion + ProteinMPNN
-        │   → 링커 백본 재설계
-        │   → 경직화 아미노산 서열
-        │   ※ Fixed residues: 촉매 핵심 잔기 + PPTase 인식 잔기
+   Phase 2  RFdiffusion
+        │   → 취약 링커 백본 앙상블 생성
+        │   ※ Fixed residues: KS 활성 Cys, AT 활성 Ser, ACP Ppant화 Ser
         │
-   Phase 3  DNA Chisel (Harmonize RCA) + Salis RBS Calculator
-        │   → 코돈 페이싱 최적화
-        │   → E. coli 맞춤 CDS (mRNA 헤어핀 배제)
+   Phase 3  ProteinMPNN
+        │   → 링커 백본에 대한 서열 역설계
+        │   → 촉매 잔기 고정 유지
         │
-   Phase 4  AlphaFold 3 재예측 + AlphaFold-Multimer (ACP–PPTase 재검증)
+   Phase 4  ColabFold 재예측 + Aggrescan3D
+        │   → 재설계 서열의 구조 신뢰도 재평가
+        │   → 응집 경향 잔기 변화 확인
         │
-[출력] Δ pLDDT / Δ PAE / Rosetta 에너지 / ACP–PPTase 인터페이스 보존 확인
+[출력] Δ pLDDT / Δ PAE / Aggrescan3D 핫스팟 변화량
 ```
 
-### Phase 1 — 구조 모델링, 취약 링커 도출 및 PPTase 인터페이스 예측
+### Phase 1 — 구조 모델링 및 취약 링커 도출
 
-AlphaFold 3 / ESMFold로 NnHispS 3D 구조를 도출하고, 잔기별 pLDDT 및 PAE 행렬로 **취약 링커 구간**을 특정한다. 동시에 AlphaFold-Multimer를 이용하여 ACP 도메인과 PPTase의 복합체 구조를 예측하고, PPTase 인식에 결정적인 **ACP 표면 잔기 목록**을 도출한다 [9].
+ColabFold를 이용하여 NnHispS FASTA 서열로부터 3D 구조를 예측한다. 출력된 pLDDT 프로파일과 PAE 행렬을 기반으로 취약 링커 후보를 아래 기준으로 특정한다.
 
-- pLDDT < 50 잔기 클러스터 → 취약 링커 1차 후보
-- PAE ≥ 15 Å 도메인 간 경계 → 취약 링커 2차 후보
-- ACP–PPTase 인터페이스 접촉 잔기 → Phase 2 fixed residues 목록 확정
+| 지표 | 기준 | 의미 |
+|------|------|------|
+| pLDDT | < 50 잔기 클러스터 | 구조 신뢰도 낮은 구간 = 취약 링커 1차 후보 |
+| PAE | ≥ 15 Å 도메인 간 경계 | 도메인 간 상대 위치 불확실 = 취약 링커 2차 후보 |
 
-### Phase 2 — 링커 재설계 (PPTase 인터페이스 보존)
-
-Phase 1 취약 링커 좌표를 RFdiffusion에 마스크 영역으로 지정하여 새로운 링커 백본 앙상블을 생성한다. ProteinMPNN 역설계 시 아래 잔기를 fixed residues로 고정한다.
-
-**Fixed residues (서열 고정 대상):**
-- 촉매 핵심 잔기: KS 활성 Cys, AT 활성 Ser, ACP 인산판테테인화 Ser
-- PPTase 인식 결정 잔기: Phase 1 AlphaFold-Multimer 예측 기반 [8, 9]
-
-이후 CamSol / Aggrescan3D 수용성 스코어로 상위 후보를 필터링한다.
-
-### Phase 3 — 코돈 페이싱 최적화
-
-DNA Chisel 'Harmonize RCA'로 진균 코돈 빈도 프로파일을 대장균 tRNA 풀에 조화시키되, 링커 구간에 희귀 코돈을 집중 배치하여 리보솜의 일시 정지를 유도한다. Salis RBS Calculator로 mRNA 헤어핀 구조를 배제한 최종 CDS를 출력한다.
-
-- 링커 구간 번역 속도: 도메인 내부 대비 30–50% 감속 목표
-- CAI > 0.85 (E. coli K12 기준)
-- 5'UTR MFE < −5 kcal/mol
-
-### Phase 4 — In Silico 구조 및 기능 검증
-
-최종 최적화 서열을 AlphaFold 3에 재입력하여 야생형 구조와 지표를 대비하고, AlphaFold-Multimer로 최적화된 ACP–PPTase 복합체를 재예측하여 인터페이스 잔기 보존 여부를 확인한다.
-
-| 지표 | 의미 |
-|------|------|
-| **Δ pLDDT** (링커·계면 잔기) | 구조 신뢰도 향상 |
-| **Δ PAE** (도메인 간 경계) | 도메인 간 상호작용 신뢰도 향상 |
-| **Rosetta REF2015 에너지** | 전체 에너지 준위 감소 |
-| **Aggrescan3D hotspot 수** | 응집 경향 잔기 감소 |
-| **ACP–Sfp 인터페이스 PAE** | PPTase 인식 잔기 보존 확인 |
+두 기준의 교집합 구간을 **최우선 재설계 대상 링커**로 확정하고, 잔기 번호 및 서열 정보를 Phase 2에 전달한다.
 
 ---
 
-## 5. 출력값 분석 및 후속 연구
+### Phase 2 — 링커 백본 재설계 (RFdiffusion)
 
-Phase 4의 최종 인실리코(In silico) 검증 지표를 바탕으로 다음과 같이 두 가지 경로로 나누어 후속 연구를 진행한다.
+Phase 1에서 특정된 취약 링커 좌표를 RFdiffusion의 마스크 영역(`contigs`)으로 지정하여 새로운 링커 백본 앙상블을 생성한다.
 
-###  Case 1: 인실리코 검증 통과 (성공적인 설계)
-**[판단 기준]**
-* **pLDDT / PAE:** 링커 구간 점수 70점 이상으로의 상승 및 도메인 간 경계면 녹색 블록 형성.
-* **Rosetta 에너지:** 야생형(WT) 대비 전체 구조 에너지 준위 감소.
-* **Aggrescan3D:** 표면 응집 핫스팟 잔기 수가 유의미하게 감소.
-* **npgA 인터페이스:** npgA-ACP 복합체 재예측 시 계면 PAE가 낮고 안정적임 (인식 잔기 보존).
-
-**[후속 액션 플랜 (Wet-lab 진입)]**
-1. **최적화 서열 확정:** 검증을 통과한 최상위 변이체(Variant)의 아미노산 및 Phase 3 최적화 CDS 염기서열 고정.
-2. **유전자 합성 발주:** 국내외 유전자 합성 전문 기업에 대장균(*E. coli*) 맞춤형 CDS 서열 합성(Gene Synthesis) 의뢰.
-3. **발현 및 활성 검증:** 발현 벡터 생성 후 *E. coli* 내에서 수용성(Soluble) 발현 수율을 확인하고, npgA 동시 발현을 통해 최종 히스피딘(Hispidin) 생산 농도 분석.
+**핵심 설계 제약:**
+- **Fixed residues (서열 고정 대상):** KS 활성 Cys, AT 활성 Ser, ACP 인산판테테인화 Ser
+- **링커 길이:** 야생형 ± 3잔기 범위 내에서 탐색
+- **생성 앙상블 수:** 50~100개 후보 백본
 
 ---
 
-###  Case 2: 인실리코 검증 실패 (재설계 필요)
-**[판단 기준 및 원인 분석]**
-* **유형 A (npgA 인식 불가):** 구조 안정성은 올랐으나, ACP-npgA 인터페이스 PAE가 치솟거나 결합 각도가 뒤틀린 경우 (링커의 과도한 경직화로 인한 구조적 왜곡).
-* **유형 B (불용성 응집 위험):** 구조 신뢰도는 올라갔으나, Aggrescan3D 핫스팟이 늘어나고 Rosetta 에너지가 오히려 악화된 경우 (표면 소수성 잔기 노출).
+### Phase 3 — 서열 역설계 (ProteinMPNN)
 
-**[후속 액션 플랜 (In silico 피드백 루프)]**
-1. **유형 A 해결을 위한 Phase 2 피드백 (RFdiffusion 조건 수정):**
-   * RFdiffusion의 `contigs` 서열 길이를 살짝 늘려 유연성을 확보하거나, ACP 표면 잔기 고정(Fixed residues) 영역을 더 넓게 지정하여 npgA 결합 포켓 공간을 강제로 보호한 뒤 뼈대 재설계.
-2. **유형 B 해결을 위한 Phase 2 피드백 (ProteinMPNN 조건 수정):**
-   * RFdiffusion 백본(뼈대)은 유지하되, ProteinMPNN 구동 스크립트에 아미노산 편향 매개변수(`--soluble_designs`)를 조정하여 표면에 친수성 잔기가 배치되도록 서열만 다시 입히기.
-3. **재검증:** 수정된 서열들을 다시 Phase 3, 4 라인에 투입하여 지표의 개선 여부를 재확인.
+RFdiffusion이 생성한 링커 백본에 대해 ProteinMPNN으로 아미노산 서열을 역설계한다. Phase 2의 fixed residues를 동일하게 고정하여 촉매 잔기가 변경되지 않도록 한다.
+
+상위 후보 서열은 아래 기준으로 1차 필터링한다.
+
+- ProteinMPNN confidence score 상위 20%
+- 링커 구간 소수성 잔기 비율 감소 여부 (수용성 향상 기대)
+
+---
+
+### Phase 4 — In Silico 검증
+
+최종 후보 서열을 ColabFold에 재입력하여 야생형과 구조 지표를 대비하고, Aggrescan3D(웹 기반)로 응집 경향 잔기 변화를 확인한다.
+
+| 지표 | 의미 | 성공 기준 |
+|------|------|------|
+| **Δ pLDDT** (링커 잔기) | 구조 신뢰도 향상 | 링커 구간 pLDDT ≥ 70 도달 |
+| **Δ PAE** (도메인 간) | 도메인 간 위치 오차 감소 | PAE 감소 및 경계 블록 명확화 |
+| **Aggrescan3D 핫스팟 수** | 응집 경향 잔기 감소 | 야생형 대비 핫스팟 감소 |
+
+---
+
+## 5. 연구 수행 타임라인
+
+본 연구는 총 7일간 매일 약 2시간씩 수행하는 일정으로 설계되었다. 각 단계는 배경 학습과 실습을 병행하여 진행한다.
+
+| 일차 | 주요 활동 | 세부 내용 | 산출물 |
+|------|----------|----------|--------|
+| **Day 1** | 문헌 학습 및 환경 준비 | PKS 구조·AlphaFold pLDDT/PAE 개념 학습; ColabFold 노트북 접속 및 FASTA 서열 준비 | 배경지식 정리 노트 |
+| **Day 2** | Phase 1 실행 | ColabFold로 NnHispS 구조 예측 실행 (대기 중 서론 작성) | PDB 파일, pLDDT/PAE 그래프 |
+| **Day 3** | Phase 1 분석 | pLDDT < 50 잔기 클러스터 특정; PAE 행렬 시각화; 취약 링커 후보 구간 확정 | 취약 링커 목록 (잔기 번호) |
+| **Day 4** | 환경 구축 및 Phase 2 준비 | 실험실 서버에 RFdiffusion 설치; contigs 파라미터 설정; 촉매 잔기 fixed residues 지정 | RFdiffusion 실행 환경 |
+| **Day 5** | Phase 2–3 실행 | RFdiffusion으로 링커 백본 앙상블 생성; ProteinMPNN으로 서열 역설계; 상위 후보 필터링 | 재설계 서열 목록 |
+| **Day 6** | Phase 4 검증 | ColabFold 재예측으로 Δ pLDDT / Δ PAE 비교; Aggrescan3D(웹) 응집 핫스팟 분석 | 검증 지표 비교표, 구조 그림 |
+| **Day 7** | 보고서 작성 및 마무리 | 결과 정리, 그림 삽입, 결론 및 향후 연구 방향 작성 | 최종 보고서 |
+
+> **비고:** Day 4에서 서버 환경 구축 중 예상치 못한 오류 발생 시, Phase 2–3은 방법론 제안으로 대체하고 ColabFold 분석 결과를 중심으로 보고서를 완성하는 대안 경로를 병행한다.
+
+---
+
+## 6. 출력값 분석 및 후속 연구
+
+Phase 4의 최종 *in silico* 검증 지표를 바탕으로 두 가지 경로로 나누어 후속 연구를 진행한다.
+
+### Case 1: In Silico 검증 통과 (성공적인 설계)
+
+**판단 기준**
+- pLDDT: 링커 구간 70점 이상으로 상승
+- PAE: 도메인 간 경계면 PAE 감소 및 녹색 블록 형성
+- Aggrescan3D: 표면 응집 핫스팟 잔기 수 유의미하게 감소
+
+**후속 액션 플랜 (Wet-lab 진입)**
+1. 검증을 통과한 최상위 변이체(Variant)의 아미노산 서열 확정
+2. 국내외 유전자 합성 기업에 *E. coli* 맞춤형 CDS 서열 합성(Gene Synthesis) 의뢰
+3. 발현 벡터 구축 후 *E. coli* 내 수용성 발현 수율 확인 및 히스피딘(Hispidin) 생산 농도 분석
+
+---
+
+### Case 2: In Silico 검증 실패 (재설계 필요)
+
+**실패 유형 및 원인 분석**
+
+| 유형 | 증상 | 원인 |
+|------|------|------|
+| **유형 A** | 구조 신뢰도 상승했으나 Aggrescan3D 핫스팟 증가 | 표면 소수성 잔기 노출 |
+| **유형 B** | pLDDT 개선 미미, PAE 변화 없음 | 링커 재설계 범위 부족 |
+
+**후속 액션 플랜 (In Silico 피드백 루프)**
+1. **유형 A:** ProteinMPNN의 아미노산 편향 파라미터(`--soluble_designs`) 조정 후 서열만 재설계
+2. **유형 B:** RFdiffusion `contigs` 길이 확장 또는 마스크 범위 재조정 후 백본부터 재설계
+3. 수정된 서열을 Phase 3, 4에 재투입하여 지표 개선 여부 재확인
 
 ---
 
