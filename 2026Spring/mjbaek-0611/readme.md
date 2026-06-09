@@ -6,7 +6,7 @@
 
 **Paper 2:** [Protein Hunter: exploiting structure hallucination within diffusion for protein design](https://www.biorxiv.org/content/10.1101/2025.10.10.681530v1)
 
-**Presentation:** [2026_proteindesigntheory_mjbaek_0611] (https://docs.google.com/presentation/d/1a-y7bXH90u-M8cVhh4Onw2vwY9oLNbz0/edit?usp=sharing&ouid=101911527141458545753&rtpof=true&sd=true)
+**Presentation:** [2026_proteindesigntheory_mjbaek_0611](https://docs.google.com/presentation/d/1a-y7bXH90u-M8cVhh4Onw2vwY9oLNbz0/edit?usp=sharing&ouid=101911527141458545753&rtpof=true&sd=true)
 
 ---
 
