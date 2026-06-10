@@ -159,4 +159,7 @@ Each method has its strengths. **BoltzDesign1** fixes the interface first and re
 
 `DHKim`:  
 
-`MSAn`: 
+`MSAn`: I have a question regarding BoltzDesign's optimization strategy. As I understand it, the optimization process relies primarily on the Pairformer's distogram as a proxy objective. This approach appears to prioritize high-confidence, high-probability regions of the learned distribution while implicitly filtering out lower-confidence candidates. Under this framework, could potentially viable de novo designs be overlooked simply because they fall outside the model's learned distribution? In particular, highly novel candidates may receive lower confidence scores despite being biophysically feasible. 
+ Intuitively, restricting the search space to high-probability regions might reduce structural diversity and could even limit the discovery of successful but unconventional solutions. Given this concern, how does the distogram-based optimization strategy ultimately achieve higher design accuracy and experimental yield without suffering from a significant loss of diversity or innovation?
+
+
