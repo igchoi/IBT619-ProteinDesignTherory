@@ -1,6 +1,6 @@
 # 연구계획서
 
-## *Polyketide Synthase(PKS)* 의 대장균 내 이종 발현을 위한 취약 링커 규명 및 재설계 In silico 파이프라인
+## *Polyketide Synthase(PKS)* 의 대장균 내 안정적인 발현을 높이기 위한 취약 링커 규명 및 재설계 In silico 파이프라인
 
 ---
 
