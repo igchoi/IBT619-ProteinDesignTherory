@@ -155,7 +155,7 @@ X 토큰으로 시작하면 초반에 알라닌이 많이 나옵니다. Folding 
 
 `YSOh`: 
 
-`KHNam`: 
+`KHNam`: Protein Hunter improves the speed of candidate generation by using AF3-style hallucination and iterative redesign. However, the speaker also emphasizes that confidence scores can be model-biased and require cross-model validation and filtering. If these downstream validation steps are included, how much of the speed advantage remains at the full pipeline level compared with using a single design model or large-scale sampling approach?
 
 `DHKim`:  
 
