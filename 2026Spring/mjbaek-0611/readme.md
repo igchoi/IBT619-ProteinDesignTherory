@@ -138,6 +138,7 @@ python run_protein_hunter.py
 **Q1: 왜 Boltz-2가 다른 모델들 보다 더 confident한 구조를 만드나?**
 
 정확한 이유는 불명확하지만 발표자 가설은 이렇습니다. Boltz-2는 Performer 기반 모듈에서 confidence weight를 직접 계산합니다. 그 과정에서 링커와 복합체 내 상호작용 정보가 더 풍부하게 반영되는 것 같다. 파라미터 수, 레이어 구성 등도 영향을 줄 것으로 봅니다.
+->즉 Boltz-2는 Diffusion이 구조를 만들어가는 과정 중에 confidence가 함께 계산. 그러다 보니 링커, 복합체 인터페이스 같은 분자 간 상호작용 정보가 confidence에 더 직접적으로 반영됩니다.
 
 **Q2: 실험적 성공률이 낮은 이유는?**
 
