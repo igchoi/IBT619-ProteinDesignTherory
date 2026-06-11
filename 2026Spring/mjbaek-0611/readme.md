@@ -128,24 +128,21 @@ python run_protein_hunter.py
 
 ---
 
-## 5. Q&As in the Seminar
+## 5. [Q&As](https://docs.google.com/document/d/182tMNwqGitB6rTey5Hn6ihYR9ato6_YZOgkIQx_anT8/edit?usp=sharing) in the Seminar
 
 **key questions**
 
-**Q1: Why is Boltz-2 so confident in its predictions compared to AlphaFold3?**
-AlphaFold3 essentially memorizes correct structures and stretches them during inference, whereas Boltz-2 derives module weights directly from the Pairformer's confidence output. This means Boltz-2 has access to richer interface and complex-level information encoded in the pair representations, which likely explains its higher confidence scores. *(Personal hypothesis by the speaker.)*
+**Q1: 왜 Boltz-2가 더 confident한 구조를 만드나?**
+정확한 이유는 불명확하지만 발표자 가설은 이렇습니다. AF3는 맞는 구조를 기억하고 stretch하는 방식인 반면, Boltz-2는 Performer 기반 모듈에서 confidence weight를 직접 계산합니다. 그 과정에서 링커와 복합체 내 상호작용 정보가 더 풍부하게 반영되는 것 같다는 거예요. 파라미터 수, 레이어 구성 등도 영향을 줄 것으로 봅니다.
 
-**Q2: How do you experimentally measure and evaluate binding affinity (KD)?**
-BLI (Bio-Layer Interferometry) is used. The target protein is immobilized on the BLI tip, and binders at varying concentrations are flowed over it. The resulting binding curves (kon/koff) are used to calculate KD. Notably, KD measurement is not strictly necessary for initial screening — the equilibrium curve itself provides sufficient information. The KD values reported in the papers are experimental, not computationally predicted; current models may estimate protein–protein KD during fine-tuning, but reliable prediction across diverse and difficult targets remains challenging.
+**Q2: 실험적 성공률이 낮은 이유는?**
+발표자도 고민 중인 문제입니다. 현재는 Rosetta 기반 필터링—delta G, 불포화 수소결합 잔기 등—으로 rough하게 걸러냅니다. 특정 결합이나 상호작용을 극대화하는 방향으로 설계하기도 하고, 여러 모델을 함께 써서 affinity나 KD의 상호 연관성을 보면서 다양한 타입의 바인더를 얻는 방식을 씁니다.
 
-**Q3: What filtering strategies are used to enrich for experimentally successful designs?**
-Rough energy-based filters analogous to Rosetta are applied (e.g., ΔG, unsatisfied hydrogen bond residues). For specific cases, particular interaction types (e.g., specific bonds) are maximized during design. Using multiple models and examining correlations between metrics like affinity and KD across models helps obtain diverse, target-specific binder candidates.
+**Q3: 좋은 KD를 어떻게 측정하나?**
+실험적으로는 **BLI(Bio-Layer Interferometry)**를 씁니다. 타깃을 센서에 고정시키고 바인더 농도를 바꿔가면서 결합 곡선을 그립니다. 여기서 equilibrium curve를 피팅해서 KD를 계산합니다. 단, NC 커브가 있으면 KD 계산이 불필요한 경우도 있어요. 모델이 KD를 직접 계산하지는 않았고, Boltz-2가 fine-tuning 과정에서 protein-protein KD를 예측할 수는 있지만 다양하고 어려운 타깃에는 아직 한계가 있습니다.
 
-**Q7: Does training data bias affect where binders dock on the target?**
-Yes, bias is inevitable. When using all-X token sequences, the model sometimes docks at the binding pocket and sometimes elsewhere — there is genuine uncertainty about the binding site. This arises partly from overfitting to training data distributions and partly from target-specific variation. For example, a 10-X token sequence designed for one binding site may also score well at unintended sites. The exact nature of the binding pocket interference is not fully understood.
-
-**Q9: Which of the three methods (BoltzDesign1, Protein Hunter, single diffusion) would you recommend?**
-Each method has its strengths. **BoltzDesign1** fixes the interface first and redesigns around it, making it well-suited when you have a defined interface and want to leverage rich learned structural information. **Protein Hunter** (multi-step diffusion) is recommended when you want to maximize confidence scores quickly — it jointly optimizes sequence and structure iteratively and is the fastest option. For initial exploration, using multiple methods in parallel (as BindCraft does with ~5 models) is strongly advised, as performance varies considerably across targets.
+**Q5: 왜 알라닌 편향이 생기나??**
+X 토큰으로 시작하면 초반에 알라닌이 많이 나옵니다. Folding 모델이 사이드체인을 알라닌 수준의 단순한 5개 원자(C-alpha 중심)로 표현하기 때문에 구조 예측 시 알라닌으로 수렴하는 경향이 있습니다. 그래서 알라닌 편향 옵션을 넣어서 초반에는 알라닌이 많더라도 사이클이 진행될수록 점진적으로 줄어들게 설계했습니다. 마지막에는 덜 편향된 서열로 수렴합니다.
 
 ---
 
