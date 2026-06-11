@@ -27,15 +27,13 @@
 - [GitHub](https://github.com/yehlincho) · [Personal Site](https://sites.google.com/view/yehlincho/home)
 
 ### Domain
-- 🎓 **Career & Education**
-  Education
+- **Education**
   - Massachusetts Institute of Technology (MIT)
     - Ph. D. in Department of Materials Science and Engineering (DMSE) Sep. 2021 - May.2026
   - Korea Advanced Institute of Science and Technology (KAIST)
-    - B.S. in Materials Science and Engineering (MSE) Mar. 2017 – Feb. 2021
-
-Graduated as the 1st rank student of the department
-    - Research: ML for protein structure prediction and engineering
+    - B.S. in Materials Science and Engineering (MSE) Mar. 2017 – Feb. 2021 
+  
+  - Research: ML for protein structure prediction and engineering
   - Awards: MOGAM-KASBP Scholarship (2022), SBS Foundation Scholarship (2021), BEST PDB Poster Award at ISMB 2024
 
 - **Publications**
