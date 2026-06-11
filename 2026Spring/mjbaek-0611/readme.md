@@ -152,7 +152,7 @@ X 토큰으로 시작하면 초반에 알라닌이 많이 나옵니다. Folding 
 
 ## 6. Classmate Questions
 
-`SWKim`: 
+`SWKim`: In the ProteinHunter preprint paper, sequence generation relied only on ProteinMPNN and LigandMPNN. Since these models may also have inherent biases, could the iterative design process converge to biased or suboptimal sequences despite improving structural confidence? Sequence diversity was not reported in preprint paper...
 
 `YSOh`: 
 
