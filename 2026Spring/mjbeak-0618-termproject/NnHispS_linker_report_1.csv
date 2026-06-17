@@ -1,0 +1,4 @@
+label,start,end,helix_frac,strand_frac,avg_plddt,min_plddt,avg_pae,vuln_score,catalytic_in_linker,verdict
+PP-binding_1-PKS_KS,662,684,0.32432432432432434,0.0,40.4,27.5,21.2,64.0,,REDESIGN
+PKS_KS-Trans-AT_docking,1109,1122,0.0,0.0,57.5,35.9,8.2,34.5,,REDESIGN
+Trans-AT_docking-PKS_AT,1192,1204,0.0,0.2777777777777778,65.5,52.6,4.9,25.2,,NO-NEED

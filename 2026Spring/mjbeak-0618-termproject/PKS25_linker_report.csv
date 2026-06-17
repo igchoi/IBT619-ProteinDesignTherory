@@ -1,0 +1,3 @@
+label,start,end,helix_frac,strand_frac,avg_plddt,min_plddt,avg_pae,vuln_score,catalytic_in_linker,verdict
+PKS_AT-PKS_DH2,917,928,0.3333333333333333,0.125,78.1,51.5,22.7,47.6,,REDESIGN
+PKS_ER-PKS_KR,2019,2029,0.23529411764705882,0.14705882352941177,81.9,69.0,18.0,38.1,,REDESIGN
