@@ -138,7 +138,9 @@ Helix 비율이 30% 이상인 두 gap(AMP–ACP_1, AT–ACP_2)은 compaction rat
 
 <img width="2365" height="664" alt="image" src="https://github.com/user-attachments/assets/fe902897-1be7-4dde-94fa-1e25ec9d403d" />
 
-###**Figure 1.** NnHispS의 HMM으로 확인한 도메인과 DSSP coil 기반 링커 후보 부위 map.
+### **Figure 1.** NnHispS의 HMM으로 확인한 도메인과 DSSP coil 기반 링커 후보 부위 map.
+
+
 
 Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구간은 gap처럼 보이지만 높은 helix 비율과 낮은 compaction ratio로 인해 링커는 아닌 것으로 판단되었다. 나머지 L1(ACP_1–KS), L2(KS–Docking), L3(Docking–AT)는 gap이자 링커적인 특징을 모두 보여 링커로 최종 확정하였다.
 
@@ -148,9 +150,10 @@ Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구�
 
 확정된 3개 링커가 동일한 수준의 구조적 취약성을 가지는지 확인하고자 하였다. 일부 링커만 구조적 불안정성을 나타낸다면 재설계의 우선순위를 결정할 수 있다. AlphaFold의 pLDDT와 PAE로 각 링커의 취약도를 정량화한 결과는 다음과 같다.
 
+<img width="2254" height="1125" alt="image" src="https://github.com/user-attachments/assets/93721d7c-52b6-4d30-848d-912908c44523" />
+
 ### **Figure 2.** 확정된 링커 3개의 pLDDT 프로파일 및 도메인 간 PAE·취약도 비교.
 
-<img width="2254" height="1125" alt="image" src="https://github.com/user-attachments/assets/93721d7c-52b6-4d30-848d-912908c44523" />
 
 
 6개 도메인 자체의 평균 pLDDT는 78.5–93.5로 모두 안정적이었고, 링커 구간에서만 뚜렷한 저하가 관찰되어 도메인-링커 경계 확정이 구조적으로도 타당함을 추가로 확인하였다. 특히 L1은 가장 낮은 pLDDT와 높은 PAE를 나타내어 세 링커 중 가장 취약한 부위로 확인되었다.
@@ -161,9 +164,10 @@ Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구�
 
 취약성이 높은 링커라도 해당 부위가 촉매 활성에 직접 관여한다면 재설계는 오히려 효소 기능을 손상시킬 수 있다. 따라서 보존된 촉매 잔기의 위치를 탐색하고 링커 좌표와 비교하였다.
 
+<img width="2512" height="770" alt="image" src="https://github.com/user-attachments/assets/dfca8cdc-0ef7-4ea5-a6b1-b15d03bd5591" />
+
 ### **Figure 3.** 촉매 잔기(보존 위치) 표시를 포함한 NnHispS 최종 검증 맵.
 
-<img width="2512" height="770" alt="image" src="https://github.com/user-attachments/assets/dfca8cdc-0ef7-4ea5-a6b1-b15d03bd5591" />
 
 모든 촉매 잔기는 각 도메인 내부에 위치하였으며 고신뢰 링커와 중복되지 않았다. L1과 L2는 취약도 임계값을 넘으면서 촉매 잔기도 없어 REDESIGN으로, L3는 취약도가 낮아 NO-NEED로 판정되었다. 취약성이 높으면서도 촉매 기능을 직접 교란하지 않는 링커를 재설계 대상으로 우선 선정할 수 있었다.
 
@@ -173,21 +177,23 @@ Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구�
 
 NnHispS를 기반으로 구축된 링커 탐색 기준이 특정 단백질에만 최적화된 결과일 가능성을 배제하기 위해, 도메인 구성이 다른 PKS25(KS-AT-DH-ER-KR, 환원형 모듈형 PKS)에 동일한 방법론을 적용해 교차 검증하였다. NnHispS와 달리 DH, ER이 확정되었고 AMP-binding, docking domain은 검출되지 않아, 도메인 구성이 입력 서열에 따라 자동으로 달라짐을 보였다.
 
-### **Figure 4.** PKS25(*Dictyostelium discoideum*, UniProt Q54KU3 / AlphaFold AF-Q54KU3)의 HMM 확정 도메인과 링커.
-
 <img width="2525" height="831" alt="image" src="https://github.com/user-attachments/assets/c321415d-a8c4-49d1-85a0-3c5e101e8610" />
 
----
+### **Figure 4.** PKS25(*Dictyostelium discoideum*, UniProt Q54KU3 / AlphaFold AF-Q54KU3)의 HMM 확정 도메인과 링커.
+
 
 도메인 탐지 이후 구조 검증을 통해 실제 링커와 미식별 구조 영역이 구분되었으며, NnHispS에서 관찰된 의사결정 흐름이 동일하게 재현되었다. DH–ER 사이 521 aa gap은 NnHispS의 미식별 구간과 동일하게 Helix/Strand 비율이 30% 내외로 높아 같은 기준으로 분류되었다. 이는 "짧은 gap은 coil 우세, 긴 gap은 정형 구조 혼재"라는 판단 기준이 진균 비환원형 PKS와 아메바 환원형 모듈형 PKS라는 진화적으로 거리가 먼 두 단백질에서 공통적으로 관찰됨을 보여주며, 본 연구의 프레임워크가 특정 PKS에 대한 경험적 규칙이 아니라 Type I PKS가 공유하는 구조적 특성을 반영하는 범용적 접근법일 가능성을 시사한다.
+
+---
 
 ### 5) Result V — 자동화 파이프라인 검증
 
 본 연구에서 구축한 분석 체계는 여러 단계를 거치는 순차적 과정으로 이루어져 있어, 대량의 PKS 분석에 수동으로 적용하기에는 현실적인 한계가 있다. 따라서 전체 과정을 자동화하더라도 전문가 수준의 결과를 재현할 수 있는지를 검증하고자 하였다.
 
+<img width="2383" height="1093" alt="image" src="https://github.com/user-attachments/assets/a5b14c9c-3bdb-40b2-ae19-9c936af45e67" />
+
 ###**Figure 5.** NnHispS, PKS25 각각에서 수동 분석(상단)과 자동화 결과(하단) 링커 좌표 페어 비교.
 
-<img width="2383" height="1093" alt="image" src="https://github.com/user-attachments/assets/a5b14c9c-3bdb-40b2-ae19-9c936af45e67" />
 
 유일한 차이는 NnHispS L1 링커의 끝 좌표(수동 685, 자동화 684)로, 같은 DSSP 출력에서 가장 긴 연속 coil run을 추출하는 동일 절차이므로 round-off 수준의 사소한 차이로 판단된다. 도메인 경계, 미식별 구간, 링커 좌표(1 aa 이내), 최종 판정 모두에서 자동화 결과가 수동 분석과 일치하였다.
 
