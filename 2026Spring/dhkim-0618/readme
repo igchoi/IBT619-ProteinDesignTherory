@@ -1,0 +1,294 @@
+# Research Plan
+
+## AML에서 PIM kinase 활성을 억제하기 위한 ATP-binding pocket block형 De novo binder protein 디자인
+
+---
+
+## 1. Background
+
+### 1) AML(Acute myeloid leukemia)
+
+Acute myeloid leukemia, AML은 진행 속도가 빠른 혈액암으로, chemotherapy, hematopoietic stem cell transplantation, targeted therapy 등이 주요 치료 전략으로 사용되고 있다. 최근에는 환자의 유전자 변이에 따라 FLT3 inhibitor, IDH inhibitor, BCL-2/venetoclax, menin inhibitor와 같이 genetic subtype에 따른 targeted therapy가 활발히 연구 및 적용되고 있다.
+
+특히 FLT3-ITD AML에서는 constitutive FLT3 signaling이 STAT5 activation을 통해 PIM kinase 발현을 증가시킬 수 있다는 연구 결과가 있다. 따라서 PIM kinase는 AML, 특히 FLT3-ITD 양성 AML에서 cancer cell survival, proliferation, anti-apoptosis, drug resistance와 관련된 중요한 therapeutic target candidate로 볼 수 있다.
+
+### 2) PIM kinase
+
+PIM kinase는 PIM1, PIM2, PIM3 세 가지 isoform으로 구성된 serine/threonine kinase family이다. 이들은 세포 생존, 증식, 항세포사멸, 약물 저항성과 관련된 pathway에 관여한다. AML에서는 FLT3-STAT5 signaling과 연결되어 PIM kinase 발현이 증가할 수 있으며, 이로 인해 PIM kinase는 AML에서 억제할 가치가 있는 target으로 여겨진다.
+
+기존에는 AZD1208, PIM447, INCB053914와 같은 pan-PIM small-molecule inhibitor들이 연구되었다. 그러나 현재 AML에서 approved standard therapy로 사용되고 있지는 않으며, monotherapy 효과에도 한계가 보고되었다. 따라서 기존 small-molecule inhibitor와 다른 방식의 PIM kinase 억제 전략을 생각해볼 수 있다.
+
+### 3) ATP-binding pocket block형 binder protein
+
+PIM kinase에는 ATP-binding pocket이 존재하며, 기존 inhibitor 개발에서는 이 부위가 주요 target site로 사용되었다. 일반적인 ATP-competitive inhibitor는 ATP-binding pocket 내부에 결합하여 ATP와 경쟁하는 방식으로 kinase 활성을 억제한다.
+
+본 연구에서는 small molecule이 아니라 de novo protein binder를 이용하여 PIM kinase의 ATP-binding pocket 주변부를 차폐하는 전략을 생각하였다. Protein binder는 small molecule처럼 깊고 좁은 ATP pocket 내부에 직접 들어가기 어렵기 때문에, ATP-binding pocket 내부를 target으로 하기보다는 pocket rim, hinge region, P-loop, catalytic cleft 주변부를 덮는 방식이 더 현실적이라고 판단하였다.
+
+따라서 본 연구의 기본 방향은 PIM kinase의 ATP-binding pocket 주변부를 덮어 ATP 접근을 sterically block할 가능성이 있는 de novo binder protein candidate를 computational tool로 설계하는 것이다.
+
+---
+
+## 2. Research objective
+
+본 연구의 목적은 PIM kinase ATP-binding pocket을 block할 가능성이 있는 de novo binder protein candidate를 in silico로 설계하는 것이다.
+
+초기 계획에서는 RFdiffusion, ProteinMPNN, AlphaFold-Multimer, Rosetta InterfaceAnalyzer를 모두 활용하여 binder backbone 생성, sequence design, complex 구조 예측, interface analysis까지 진행하고자 하였다. 그러나 실제 연구 기간과 지식적 한계를 고려했을 때, 모든 과정을 수행하기는 어렵다고 판단하였다.
+
+따라서 본 연구에서는 범위를 줄여 RFdiffusion과 ProteinMPNN 두 가지 tool만 사용하고자 하였다. 즉, 실제 binding affinity나 kinase inhibition을 평가하는 것이 아니라, PIM kinase 1을 target으로 ATP-binding pocket 주변부에 결합할 가능성이 있는 binder backbone과 예측 amino acid sequence를 얻는 것을 1차 목표로 하였다.
+
+또한 PIM1, PIM2, PIM3를 모두 대상으로 하기보다는, 구조 정보가 비교적 잘 알려져 있고 AML과 관련성이 높은 PIM kinase 1만을 target으로 설정하였다.
+
+---
+
+## 3. Research questions
+
+### Research Question 1
+
+PIM kinase 1의 ATP-binding pocket 주변 residue를 hotspot으로 설정했을 때, RFdiffusion을 이용하여 ATP pocket 입구를 덮을 수 있는 de novo binder backbone을 생성할 수 있는가?
+
+### Research Question 2
+
+RFdiffusion으로 생성된 binder backbone에 ProteinMPNN을 적용하여, 해당 backbone에 적합한 amino acid sequence candidate를 얻을 수 있는가?
+
+### Research Question 3
+
+AlphaFold-Multimer와 Rosetta InterfaceAnalyzer를 사용하지 못하는 제한적인 조건에서도, RFdiffusion과 ProteinMPNN만으로 PIM kinase 1 binder design의 초기 workflow를 구성할 수 있는가?
+
+---
+
+## 4. Strategy
+
+### 1) A plan: Competitive-like ATP-pocket-blocking binder design
+
+PIM kinase의 ATP-binding pocket 주변부에 결합하여 ATP 접근을 물리적으로 차단할 수 있는 binder를 설계하는 전략이다.
+
+Protein binder는 small molecule처럼 ATP pocket 내부에 깊게 들어가기 어렵다. 따라서 본 연구에서는 ATP-binding pocket 내부 결합이 아니라, ATP pocket 입구를 구성하는 P-loop, hinge region, catalytic cleft 주변부를 덮는 방식을 목표로 하였다.
+
+이 전략은 완전한 ATP-competitive inhibitor라기보다는, ATP가 pocket으로 접근하는 경로를 단백질 binder가 steric하게 막는 competitive-like binder design에 가깝다.
+
+### 2) B plan: Potential allosteric binder design
+
+초기 계획에서는 PIM kinase 표면의 potential allosteric pocket을 찾아 해당 부위에 결합하는 binder를 설계하는 방법도 고려하였다. Allosteric binder는 ATP-binding pocket에 직접 결합하지 않더라도 kinase domain의 conformation을 변화시키거나 ATP-binding pocket의 안정성을 방해할 가능성이 있다.
+
+하지만 PIM kinase에서 명확하게 확립된 allosteric site 정보는 제한적이다. 또한 allosteric site 탐색부터 binder design까지 진행하기에는 시간적 한계가 있었다. 따라서 본 연구에서는 B plan은 후속 연구 방향으로만 남기고, 실제 시도는 A plan인 ATP-pocket-blocking binder design에 집중하였다.
+
+---
+
+## 5. Computational pipeline
+
+### 5.1 초기 계획
+
+처음 계획한 전체 pipeline은 다음과 같다.
+
+step1. PDB에서 PIM1/2를 target으로 구조 기반 ATP-binding pocket, hinge, P-loop, pocket hotspot residue 정의
+step2. Competitive-like epitope와 potential allosteric pocket target epitope 선정
+step3. RFdiffusion - 3D 구조에 target epitope 주변에 결합 가능한 binder backbone 생성
+step4. ProteinMPNN - 만들어진 binder backbone의 sequence 생성 및 stability filtering
+step5. AlphaFold2-Multimer - complex 예측, ipTM, PAE, clash 및 결합 가능성 평가
+step6. Rosetta InterfaceAnalyzer - ΔG, buried SASA, shape complementarity 계산
+step7. 최종 후보 선별
+
+### 5.2 실제 시도한 단순화 pipeline
+
+그러나 본 연구에서는 시간적, 지식적 한계로 인해 전체 pipeline을 모두 수행하지 못하였다. 실제로는 RFdiffusion과 ProteinMPNN만 사용하여 예측 서열을 얻는 것을 목표로 하였다.
+
+Input: PIM kinase 1 PDB file
+│
+▼
+[1] PIM kinase 1 ATP-binding pocket 주변 residue 확인
+│
+▼
+[2] P-loop, catalytic cleft, hinge region을 포함하는 hotspot 지정
+│
+▼
+[3] RFdiffusion으로 binder backbone 생성 시도
+│
+▼
+[4] ProteinMPNN으로 binder sequence 생성 시도
+│
+▼
+Output: PIM kinase 1 ATP-pocket-blocking binder의 예측 sequence candidate
+
+본 단계에서는 실제 결합력, kinase inhibition, 세포 내 작용 가능성은 평가하지 않았다.
+
+---
+
+## 6. Materials and Methods
+
+### 6.1 Target protein
+
+본 연구에서는 PIM kinase family 중 PIM kinase 1만을 target으로 사용하고자 하였다. PIM1은 AML과 관련성이 있고, PDB 구조를 이용한 ATP-binding pocket 확인이 가능하기 때문에 첫 번째 target으로 적절하다고 판단하였다.
+
+PIM2와 PIM3도 암과 관련성이 있지만, 초심자 수준에서 짧은 기간 안에 여러 isoform을 동시에 다루면 hotspot 설정과 구조 비교가 복잡해진다. 따라서 본 연구에서는 PIM1 하나만을 사용하여 workflow를 먼저 구성하고자 하였다.
+
+### 6.2 RFdiffusion input setting
+
+RFdiffusion을 구동하기 위해 다음과 같은 input setting을 사용하고자 하였다.
+
+```python
+TARGET_PDB = "/content/my_target.pdb"  # 준비한 Pim-1 PDB 파일 경로
+TARGET_CONTIG = "A33-313"              # 타겟 단백질의 체인과 실제 잔기 번호 범위
+HOTSPOTS = "A49,A67,A120,A124"         # Pim-1 ATP 포켓 입구를 덮기 위한 핵심 타겟 잔기들
+BINDER_LENGTH = "60-80"                # 생성할 미니 단백질 결합체의 길이 범위
+```
+
+여기서 `TARGET_PDB`는 Google Colab에 업로드한 PIM1 PDB 파일을 의미한다. `TARGET_CONTIG = "A33-313"`은 PIM1 kinase domain 중 chain A의 residue 범위를 지정한 것이다. 다만 실제 PDB마다 residue numbering이나 missing residue가 다를 수 있기 때문에, 이 값은 사용한 PDB 파일에서 반드시 확인해야 한다.
+
+### 6.3 Hotspot 및 epitope 지정 이유
+
+본 연구에서 지정한 hotspot은 다음과 같다.
+
+```python
+HOTSPOTS = "A49,A67,A120,A124"
+```
+
+이 hotspot은 PIM1 ATP-binding pocket 내부가 아니라, ATP pocket 입구를 덮는 방향으로 설정하였다. 이유는 protein binder가 small molecule처럼 ATP pocket 내부에 깊게 결합하기는 어렵기 때문이다. 따라서 pocket 내부를 직접 target으로 하기보다는, ATP가 들어가는 입구와 주변 구조를 덮을 수 있는 residue를 중심으로 epitope을 설정하였다.
+
+A49는 P-loop 또는 glycine-rich loop 주변 residue로 볼 수 있다. 이 부위는 ATP의 phosphate group이 접근하는 쪽과 가까운 영역이기 때문에, binder가 이 부위를 덮으면 ATP 접근을 방해할 가능성이 있다고 판단하였다.
+
+A67은 kinase catalytic cleft에서 중요한 위치에 있는 catalytic Lys 주변 residue이다. ATP 결합과 phosphate transfer에 중요한 구조적 위치에 해당하므로, 이 주변을 binder가 차폐하면 ATP 결합 또는 catalytic positioning에 영향을 줄 수 있다고 보았다.
+
+A120과 A124는 hinge region 또는 ATP pocket rim 주변에 해당하는 residue로 설정하였다. Hinge region은 ATP-competitive inhibitor들이 자주 상호작용하는 부위이므로, binder가 이 부위와 접촉하면 pocket 입구를 덮는 형태가 나올 가능성이 있다고 판단하였다.
+
+따라서 A49, A67, A120, A124는 각각 P-loop, catalytic cleft, hinge region을 대표하도록 설정한 hotspot이다. 이 조합을 통해 binder가 한쪽에만 붙는 것이 아니라 ATP-binding pocket 입구를 전체적으로 덮는 방향으로 생성되기를 기대하였다.
+
+### 6.4 Binder length 설정
+
+Binder length는 60–80 aa로 설정하였다.
+
+```python
+BINDER_LENGTH = "60-80"
+```
+
+너무 짧은 binder는 ATP pocket 입구를 충분히 덮기 어렵고, 너무 긴 binder는 구조가 복잡해져 계산과 해석이 어려워질 수 있다. 따라서 본 연구에서는 ATP-binding pocket 주변부를 덮을 수 있으면서도 비교적 작은 mini protein binder를 만들기 위해 60–80 aa 범위를 사용하고자 하였다.
+
+### 6.5 RFdiffusion
+
+RFdiffusion은 target protein의 3D 구조와 hotspot 정보를 이용해, 해당 부위에 결합할 수 있는 binder backbone을 생성하는 단계로 사용하고자 하였다.
+
+본 연구에서는 PIM1의 ATP-binding pocket 입구를 target epitope으로 설정하고, 이 부위를 덮는 binder backbone을 생성하는 것을 목표로 하였다. 이 단계에서 얻어지는 결과는 sequence가 완성된 단백질이 아니라, binder의 3D backbone 후보이다.
+
+### 6.6 ProteinMPNN
+
+ProteinMPNN은 RFdiffusion으로 생성된 backbone에 amino acid sequence를 부여하는 단계로 사용하고자 하였다.
+
+즉, RFdiffusion이 binder의 형태를 만들고, ProteinMPNN이 그 형태를 유지할 수 있는 sequence를 제안하는 방식이다. 본 연구에서는 AlphaFold-Multimer와 Rosetta를 사용하지 않았기 때문에, ProteinMPNN 결과는 검증된 binder sequence가 아니라 1차 예측 sequence candidate로 해석해야 한다.
+
+---
+
+## 7. Seven-day timeline
+
+본 연구는 초심자 기준으로 약 7일 안에 가능한 범위를 목표로 하였다.
+
+| 날짜    | 목표             | 내용                                                                               | 예상 결과              |
+| ----- | -------------- | -------------------------------------------------------------------------------- | ------------------ |
+| Day 1 | 환경 세팅          | Google Colab에서 RFdiffusion과 ProteinMPNN 실행 환경을 준비하고 예제 파일로 작동 여부를 확인한다.          | 예제 실행 확인           |
+| Day 2 | PIM1 구조 준비     | PIM1 PDB 파일을 준비하고 chain A와 residue numbering을 확인한다. ATP-binding pocket 위치를 확인한다. | `my_target.pdb` 준비 |
+| Day 3 | Hotspot 선정     | ATP pocket 입구를 덮기 위한 hotspot residue를 선정한다. 본 연구에서는 A49, A67, A120, A124를 사용한다.  | hotspot set 확정     |
+| Day 4 | RFdiffusion 실행 | PIM1 구조와 hotspot 정보를 이용해 binder backbone 생성을 시도한다. 처음에는 소수의 backbone만 생성한다.      | backbone 후보        |
+| Day 5 | ProteinMPNN 실행 | RFdiffusion으로 얻은 backbone에 대해 sequence design을 수행한다.                             | sequence 후보        |
+| Day 6 | 후보 확인          | 생성된 backbone과 sequence를 정리하고, pocket을 덮는 형태인지 확인한다.                              | 1차 후보 정리           |
+| Day 7 | 결과 정리          | 실행 결과, 오류, 한계, 후속 개선 방향을 정리한다.                                                   | pilot report 작성    |
+
+---
+
+## 8. Expected results
+
+본 연구를 통해 PIM kinase 1 ATP-binding pocket 주변부에 결합할 수 있는 de novo binder backbone과 amino acid sequence candidate를 얻을 수 있을 것으로 예상하였다.
+
+특히 A49, A67, A120, A124를 hotspot으로 지정하여 P-loop, catalytic cleft, hinge region 주변을 동시에 덮는 binder가 생성되기를 기대하였다. 이러한 binder는 ATP-binding pocket 내부에 직접 결합하지 않더라도, ATP가 pocket으로 접근하는 입구를 sterically block할 가능성이 있다.
+
+예상한 결과물은 다음과 같다.
+
+1. PIM1 ATP-binding pocket 주변부에 결합하는 RFdiffusion backbone 후보
+2. 각 backbone에 대한 ProteinMPNN sequence 후보
+3. hotspot과 binder length 조건 정리
+4. 후속 AlphaFold-Multimer 및 Rosetta 분석에 사용할 수 있는 sequence set
+
+---
+
+## 9. Results
+
+본 연구에서는 Google Colab을 이용하여 RFdiffusion과 ProteinMPNN을 실행하고자 하였다. Google Colab은 별도의 GPU workstation 없이 사용할 수 있기 때문에, 초심자 수준에서 computational protein design을 시도하기에 접근성이 좋다고 판단하였다.
+
+하지만 실제 구동 과정에서는 반복적인 오류가 발생하였다. 특히 RFdiffusion 실행 과정에서 PDB 입력 형식, contig 설정, dependency 문제, runtime 문제 등이 반복적으로 나타났다. 또한 실행 시간이 길어지면서 Colab 세션이 종료되거나, 사용량 제한으로 인해 계산을 계속 진행하기 어려운 문제가 있었다.
+
+결과적으로 본 연구에서는 실제 RFdiffusion backbone과 ProteinMPNN sequence candidate를 확보하지 못하였다. 따라서 본 연구의 실질적인 결과는 binder sequence 확보가 아니라, PIM1 ATP-binding pocket block형 binder design을 위한 target 설정, hotspot 선정, binder length 설정, 그리고 단순화된 workflow 구성에 머물렀다.
+
+즉, 본 연구는 성공적인 computational design 결과를 제시한 연구라기보다는, PIM1을 대상으로 RFdiffusion과 ProteinMPNN을 적용하기 위한 pilot trial로 볼 수 있다.
+
+---
+
+## 10. Limitation
+
+### 1) 실제 sequence candidate를 얻지 못함
+
+가장 큰 한계는 Google Colab 환경에서 반복적인 오류와 runtime 제한으로 인해 실제 binder sequence candidate를 확보하지 못했다는 점이다. 따라서 본 연구에서는 최종 후보 sequence나 구조 모델을 제시할 수 없다.
+
+### 2) RFdiffusion과 ProteinMPNN만 사용한 한계
+
+초기 계획과 달리 AlphaFold-Multimer와 Rosetta InterfaceAnalyzer를 사용하지 못하였다. 따라서 설령 RFdiffusion과 ProteinMPNN으로 sequence를 얻더라도, 해당 sequence가 실제로 접히는지, PIM1에 결합하는지, ATP-binding pocket을 차단하는지는 판단할 수 없다.
+
+RFdiffusion과 ProteinMPNN은 후보를 생성하는 단계에는 사용할 수 있지만, 실제 binding affinity나 kinase inhibition을 보장하지는 않는다.
+
+### 3) Protein binder 전략 자체의 한계
+
+PIM kinase의 ATP-binding pocket은 작고 깊은 구조를 가지므로 protein binder가 pocket 내부에 직접 결합하기는 어렵다. 따라서 본 연구는 pocket 내부 결합이 아니라 pocket 입구를 덮는 전략을 사용하였다.
+
+하지만 ATP pocket 입구를 덮는 것만으로 실제 ATP binding이 충분히 방해될지는 추가 검증이 필요하다.
+
+### 4) Hotspot 설정의 불확실성
+
+본 연구에서는 A49, A67, A120, A124를 hotspot으로 설정하였다. 그러나 residue numbering은 사용하는 PDB 파일에 따라 달라질 수 있으며, 일부 residue는 missing되어 있을 수도 있다.
+
+따라서 hotspot은 고정된 정답이라기보다는 P-loop, catalytic cleft, hinge region을 대표하기 위한 1차 설정으로 보아야 한다. 후속 연구에서는 PDB 구조를 직접 확인하고 hotspot set을 여러 개로 나누어 비교하는 과정이 필요하다.
+
+### 5) Google Colab 환경의 한계
+
+Google Colab은 접근성은 좋지만 RFdiffusion처럼 무거운 계산을 반복적으로 수행하기에는 한계가 있었다. 긴 runtime, 세션 종료, GPU 사용량 제한이 반복되었고, 이로 인해 결과를 안정적으로 얻기 어려웠다.
+
+후속 연구에서는 local GPU workstation, cloud GPU server, 또는 Colab Pro와 같은 더 안정적인 계산 환경이 필요하다.
+
+### 6) Intracellular target으로서의 한계
+
+PIM kinase는 세포 안에 존재하는 kinase이다. 따라서 binder protein을 실제 치료제로 사용하기 위해서는 세포 내 전달, 단백질 안정성, degradation, immunogenicity 등의 문제가 추가로 해결되어야 한다.
+
+본 연구는 이러한 치료제 개발 단계까지 다루는 것이 아니라, PIM1 ATP-binding pocket을 target으로 한 de novo binder design의 초기 가능성을 확인하는 단계이다.
+
+---
+
+## 11. Future plan
+
+후속 연구에서는 먼저 RFdiffusion과 ProteinMPNN이 안정적으로 실행되는 계산 환경을 확보해야 한다. 이후 같은 PIM1 PDB와 hotspot 조건을 사용하여 소량의 backbone을 먼저 생성하고, 정상적으로 실행되면 backbone 수를 늘리는 방식으로 진행하는 것이 좋다.
+
+또한 현재 사용한 hotspot set 외에도 여러 조건을 비교할 필요가 있다. 예를 들어 P-loop 중심 hotspot, hinge 중심 hotspot, pocket rim 전체를 포함하는 hotspot set을 각각 따로 설정하여 어떤 조건에서 ATP pocket을 더 잘 덮는 binder가 생성되는지 확인해야 한다.
+
+RFdiffusion과 ProteinMPNN으로 sequence candidate를 얻은 뒤에는 AlphaFold-Multimer 또는 ColabFold를 이용해 PIM1-binder complex 구조를 예측해야 한다. 이후 ipTM, PAE, clash 여부, interface quality를 확인하고, 가능하다면 Rosetta InterfaceAnalyzer로 ΔG, buried SASA, shape complementarity를 계산해야 한다.
+
+최종적으로는 in silico 결과만으로 결론을 내리기보다는, 실제 binding assay나 kinase activity assay를 통해 PIM1 binding 및 inhibition 여부를 검증해야 한다.
+
+---
+
+## 12. Conclusion
+
+본 연구는 AML에서 therapeutic target candidate로 여겨지는 PIM kinase, 그중 PIM kinase 1의 ATP-binding pocket을 차폐할 수 있는 de novo binder protein을 설계하고자 한 pilot study이다.
+
+초기에는 RFdiffusion, ProteinMPNN, AlphaFold-Multimer, Rosetta InterfaceAnalyzer를 포함하는 전체 computational pipeline을 계획하였다. 하지만 시간적, 지식적 한계로 인해 실제 수행 범위는 RFdiffusion과 ProteinMPNN을 이용해 예측 sequence를 얻는 단계로 축소하였다.
+
+본 연구에서는 PIM1 kinase domain을 target으로 설정하고, ATP pocket 입구를 구성하는 P-loop, catalytic cleft, hinge region 주변 residue인 A49, A67, A120, A124를 hotspot으로 지정하였다. Binder length는 60–80 aa로 설정하여 ATP-binding pocket 주변부를 덮을 수 있는 mini binder를 생성하고자 하였다.
+
+그러나 Google Colab 환경에서 반복적인 오류, 긴 runtime, 사용량 제한이 발생하여 실제 RFdiffusion backbone이나 ProteinMPNN sequence candidate는 확보하지 못하였다. 따라서 본 연구의 현재 결과는 binder candidate 확보가 아니라, target 선정, hotspot 설정, binder length 설정, 단순화된 workflow 구성, 그리고 실패 원인 정리에 있다.
+
+본 연구는 결과 확보에는 실패했지만, PIM1 ATP-pocket-blocking binder design을 시도하기 위한 기본 방향과 한계를 확인했다는 점에서 의미가 있다. 후속 연구에서는 안정적인 GPU 환경에서 RFdiffusion과 ProteinMPNN을 다시 실행하고, AlphaFold-Multimer와 Rosetta 기반 검증을 추가해야 한다.
+
+---
+
+## 13. Discussion
+
+본 연구는 PIM kinase 억제 전략을 기존 small-molecule inhibitor가 아니라 de novo protein binder 관점에서 접근했다는 점에서 차이가 있다. 기존 ATP-competitive inhibitor는 ATP-binding pocket 내부에 결합하지만, 본 연구에서는 protein binder가 ATP pocket 주변부를 덮어 ATP 접근을 막는 전략을 생각하였다.
+
+하지만 현재 단계에서는 실제 sequence candidate를 얻지 못했기 때문에, 이 전략이 실제로 가능한지는 확인하지 못하였다. 또한 RFdiffusion과 ProteinMPNN만으로는 binder의 결합 가능성이나 억제 효과를 판단하기 어렵다. 따라서 본 연구는 완성된 binder design 결과가 아니라, PIM1을 대상으로 한 초기 computational feasibility trial로 보는 것이 적절하다.
+
+추가로, hotspot으로 사용한 A49, A67, A120, A124는 ATP-binding pocket 주변의 대표적인 위치를 기준으로 설정한 것이다. 그러나 실제 design 결과는 hotspot 선정에 크게 영향을 받기 때문에, 후속 연구에서는 여러 hotspot set을 비교해야 한다.
+
+마지막으로, PIM kinase는 intracellular target이기 때문에 실제 치료제로 확장하기 위해서는 세포 내 delivery 문제가 반드시 해결되어야 한다. 따라서 본 연구의 범위는 치료제 개발 전체가 아니라, PIM1 ATP-binding pocket을 target으로 하는 de novo binder candidate를 computationally 생성할 수 있는지 확인하는 초기 단계로 제한된다.
