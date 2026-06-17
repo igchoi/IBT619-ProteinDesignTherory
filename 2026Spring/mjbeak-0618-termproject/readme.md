@@ -128,28 +128,23 @@ Helix 비율이 30% 이상인 두 gap(AMP–ACP_1, AT–ACP_2)은 compaction rat
 
 Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구간은 높은 helix 비율과 낮은 compaction ratio를 나타내지 않아 gap처럼 보이지만, 링커는 아닌 특성을 보였다. 따라서, gap이자 링커적인 특징을 보인 L1 (ACP_1–KS), L2 (KS–Docking), L3 (Docking–AT)를 링커로 판단했다.
 
+---
 
-### Result II — 취약 부위 도출 (NnHispS)
+### 2) Result II — 취약 부위 도출 (NnHispS)
 
 확정된 3개 링커가 동일한 수준의 구조적 취약성을 가지는지 확인하고자 하였다. 만약 일부 링커만이 구조적 불안정성을 나타낸다면, 재설계의 우선순위를 결정할 수 있을 것이다.
 
 이를 위해 AlphaFold의 pLDDT와 PAE를 이용하여 각 링커의 취약도를 정량화하였다. AlphaFold에서 확보한 PDB,PAE JSON으로 pLDDT와 PAE를 적용한 결과는 다음과 같다.
 
-| 링커 | 평균 pLDDT | 최소 pLDDT | 평균 PAE (Å) | 취약도 점수 |
-|---|---|---|---|---|
-| L1 (ACP_1–KS) | 42.6 | 27.5 | 21.2 | 62.9 |
-| L2 (KS–Docking) | 57.5 | 35.9 | 8.2 | 34.5 |
-| L3 (Docking–AT) | 65.5 | 52.6 | 4.9 | 25.2 |
-
-6개 도메인 자체의 평균 pLDDT는 78.5–93.5로 모두 안정적이었고, 링커 구간에서만 뚜렷한 저하가 관찰되어 도메인-링커 경계 확정이 구조적으로도 타당함을 추가로 확인하였다.
-
 <img width="2254" height="1125" alt="image" src="https://github.com/user-attachments/assets/93721d7c-52b6-4d30-848d-912908c44523" />
 
 **Figure 2. 확정된 링커 3개의 pLDDT 프로파일 및 도메인 간 PAE·취약도 비교.**
 
-Figure 2에서 확인한 결과, 도메인 자체는 높은 pLDDT 값을 유지한 반면 링커 구간에서는 신뢰도가 선택적으로 감소하였다. 특히 L1은 가장 낮은 pLDDT와 높은 PAE를 나타내어 세 링커 중 가장 취약한 부위로 확인되었다.
+Figure 2에서 확인한 결과, 6개 도메인 자체의 평균 pLDDT는 78.5–93.5로 모두 안정적이었고, 링커 구간에서만 뚜렷한 저하가 관찰되어 도메인-링커 경계 확정이 구조적으로도 타당함을 추가로 확인하였다. 특히 L1은 가장 낮은 pLDDT와 높은 PAE를 나타내어 세 링커 중 가장 취약한 부위로 확인되었다.
 
-### Result III — 검증: 촉매 잔기 확인 및 재설계 판정
+---
+
+### 3) Result III — 검증: 촉매 잔기 확인 및 재설계 판정
 
 취약성이 높은 링커가 확인되었다 하더라도, 해당 부위가 촉매 활성에 직접 관여한다면 재설계는 오히려 효소 기능을 손상시킬 수 있다. 따라서 취약성만으로 재설계 여부를 결정할 수 없기에 보존된 촉매 잔기의 위치를 탐색하고 링커 좌표와 비교하였다.
 
@@ -160,15 +155,18 @@ Figure 2에서 확인한 결과, 도메인 자체는 높은 pLDDT 값을 유지�
 | L3 (Docking–AT) | 25.2 | 없음 | NO-NEED |
 
 <img width="2512" height="770" alt="image" src="https://github.com/user-attachments/assets/dfca8cdc-0ef7-4ea5-a6b1-b15d03bd5591" />
+
 **Figure 3. 촉매 잔기(보존 위치) 표시를 포함한 NnHispS 최종 검증 맵.**
 
 Figure 3의 결과, 모든 촉매 잔기는 각 도메인 내부에 위치하였으며 고신뢰 링커와 중복되지 않았다. 따라서 취약성이 높으면서도 촉매 기능을 직접 교란하지 않는 링커를 재설계 대상으로 우선 선정할 수 있었다.
 
-### Result IV — 교차 검증 (PKS25)
+---
 
-NnHispS를 기반으로 구축된 분석 기준이 특정 단백질에만 최적화된 결과일 가능성을 배제하기 위해, 도메인 구성이 다른 Dictyostelium discoideum 유래 Probable polyketide synthase 25(PKS25, UniProt Q54KU3, AlphaFold AF-Q54KU3)에 동일한 방법론을 적용해 결과 패턴이 재현되는지 교차 검증하였다. 
+### 4) Result IV — 교차 검증 (PKS25)
 
-| 도메인 | 위치(aa) | i-evalue |
+NnHispS를 기반으로 구축된 링커 탐색 기준이 특정 단백질에만 최적화된 결과일 가능성을 배제하기 위해, 도메인 구성이 다른 *Dictyostelium discoideum* 유래 Probable polyketide synthase 25(PKS25, UniProt Q54KU3, AlphaFold AF-Q54KU3)에 동일한 방법론을 적용해 교차 검증하였다. 
+
+| 도메인 | 위치(aa) | i-evalue |                     
 |---|---|---|
 | KS | 34–458 | 1.23e-152 |
 | AT | 568–877 | 1.29e-80 |
@@ -185,17 +183,18 @@ NnHispS와 달리 DH, ER이 확정되었고 AMP-binding, docking domain은 검�
 | DH–ER | 521 aa | 31% | 29% | 39% | 미식별 도메인 |
 | ER–KR | 35 aa | 24% | 15% | 62% | 고신뢰 링커 |
 
-**Figure 4.** PKS25(*Dictyostelium discoideum*, UniProt Q54KU3 / AlphaFold AF-Q54KU3)의 HMM 확정 도메인과 링커.
+<img width="2525" height="831" alt="image" src="https://github.com/user-attachments/assets/c321415d-a8c4-49d1-85a0-3c5e101e8610" />
 
-![Figure 4](PKS25_domain_map.png)
+**Figure 4. PKS25(*Dictyostelium discoideum*, UniProt Q54KU3 / AlphaFold AF-Q54KU3)의 HMM 확정 도메인과 링커.**
 
 Figure 4의 결과, PKS25에서도 도메인 탐지 이후 구조 검증을 통해 실제 링커와 미식별 구조 영역이 구분되었으며, NnHispS에서 관찰된 의사결정 흐름이 동일하게 재현되었다.
 또한, DH–ER 사이 521 aa gap은 NnHispS의 미식별 구간과 동일하게 Helix/Strand 비율이 30% 내외로 높아 같은 기준으로 분류되었다. 이는 "짧은 gap은 coil 우세, 긴 gap은 정형 구조 혼재"라는 판단 기준이 진균 비환원형 PKS와 아메바 환원형 모듈형 PKS라는 진화적으로 거리가 먼 두 단백질에서 공통적으로 관찰됨을 보여준다. 
 
-이는 본 연구의 프레임워크가 특정 PKS에 대한 경험적 규칙이 아니라, Type I PKS가 공유하는 구조적 특성을 반영하는 범용적 접근법일 가능성을 시사한다.
+이는 본 연구의 프레임워크가 **특정 PKS에 대한 경험적 규칙이 아니라, Type I PKS가 공유하는 구조적 특성을 반영하는 범용적 접근법**일 가능성을 시사한다.
 
+---
 
-### Result V — 자동화 파이프라인 검증
+### 5) Result V — 자동화 파이프라인 검증
 
 본 연구에서 구축한 분석 체계는 여러 단계를 거치는 순차적 과정으로 이루어져 있어, 대량의 PKS 분석에 수동으로 적용하기에는 현실적인 한계가 존재한다. 따라서 전체 과정을 자동화하더라도 전문가 수준의 결과를 재현할 수 있는지를 검증하고자 하였다.
 
@@ -207,6 +206,7 @@ Figure 4의 결과, PKS25에서도 도메인 탐지 이후 구조 검증을 통�
 | 최종 판정 | L1·L2 REDESIGN, L3 NO-NEED | L1·L2 REDESIGN, L3 NO-NEED | — | AT-DH·ER-KR REDESIGN |
 
 <img width="2383" height="1093" alt="image" src="https://github.com/user-attachments/assets/a5b14c9c-3bdb-40b2-ae19-9c936af45e67" />
+
 **Figure 5. NnHispS, PKS25 각각에서 수동 분석(상단)과 자동화 결과(하단) 링커 좌표 페어 비교.**
 
 Figure 5의 결과, 유일한 차이는 NnHispS L1 링커의 끝 좌표(수동 685, 자동화 684)로, 같은 DSSP 출력에서 가장 긴 연속 coil run을 추출하는 동일 절차이므로 round-off 수준의 사소한 차이로 판단된다. 도메인 경계, 미식별 구간, 링커 좌표(1 aa 이내), 최종 판정 모두에서 자동화 결과가 수동 분석과 일치하였다.
