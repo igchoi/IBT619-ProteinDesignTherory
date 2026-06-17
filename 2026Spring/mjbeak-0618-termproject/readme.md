@@ -218,8 +218,8 @@ DH–ER 사이의 521 aa gap은 NnHispS의 미식별 도메인 구간(AMP–ACP_
 | 고신뢰 링커 좌표 | aa662–685, 1109–1122, 1192–1204 | aa662–684, 1109–1122, 1192–1204 | aa917–928(AT-DH), 2019–2029(ER-KR) | aa917–928, 2019–2029 |
 | 최종 판정 | L1·L2 REDESIGN, L3 NO-NEED | L1·L2 REDESIGN, L3 NO-NEED | (수동 분석 미실시) | AT-DH·ER-KR REDESIGN |
 
->![Figure 5.](image-5.png)
-> **Figure 5.**찾은 PKS의 링커에 대한 자동화 전 후 비교.
+> <img width="2383" height="1093" alt="image" src="https://github.com/user-attachments/assets/c54b24ac-fe0a-41d1-9807-44d0d3da5427" />
+> **Figure 5.** 찾은 PKS의 링커에 대한 자동화 전 후 비교.
 
 자동화 결과는 도메인 경계, 미식별 구간, 링커 좌표(1 aa 이내 오차) 및 최종 판정에서 수동 분석과 일치하였다. 유일한 차이는 NnHispS L1 링커의 끝 좌표가 수동 분석에서는 685, 자동화에서는 684였는데, 이는 두 분석 모두 같은 DSSP 출력에서 "가장 긴 연속 coil run"을 추출하는 절차이므로 round-off 수준의 사소한 차이로 판단된다.
 
