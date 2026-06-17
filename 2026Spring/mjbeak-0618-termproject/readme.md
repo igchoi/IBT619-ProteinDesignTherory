@@ -32,8 +32,6 @@ Polyketide Synthase(PKS) 중 Type I PKS는 여러 촉매 도메인이 하나의 
 출력: 링커 좌표, 취약도, 재설계 대상 목록
 ```
 
-검증은 두 단계로 진행하였다. 1차로 *Neonothopanus nambi* 유래 Hispidin synthase(NnHispS, AlphaFold AF-A0A3G9K3K9)에 전체 방법론을 적용해 링커 식별부터 재설계 판정까지 수행했고, 2차로 도메인 구성이 전혀 다른 *Dictyostelium discoideum* 유래 Probable polyketide synthase 25(PKS25, UniProt Q54KU3, AlphaFold AF-Q54KU3)에 동일한 방법론을 적용해 결과 패턴이 재현되는지 교차 검증하였다. 마지막으로 검증된 절차를 자동화 스크립트로 구현하여, 수동 분석과 동일한 결과를 산출하는지 확인하였다.
-
 ---
 
 ## 2. Materials and Methods
@@ -97,12 +95,11 @@ KS-Cys(`HGTGT` 인접), AT-Ser(`GHSxG`/`AFSGQGT`), ACP-Ser(`LGxDS`/`LGxTS`/`LGxE
 
 ## 3. Results
 
-### Result I — 링커 찾기 (NnHispS)
+### 1) Result I — 링커 찾기 (NnHispS)
 
-우선 HMM 기반 도메인 탐지만으로 실제 링커를 식별할 수 있는지를 검증하고자 하였다. 초기 가설은 인접한 도메인 사이의 gap이 모두 링커일 것이라는 것이었다. 
+이를 확인하기 위해 NnHispS의 FASTA 서열을 입력으로 하여 PKS/NRPS HMM 라이브러리를 대상으로 hmmsearch를 수행하였고, i-evalue < 1×10⁻⁵를 기준으로 도메인을 탐지하였다.
 
-이를 확인하기 위해 NnHispS에 대해 HMM 기반 도메인 탐지를 수행하였다.
-i-evalue < 1e-5 기준으로 6개 도메인이 채택되었다.
+그 결과, 아래 표와 같이, i-evalue < 1e-5 기준으로 6개 도메인이 채택되었다.
 
 | 도메인 | 위치(aa) | i-evalue |
 |---|---|---|
@@ -113,9 +110,7 @@ i-evalue < 1e-5 기준으로 6개 도메인이 채택되었다.
 | AT | 1210–1491 | 5.32e-68 |
 | ACP_2 | 1619–1691 | 1.33e-10 |
 
-AMP-binding 도메인이 N-말단에서 검출된 것은 예비 분석에서 예상치 못한 결과였으나, NnHispS와 근연한 비환원형 진균 PKS(ShPKS1 등)가 KS 앞에 추가 AMP·ACP 도메인을 가진다는 선행 문헌과 일치해, 실제 도메인으로 확인되었다.
-
-6개의 도메인이면, 5개의 gap이 발생하고, 각 5개의 gap을 링커 후보 부위로 생각하고, DSSP coil 비율을 확인해봤다. 
+총 6개의 도메인이 확인됨에 따라 5개의 도메인 간 gap이 정의되었으며, 이들을 잠재적 링커 후보로 간주하여 DSSP 기반 이차구조 조성(coil확인)을 분석하였다.
 
 | Gap | 길이 | Helix | Strand | Coil |
 |---|---|---|---|---|
@@ -128,21 +123,15 @@ AMP-binding 도메인이 N-말단에서 검출된 것은 예비 분석에서 예
 Helix 비율이 30% 이상인 두 gap(AMP–ACP_1, AT–ACP_2)은 compaction ratio를 계산한 결과 둘 다 0.09로, 도메인 대조군(0.01)에 가깝고 링커 대조군(0.60)과는 뚜렷이 구분되어 미식별 **도메인**으로 재분류하였다. PKS/NRPS HMM 라이브러리 재스캔에서도 매칭되는 모델이 없어 정확한 정체는 확인하지 못했다.
 
 <img width="2365" height="664" alt="image" src="https://github.com/user-attachments/assets/fe902897-1be7-4dde-94fa-1e25ec9d403d" />
+
 **Figure 1. NnHispS의 HMM으로 확인한 도메인과 DSSP coil 기반 링커 후보 부위 map**
 
-남은 3개 gap은 고신뢰 링커로 확정되었다.
+Figure 1을 통해 확인한 결과, 총 5개의 도메인 간 gap 중 2개 구간은 높은 helix 비율과 낮은 compaction ratio를 나타내지 않아 gap처럼 보이지만, 링커는 아닌 특성을 보였다. 따라서, gap이자 링커적인 특징을 보인 L1 (ACP_1–KS), L2 (KS–Docking), L3 (Docking–AT)를 링커로 판단했다.
 
-| 링커 | 위치(aa) | 길이 |
-|---|---|---|
-| L1 (ACP_1–KS) | 662–685 | 23 aa |
-| L2 (KS–Docking) | 1109–1122 | 13 aa |
-| L3 (Docking–AT) | 1192–1204 | 12 aa |
-
-5개 gap 중 2개(40%)가 단순 "도메인 사이 = 링커" 가정으로는 걸러지지 않고 추가 구조 검증이 필요했다는 점은, 도메인 탐지만으로는 링커 식별이 충분하지 않음을 보여준다.
 
 ### Result II — 취약 부위 도출 (NnHispS)
 
-확정된 후보 3개 링커가 동일한 수준의 구조적 취약성을 가지는지 확인하고자 하였다. 만약 일부 링커만이 구조적 불안정성을 나타낸다면, 재설계의 우선순위를 결정할 수 있을 것이다.
+확정된 3개 링커가 동일한 수준의 구조적 취약성을 가지는지 확인하고자 하였다. 만약 일부 링커만이 구조적 불안정성을 나타낸다면, 재설계의 우선순위를 결정할 수 있을 것이다.
 
 이를 위해 AlphaFold의 pLDDT와 PAE를 이용하여 각 링커의 취약도를 정량화하였다. AlphaFold에서 확보한 PDB,PAE JSON으로 pLDDT와 PAE를 적용한 결과는 다음과 같다.
 
@@ -155,6 +144,7 @@ Helix 비율이 30% 이상인 두 gap(AMP–ACP_1, AT–ACP_2)은 compaction rat
 6개 도메인 자체의 평균 pLDDT는 78.5–93.5로 모두 안정적이었고, 링커 구간에서만 뚜렷한 저하가 관찰되어 도메인-링커 경계 확정이 구조적으로도 타당함을 추가로 확인하였다.
 
 <img width="2254" height="1125" alt="image" src="https://github.com/user-attachments/assets/93721d7c-52b6-4d30-848d-912908c44523" />
+
 **Figure 2. 확정된 링커 3개의 pLDDT 프로파일 및 도메인 간 PAE·취약도 비교.**
 
 Figure 2에서 확인한 결과, 도메인 자체는 높은 pLDDT 값을 유지한 반면 링커 구간에서는 신뢰도가 선택적으로 감소하였다. 특히 L1은 가장 낮은 pLDDT와 높은 PAE를 나타내어 세 링커 중 가장 취약한 부위로 확인되었다.
