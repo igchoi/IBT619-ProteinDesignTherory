@@ -23,7 +23,7 @@
 **후보 서열을 만들 때 적용한 기준**
 
 | 항목 | 기준 |
-|---|---|
+|:---:|:---:|
 | 길이 | 약 35-60 amino acids |
 | 구조 | 주로 alpha-helix |
 | 기능적 방향 | 항균 펩타이드 유사 막 상호작용 후보 |
@@ -40,7 +40,7 @@
 설계 기준에 따라 다섯 개의 후보 서열을 설계하였다.
 
 | 후보 | 서열 | 설계 의도 |
-|---|---|---|
+|:---:|:---:|:---:|
 | Design A | `KLAEQLKQSLKELAKQSLKELAKQSLKELAKQKQS` | 기본적인 단일 alpha-helix 후보 |
 | Design B | `KLAKQLSEKLKQALSKQLAELKQALSKQLAELKKQS` | 전하와 소수성의 균형을 맞춘 amphipathic helix 후보 |
 | Design C | `EALKQLLKAQSKSGKLAEQLLKQALSKQLAEKQSQ` | 짧은 turn을 넣은 helix-turn-helix 유사 후보 |
@@ -54,7 +54,7 @@ Design B는 초기 설계 단계부터 전하와 소수성의 균형을 중점�
 먼저 서열 자체에서 계산할 수 있는 기본 지표를 비교하였다. 평가 항목은 길이, 순전하, 소수성 비율, GRAVY score, helix propensity, hydrophobic moment, 가장 긴 소수성 연속 구간, Pro/Gly 비율이었다.
 
 | 후보 | 길이 | 순전하 | 소수성 비율 | GRAVY | Helix propensity | Hydrophobic moment | 최장 소수성 구간 | Pro/Gly 비율 | 점수 |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Design A | 35 | +5 | 0.34 | -1.02 | 1.21 | 0.83 | 2 | 0.00 | 5/6 |
 | Design B | 36 | +6 | 0.39 | -0.74 | 1.21 | 1.16 | 2 | 0.00 | 6/6 |
 | Design C | 35 | +4 | 0.37 | -0.76 | 1.20 | 0.83 | 2 | 0.03 | 6/6 |
@@ -79,7 +79,7 @@ Design B는 초기 설계 단계부터 전하와 소수성의 균형을 중점�
 ## 6. 구조 예측 결과
 
 | 후보 | 길이 | 평균 pLDDT | pTM | 해석 |
-|---|---:|---:|---:|---|
+|:---|:---:|:---:|:---:|:---:|
 | Design A | 35 | 95.1 | 0.506 | 매우 높은 신뢰도의 alpha-helix 예측 |
 | Design D | 35 | 93.4 | 0.487 | 높은 신뢰도의 양전하성 alpha-helix 예측 |
 | Design B | 36 | 94.4 | 0.519 | 높은 신뢰도의 amphipathic alpha-helix 예측 |
@@ -99,7 +99,7 @@ ColabFold 결과에서는 Design A, Design B, Design D가 모두 높은 평균 p
 예측된 PDB 구조를 바탕으로 평균 pLDDT, 최소 pLDDT, low-confidence residue 비율, radius of gyration, helix-like fraction을 계산하였다.
 
 | 순위 | 후보 | 잔기 수 | 평균 pLDDT | 최소 pLDDT | Low-confidence fraction | Radius of gyration | Helix-like fraction | Priority score |
-|---:|---|---:|---:|---:|---:|---:|---:|---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Design A | 35 | 95.1 | 69.4 | 0.03 | 15.17 | 1.00 | 7.46 |
 | 2 | Design D | 35 | 93.5 | 70.9 | 0.00 | 15.17 | 1.00 | 7.44 |
 | 3 | Design B | 36 | 94.4 | 70.2 | 0.00 | 15.50 | 1.00 | 7.42 |
@@ -150,7 +150,7 @@ Design B는 ColabFold에서 연속적인 alpha-helix 형태로 예측되었다. 
 **Design B의 residue별 pLDDT 요약**
 
 | 항목 | 값 |
-|---|---:|
+|:---|:---:|
 | 서열 길이 | 36 residues |
 | 평균 pLDDT | 94.4 |
 | 최소 pLDDT | 70.2 |
@@ -159,7 +159,7 @@ Design B는 ColabFold에서 연속적인 alpha-helix 형태로 예측되었다. 
 pLDDT가 90보다 낮은 residue는 주로 말단에 위치하였다.
 
 | Residue | Amino acid | pLDDT |
-|---:|---|---:|
+|:---:|:---|:---:|
 | 1 | LYS | 85.7 |
 | 35 | GLN | 82.5 |
 | 36 | SER | 70.2 |
@@ -190,7 +190,7 @@ PyMOL 표면 시각화에서 Lys와 같은 양전하 residue, Glu와 같은 음�
 
 
 | Rank | Model | Mean pLDDT | pTM |
-|---:|---|---:|---:|
+|:---:|:---:|:---:|:---:|
 | 1 | alphafold2_ptm_model_5_seed_000 | 97.1 | 0.59 |
 | 2 | alphafold2_ptm_model_3_seed_000 | 97.1 | 0.61 |
 | 3 | alphafold2_ptm_model_4_seed_000 | 96.8 | 0.57 |
