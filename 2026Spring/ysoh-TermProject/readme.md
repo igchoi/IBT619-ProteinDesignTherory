@@ -5,9 +5,23 @@
 - Paper: [Genomic language model predicts protein co-regulation and function](https://www.nature.com/articles/s41467-024-46947-9)
 - In class: [presentation](https://docs.google.com/presentation/d/1sF-S-429DUhPfFoTV15OXIbcB2kLGqsV/edit?usp=sharing&ouid=107177185030271497727&rtpof=true&sd=true)
 ***
+## Overview
+<pre><code>
+<span style="color: #5e91ff">[gLM]</span>
+1. 원하는 부분의 gene contig file을 준비한다.   
+   (15 - 30개 / seminar에서는 30개로 training 시킴)
+2. Colab 또는 Anaconda를 통해 환경 설정을 해준 뒤, data를 input한다.
+3. embedding 값을 얻고 이를 inference하여 수치화시킨다.
+4. target하는 gene과 주변 gene의 거리를 통해 기능적으로 유사할지 추정한다.
+
+
+<span style="color: #5e91ff">[Docking simulation]</span>
+1. target하는 gene를 Alphafold2를 사용해서 structure를 얻는다.
+2. 해당 gene과 아미노산 서열 유사도가 높은 reference gene을 selection하여 보조인자의 위치를 확인할 수 있게 한다.
+3. Anaconda</code></pre>
 
 ## 1. gLM 구동
-### 1-1. input data 생성
+### 1-1. Input data 생성
 <pre><code>2가지의 contig file 생성
 
 1. sequence fasta file (.fa) : target하는 gene 앞 뒤로 7개의 gene (total 15개)
@@ -53,7 +67,7 @@ print("=== gLM.py 수정 완료 ===")
  (data download의 소요 시간이 bottleneck이어서 colab으로 사용했음)
 
 
-### 1-3. data input
+### 1-3. Data input
 <pre><code>
 from google.colab import files
 print("my_gene_00114.fa 와 my_contig_00114.tsv 두 파일을 선택하세요")
@@ -73,27 +87,86 @@ uploaded = files.upload()
 </code></pre>
 - 3번째 줄을 보면 file name이 있어 코드를 사용할 때 file name이 일치하는지 확인한.
 
-## 2. chain specific 예측
+## 2. Chain specific 예측
 >gLM만으로 chain specific을 예측하기 어려움.   
  따라서 Alphafold2로 structure를 예측한 다음, vina 및 PyMOL를 사용하여 C6 acid를 docking 해보고자 함.
 
-### 2-1. reference gene 
+### 2-1. Reference gene 
 
-- target gene은 Protein Data Bank(PDB)에 data가 없기 없어 Alphafold2로 structure를 예측해야한다. 그러나  해당 gene과 amino acid similiarity가 높은 _Clostridium autoethanogenum_ 의 sequence를 reference로 사용한다.
-- PDB에서 reference sequence를 다운로드 받는다. 
-- 
+- target gene은 Protein Data Bank(PDB)에 data가 없기 때문에 Alphafold2로 structure를 예측해야한다. 그러나 Alphafold2를 통해 W 또는 Mo와 같은 보조인자는 알 수 없기 때문에 해당 gene과 amino acid similiarity가 높은 _Clostridium autoethanogenum_ 의 sequence를 reference로 사용한다.
+- PDB에서 reference sequence를 다운로드 받는다. (PDBx/mmCIF Format , .cif 형식)
 
-### 2-3. target gene Structure 준비 (Alphafold2)
-<pre><code>{code}</code></pre>
+
+### 2-2. Target gene Structure 준비 (Alphafold2)
 - google colab에서 'ColabFold AlphaFold2_mmseqs2'을 검색하여 Alphafold2 실행
 - 'query_sequence' 칸에 target하는 amino acid sequence 붙여넣기
 - .pdb 파일이 자동 다운로드되면 성공
 
-### 2-2. 
-<pre><code>{code}</code></pre>
+### 2-3. Docking 환경 구축 
+<pre><code>
+<span style="color: #008000"># 도킹 전용 환경 만들기</span>
+conda create -n docking python=3.9 -y
+conda activate docking
 
+<span style="color: #008000"># 핵심 도구</span>
+conda install -c conda-forge openbabel -y      <span style="color: #008000"># 리간드 3D 변환</span>
+pip install meeko                              <span style="color: #008000"># vina용 파일 준비
+</span>
+</code></pre>
+- AutoDock Vina: https://github.com/ccsb-scripps/AutoDock-Vina/releases 에서 실행파일 받기
+- PyMOL :  https://pymol.org 에서 다운로드
 
-## 3. Conclusion & Discussion
+### 2-4. Receptor 준비
+- PyMOL에서 진행한다.
+  - solvent 제거
+  - h added
+- 해당 파일을 .pdb로 저장 → 00114.pdb
+- Vina용 형식(.pdbqt)으로 변환
+<Pre><code>prepare_receptor -r aor.pdb -o aor.pdbqt</code></Pre>
+
+### 2-5. Ligand 준비
+<pre><code>
+<span style="color: #008000"># acetic acid</span>
+obabel -:"CC(=O)O" -O acetic_acid.pdbqt --gen3d
+
+<span style="color: #008000"># butyric acid</span>
+obabel -:"CCCC(=O)O" -O butanoic_acid.pdbqt --gen3d
+
+<span style="color: #008000"># hexanoic acid</span>
+obabel -:"CCCCCC(=O)O" -O hexanoic_acid.pdbqt --gen3d
+
+</code></pre>
+
+- 더 긴 사슬을 넣어서 어디부터 docking이 안되는지 확인할 수 있다.
+
+<pre><code>
+<span style="color: #008000"># acetic acid</span>
+vina.exe --receptor aor.pdbqt --ligand acetic_acid.pdbqt --center_x 16.772 --center_y 26.895 --center_z 24.908 --size_x 22 --size_y 22 --size_z 22 --exhaustiveness 16 --out acetic_out.pdbqt > acetic_log.txt
+type acetic_log.txt
+
+<span style="color: #008000"># butyric acid</span>
+vina.exe --receptor aor.pdbqt --ligand butanoic_acid.pdbqt --center_x 16.772 --center_y 26.895 --center_z 24.908 --size_x 22 --size_y 22 --size_z 22 --exhaustiveness 16 --out butanoic_out.pdbqt > butanoic_log.txt
+type butanoic_log.txt
+
+<span style="color: #008000"># hexanoic acid</span>
+vina.exe --receptor aor.pdbqt --ligand hexanoic_acid.pdbqt --center_x 16.772 --center_y 26.895 --center_z 24.908 --size_x 22 --size_y 22 --size_z 22 --exhaustiveness 16 --out hexanoic_out.pdbqt > hexanoic_log.txt
+type hexanoic_log.txt
+
+</code></pre>
+- 각 chain 별로 affinity 값을 얻을 수 있고, PyMOL에서 구조를 시각화하여 ligand가 어디에 붙는지 확인한다.
+<pre><code>load C:/docking/acetic_out.pdbqt, c2pose
+load C:/docking/hexanoic_out.pdbqt, c6pose
+show spheres, ref and elem W
+color orange, ref and elem W
+show sticks, c2pose
+show sticks, c6pose
+zoom ref and elem W, 15</code></pre>
+## 3. Result
+### 3-1. gLM 
+
+### 3-2. Docking simulation
+
+## 4. Conclusion & Discussion
 
 
 
