@@ -168,14 +168,34 @@ zoom ref and elem W, 15</code></pre>
 
 ## 3. Result
 ### 3-1. gLM 
-- strategy 1. Hypothetical protein
+#### 3-1-1. strategy 1) Hypothetical protein
 > RNA sequencing을 바탕으로 특이적으로 발현량이 높거나 낮은 hypothetical protein을 선별함.    
 cluster 안에 여러 개의 hypothetical protein이 존재하는 경우 및 hypothetical protein 수가 많아서 각 경우 별로 1가지의 예시만 올렸음.
 
+| Gene number | Cosine similarity | Euclidean distance | 
+| ----- | ----- | ----- | 
+| 1 | 0.999929 | 0.100 | 
+| 2 | 0.999808| 0.170 | 
+| 3 | 0.999722 | 0.199 |
+| 4 | 0.992781 | 0.982|
+| 5 | 0.995628 | 0.775|
 
-- strategy 2) Aldehyde ferredoxin oxidoreductase
+- target gene는 1, 2, 3과 같은 genomic context 또는 functional/regulatory module에 속할 가능성이 높다.
+
+#### 3-1-2. strategy 2) Aldehyde ferredoxin oxidoreductase
 > 주변 genomic context 정보를 가지고 해당 gene의 기질 특이성을 확인하고자 했음.
 
+| Gene number | Cosine similarity | Euclidean distance | 
+| ----- | ----- | ----- | 
+| 1 | 0.999160 | 0.343961 | 
+| 2 | 0.998589| 0.447579 | 
+| 3 | 0.997954 | 0.537559 |
+| 4 | 0.988968 | 1.254940|
+| 5 | 0.554476 | 9.787482|
+
+- 4, 5은 aor와 같은 functional/regulatory module보다는 다른 기능적 맥락에 있는 유전자일 가능성이 높다.
+- molybdenum/tungsten cofactor biosynthesis 또는 sulfur-carrier system과 연결된 redox gene cluster 안에 위치하며, 주변 조절 유전자 및 cofactor-related 유전자들과 같은 functional/regulatory module에 속할 가능성이 높다.   
+(gene number는 밝히기 어렵습니다.)
 ### 3-2. Docking simulation
 - acetic acid affinity
 ![alt text](image-8.png)
@@ -195,7 +215,26 @@ cluster 안에 여러 개의 hypothetical protein이 존재하는 경우 및 hyp
 
 
 ## 4. Conclusion & Discussion
+### Conclusion
+- **gLM**은 genomic context 기반의 embedding(cosine similarity, Euclidean distance)을 통해 target gene이 어떤 functional/regulatory module에 속하는지 예측하는 데 효과적이었다.
+  - Hypothetical protein은 cosine similarity가 0.999 이상으로 매우 높은 gene들과 같은 module에 속할 가능성이 높았다.
+  - Aldehyde ferredoxin oxidoreductase(AOR)는 molybdenum/tungsten cofactor biosynthesis 및 sulfur-carrier system과 연결된 redox gene cluster 안에 위치하는 것으로 예측되었다.
+- 다만 **gLM 단독으로는 chain specificity(기질의 탄소 사슬 길이 특이성)를 예측할 수 없었다.** 이는 gLM이 '주변 유전자 맥락'을 보는 모델이지, 효소-기질 결합을 직접 다루는 모델이 아니기 때문이다.
+- 이를 보완하기 위해 **AlphaFold2 structure 예측 + AutoDock Vina docking + PyMOL 시각화** 파이프라인을 적용한 결과:
+  - <span style="color: #5e91ff">C2(acetic), C4(butyric), C6(hexanoic) acid가 모두 active site(W cofactor 근처)에 docking</span> 되었다.
+  - 사슬이 길어질수록 binding affinity가 증가하는 경향을 보였고, 이는 docking simulation이 합리적으로 작동했음을 시사한다.
+- 종합하면, 이 효소는 **단일 탄소 사슬 길이에 특이적이라기보다 비교적 넓은 범위의 기질을 받아들일 가능성이 높다.**
 
+### Discussion
+- **Affinity 증가 경향의 해석에는 주의가 필요하다.** Docking affinity는 사슬이 길어질수록 <span style="color: #5e91ff">(원자 수가 많아져 van der Waals 접촉이 늘어나면서)</span> 일반적으로 높아지는 경향이 있다. 따라서 affinity 증가 자체가 곧바로 '생물학적 기질 특이성'을 의미하지는 않으며, 어디까지를 실제 기질로 볼지는 추가 실험적 검증이 필요하다.
+- **Octanoic acid(C8)까지 docking 되는 결과**는, 이 효소가 <span style="color: #5e91ff">특정 사슬 길이 하나에만 작동하는 specific enzyme이 아니라 broad-specificity enzyme</span> 일 가능성을 뒷받침한다.
+- **Method의 한계**
+  - AlphaFold2는 W/Mo 같은 보조인자(cofactor)를 예측하지 못해, _C. autoethanogenum_ reference sequence로 cofactor 위치를 보완해야 했다. 이 reference 의존성은 예측 정확도에 영향을 줄 수 있다.
+  - Docking은 단백질을 rigid body로 가정하는 경우가 많아, 실제 효소의 conformational change나 induced fit을 반영하지 못한다.
+- **Future direction**
+  - gLM이 예측한 cofactor cluster 가설을 sequence motif 분석이나 실험적 검증(activity assay)으로 확인할 수 있다.
+  - 실제 효소 활성 측정(in vitro enzyme assay)을 통해 각 사슬 길이별 kinetics(Km, kcat)를 비교하여 docking 예측과 대조해 볼 수있다.
+  
 
 
 
