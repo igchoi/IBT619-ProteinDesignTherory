@@ -12,13 +12,16 @@
    (15 - 30개 / seminar에서는 30개로 training 시킴)
 2. Colab 또는 Anaconda를 통해 환경 설정을 해준 뒤, data를 input한다.
 3. embedding 값을 얻고 이를 inference하여 수치화시킨다.
-4. target하는 gene과 주변 gene의 거리를 통해 기능적으로 유사할지 추정한다.
+4. target하는 gene과 주변 gene의 거리를 통해 기능적으로 유사할지 예측한다.
 
 
 <span style="color: #5e91ff">[Docking simulation]</span>
 1. target하는 gene를 Alphafold2를 사용해서 structure를 얻는다.
 2. 해당 gene과 아미노산 서열 유사도가 높은 reference gene을 selection하여 보조인자의 위치를 확인할 수 있게 한다.
-3. Anaconda</code></pre>
+3. Anaconda에서 receptor와 ligand를 지정하고, vina를 통해 docking affinity를 확인한다.
+4. affinity를 PyMOL에서 시각화하여 active site에 붙는지 확인한다. 
+
+</code></pre>
 
 ## 1. gLM 구동
 ### 1-1. Input data 생성
@@ -161,10 +164,13 @@ color orange, ref and elem W
 show sticks, c2pose
 show sticks, c6pose
 zoom ref and elem W, 15</code></pre>
+
+
 ## 3. Result
 ### 3-1. gLM 
 
 ### 3-2. Docking simulation
+<img width="614" height="375" alt="image" src="https://github.com/user-attachments/assets/92d12de8-8716-422e-b1a1-80c68da36f64" />
 
 ## 4. Conclusion & Discussion
 
