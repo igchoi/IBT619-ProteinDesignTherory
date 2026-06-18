@@ -168,9 +168,31 @@ zoom ref and elem W, 15</code></pre>
 
 ## 3. Result
 ### 3-1. gLM 
+- strategy 1. Hypothetical protein
+> RNA sequencing을 바탕으로 특이적으로 발현량이 높거나 낮은 hypothetical protein을 선별함.    
+cluster 안에 여러 개의 hypothetical protein이 존재하는 경우 및 hypothetical protein 수가 많아서 각 경우 별로 1가지의 예시만 올렸음.
+
+
+- strategy 2) Aldehyde ferredoxin oxidoreductase
+> 주변 genomic context 정보를 가지고 해당 gene의 기질 특이성을 확인하고자 했음.
 
 ### 3-2. Docking simulation
-<img width="614" height="375" alt="image" src="https://github.com/user-attachments/assets/92d12de8-8716-422e-b1a1-80c68da36f64" />
+- acetic acid affinity
+![alt text](image-8.png)
+![alt text](image-5.png)
+
+- butyric acid affinity
+![alt text](image-9.png)
+![alt text](image-6.png)
+- hexanoic acid affinity
+![Fig. 3](image.png)
+![alt text](image-7.png)
+
+![alt text](image-4.png)
+- C2, C4, C6가 active site에 docking 된다. chain이 증가하면서 affinity도 증가하는 것을 확인하여 simulation이 잘 이루어졌다. 
+- hexanoic acid도 docking 되면서 affinity가 증가하는 것으로 보아 C6에도 working 할 것으로 예상한다. 
+- octanoic acid도 docking 되는 결과가 있어 어떤 carbon chain 1개의 특이성을 갖는 enzyme은 아닐 수도 있다는 결론이다.
+
 
 ## 4. Conclusion & Discussion
 
