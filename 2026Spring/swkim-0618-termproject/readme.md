@@ -17,7 +17,7 @@ Evo 1/Evo 2와 같은 genomic language model은 attention mechanism을 활용해
 |Evo 1| 7B | Bacteria, Archaea, and Virus (Phage); **OpenGenome**|
 |Evo 2| 1B, 7B, 20B, 40B| All domains of life; **OpenGenome2**| 
 
-![](https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/main/2026Spring/swkim-0604/in-context%20gene%20generation%20with%20Evo2.png)
+![](https://github.com/igchoi/IBT619-ProteinDesignTherory/blob/main/2026Spring/swkim-0604/in-context%20gene%20generation%20with%20Evo1.5.png)
 
 Evo 1의 모델 구조를 동일하게 유지한 채로, 학습을 조금 1.5배 오래하여 만든 Evo 1.5 모델은, 특정한 target gene 주위의 genomic context를 고려해서 highly conserved gene들과 동일한 function을 가지지만 서열이 다른 gene을 생성할 수 있다 [3]. 또한 genetic context가 어느정도 유지되어 있는 system의 경우 (e.g. bacteria toxin-antitoxin system, viral anti-CRISPR system) 본질적으로 다양성이 높은 gene이라도 Evo 1.5 모델이 functional gene을 생성할 수 있다 [3]. 
 
