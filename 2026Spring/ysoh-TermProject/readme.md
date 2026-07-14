@@ -198,13 +198,17 @@ cluster 안에 여러 개의 hypothetical protein이 존재하는 경우 및 hyp
 (gene number는 밝히기 어렵습니다.)
 ### 3-2. Docking simulation
 - acetic acid affinity
+
 ![alt text](image-8.png)
 ![alt text](image-5.png)
 
 - butyric acid affinity
+
 ![alt text](image-9.png)
 ![alt text](image-6.png)
+
 - hexanoic acid affinity
+
 ![Fig. 3](image.png)
 ![alt text](image-7.png)
 
